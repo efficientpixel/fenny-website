@@ -1,0 +1,33 @@
+      Processing of PCF.........
+ 
+Component Name: Tee  EXFL
+     Start-Point    :    849.467    1404.177     179.893
+     End-Point      :    850.382    1404.177     181.192
+ 
+     Branch1-Point  :    848.552     848.552     848.552
+ 
+==>Decomposed To  3 Components:
+------------------------------------------------------------
+ Component   1 :
+Component Name: Flange  
+     Start-Point    :    849.467    1404.177     179.893
+     End-Point      :      0.000       0.000       0.000
+ 
+ Component   2 :
+Component Name: Flange  
+     Start-Point    :      0.000       0.000       0.000
+     End-Point      :    850.382    1404.177     181.192
+ 
+ Component   3 :
+Component Name: Flange  
+     Start-Point    :      0.000       0.000       0.000
+     End-Point      :    848.552    1404.177     181.192
+ 
+------------------------------------------------------------
+Processing Complete...........
+ 
+Unhandled Supports.........................
+-------------------------------------------
+ 
+-------------------------------------------
+ 

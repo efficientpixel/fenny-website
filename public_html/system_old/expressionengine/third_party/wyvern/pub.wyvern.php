@@ -1,0 +1,4 @@
+class Wyvern_pub {
+	
+	
+}

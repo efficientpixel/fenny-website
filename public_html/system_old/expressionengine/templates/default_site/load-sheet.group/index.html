@@ -1,0 +1,123 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Fenny Engineering Load Sheet</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/themes/blue/style.css" />
+<link rel="stylesheet" href="/css/load-sheet.css" />
+
+        <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+
+<body>
+<h2>Load Sheet - Max Values</h2>
+<table class="tablesorter" width="100%" border="0" cellspacing="0" cellpadding="0">
+<thead>
+  <tr>
+    {!--<th scope="col">Seg</th>--}
+    <th scope="col">Point</th>
+    <th scope="col">Tag No.</th>
+    <th scope="col">Type</th>
+     {!--<th scope="col">Combination</th>
+   --}
+    <th scope="col">Nominal (in)</th>
+    <th scope="col">GlobalFY (lbf)</th>
+    <th scope="col">GlobalFX (lbf)</th>
+    <th scope="col">GlobalFZ (lbf)</th>
+    <th scope="col">Disp X (in)</th>
+    <th scope="col">Disp X (-in)</th>
+    <th scope="col">Disp Y (in)</th>
+    <th scope="col">Disp Y (-in)</th>
+    <th scope="col">Disp Z (in)</th>
+    <th scope="col">Disp Z (-in)</th>
+    {!--
+    <th scope="col">GlobalFR (lbf)</th>
+    <th scope="col">GlobalDX (in)</th>
+    <th scope="col">GlobalDY (in)</th>
+    <th scope="col">GlobalDZ (in)</th>
+    <th scope="col">GlobalDR (in)</th>
+    <th scope="col">LocalDir1</th>
+    <th scope="col">Force1 (lbf)</th>
+    <th scope="col">Force2 (lbf)</th>
+    <th scope="col">Force3 (lbf)</th>
+    <th scope="col">Disp1 (in)</th>
+    --}
+    <th scope="col">Lateral Gap (in)</th>
+  </tr>
+  </thead>
+  <tbody>
+ {exp:channel:entries channel="load_sheet_points" dynamic="off" limit="10000" disable="categories|pagination|member_fields" orderby="point" sort="asc"}
+  <tr>
+   {!-- <td>{seg}</td> --}
+   {exp:replace_plus find=":SPACE:1|:SPACE:2" replace="" multiple="yes"}
+    <td>{point}</td>
+    {/exp:replace_plus}
+    <td>{tag_no}</td>
+ {exp:replace_plus find="-" replace="" multiple="yes"}
+    <td>{exp:switchee variable="{type}"}{case value='Guide'}VS, LG{/case}
+        {case value='Shoe|Rod Hgr'}R{/case}
+        {case default="Yes"}{type}{/case}
+        {/exp:switchee}</td>
+    {!--<td>{combination}</td>--}
+    <td>{nominal}</td>
+    <td>{globalfy}</td>
+    <td>{globalfx}</td>
+    <td>{globalfz}</td>
+        {/exp:replace_plus}
+ {exp:replace_plus find="-" replace="" multiple="yes"}
+    <td>{disp_x}</td>
+    {/exp:replace_plus}
+    <td>{disp_x}</td>
+     {exp:replace_plus find="-" replace="" multiple="yes"}
+    <td>{disp_y}</td>
+    {/exp:replace_plus}
+    <td>{disp_y}</td>
+     {exp:replace_plus find="-" replace="" multiple="yes"}
+    <td>{disp_z}</td>
+    {/exp:replace_plus}
+    <td>{disp_z}</td>
+    {!--
+    <td>{globalfr}</td>
+    <td>{globaldx}</td>
+    <td>{globaldy}</td>
+    <td>{globaldz}</td>
+    <td>{globaldr}</td>
+    <td>{localdir1}</td>
+    <td>{force1}</td>
+    <td>{force2}</td>
+    <td>{force3}</td>
+    <td>{disp1}</td>
+    --}
+    <td>{exp:switchee variable="{type}"}
+        {case value='Rod Hgr'}0{/case}
+        {case default="Yes"}{gap2}{/case}
+        {/exp:switchee}</td>
+  </tr>
+{/exp:channel:entries}
+</tbody>
+</table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/js/vendor/jquery.tablesorter.min.js"></script>
+<script src="/js/vendor/jquery.metadata.js"></script>
+<script>
+$(document).ready(function() {
+	$('.tablesorter').tablesorter( {
+			sortList: [[0,0], [4,0]],
+			sortForce: [[0,0]] 
+		}); 
+	$('.tablesorter').delay(5000).addClass('sorted');
+	
+	
+});
+</script>
+</body>
+</html>

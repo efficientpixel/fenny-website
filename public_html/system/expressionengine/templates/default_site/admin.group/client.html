@@ -1,0 +1,86 @@
+{embed="admin/head"}
+<body>
+{embed="admin/header"}
+<div class="container">
+	<div class="container-content">
+    {if segment_3 == 'updated'}
+    <div class="msg msg-updated">
+        <strong>Your project(s) have been updated</strong>
+    </div>
+    {/if}
+    <div class="page-header">
+       {!-- <div class="crumbs">
+            <span>&nbsp;</span>
+        </div>
+        --}
+        <h1 class="page-title page-header-title">Client</h1>
+        <div class="header-right">
+            <a href="/admin/projects/new/" class="page-header-button btn button-new btn-submit">New Project [+]</a>
+            <a href="/admin/clients/new/" class="page-header-button btn button-new btn-submit">New Customer [+]</a>
+        </div>
+    </div>
+    <div class="projects-list-container content-main">
+  {exp:channel:entries entry_id="{segment_3}" channel="clients" dynamic="off" disable="pagination|categories|member_data"}
+      <div class="member-name-header">
+        <h2 class="member-heading-name">{title} ({client_code})</h2> <a href="#">Edit</a>
+      </div>
+        <div class="client-address">
+        	<p>{client_address}<br />
+            {if client_address_2}{client_address_2}<br />{/if}
+            {client_city}, {client_state} {client_zip_code}<br />
+            {if client_website}{client_website} {/if}{if client_phone}| {client_phone} {/if}
+            {if client_billing_rate}<br />Rate: ${client_billing_rate}/hr{/if}</p>
+        </div>
+      <div class="projects-list-container">
+      	<h4 class="project-list-header">Active Projects:</h4>
+        <ul class="projects-list">
+        {parents field='customer' status='Active' orderby='status' sort='asc'}
+            <li>{parents:absolute_count}. {parents:job_number} - {parents:title}{!-- <span class="item-status status-{parents:status}">{parents:status}</span>--} | <a href="/admin/project/{parents:entry_id}/">Edit Project</a></li>
+        {if parents:no_results}
+                  <li>You have no active projects at this time...</li>
+                {/if}
+        {/parents}
+        </ul>
+    </div>
+      <div class="projects-list-container">
+      	<h4 class="project-list-header">Submitted Projects:</h4>
+        <ul class="projects-list">
+        {parents field='customer' status='Submitted' orderby='status' sort='asc'}
+            <li>{parents:absolute_count}. {parents:job_number} - {parents:title}{!-- <span class="item-status status-{parents:status}">{parents:status}</span>--} | <a href="/admin/project/{parents:entry_id}/">Edit Project</a></li>
+        {if parents:no_results}
+                  <li>You have no submitted projects at this time...</li>
+                {/if}
+        {/parents}
+        </ul>
+    </div>
+      <div class="projects-list-container">
+      	<h4 class="project-list-header">{current_year} Completed Projects:</h4>
+        <ul class="projects-list">
+        {embed="admin/client-completed-jobs" entryids="{parents field='customer' status='Completed' orderby='status' sort='asc'}{parents:entry_id}|{/parents}"}
+        </ul>
+    </div>
+    {if in_group_1_7}
+    <div class="client-notes">
+    <h4>Client Notes:</h4>
+    {if requires_po == 'y'}
+    <p><strong>{lang_requires_po}</strong></p>
+    {if client_notes}<p>{client_notes}</p>{/if}
+    
+    {/if}
+    </div>
+    <div class="projects-total-price">
+        {embed="admin/client-price-totals" projectids="{parents field='customer' status='Completed' orderby='status' sort='asc'}{parents:entry_id}|{/parents}" clientid='{entry_id}' year='{current_time format="%Y"}'}
+	</div>
+    {/if}
+   {/exp:channel:entries}
+   
+   
+   
+    </div>
+{embed="admin/projects-sidebar"}
+</div>
+
+</div>
+{admin-footer}
+{embed="admin/pages-bottom"}
+</html>

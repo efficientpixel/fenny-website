@@ -1,0 +1,30 @@
+{if logged_out}
+{exp:switchee variable='{segment_2}' parse='inward'}
+	{case value='forgot-password|login|reset-password'}{/case}
+    {case default='Yes'}
+        {redirect="/admin/login/"}
+    {/case}
+{/exp:switchee}
+{/if}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+{exp:switchee variable='{segment_2}'}
+	{case value='projects'}Projects - {/case}
+{/exp:switchee}Project Management Fenny Engineering
+</title>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800|Roboto:400,400i,500,500i,700,700i' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="/css/admin/admin.css?d=032917" />
+<link type="text/css" rel="stylesheet" href="/css/admin/datepicker.css" />
+<link type="text/css" rel="stylesheet" href="/css/admin/skins/grey/grey.css" />
+<link type="text/css" rel="stylesheet" href="/css/admin/sorter.css" />
+<link type="text/css" rel="stylesheet" href="/css/admin/remodal.css" />
+<link type="text/css" rel="stylesheet" href="/css/admin/remodal-default-theme.css" />
+{if segment_2 == 'project' OR segment_3 == 'new'}
+<link type="text/css" rel="stylesheet" href="/css/admin/trumbowyg.min.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />      
+{/if}
+
+</head>

@@ -1,0 +1,41 @@
+{embed="admin/head"}
+<body>
+{embed="admin/header"}
+<div class="container">
+	<div class="container-content">
+    <div class="page-header">
+        <div class="crumbs">
+            <span>&nbsp;</span>
+        </div>
+        <h1 class="page-title">Projects</h1>
+        <a href="/admin/projects/new/" class="button button-new">Create New</a>
+    </div>
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="projects-table">
+        <thead>
+            <tr>
+                {!--<th scope="col">&nbsp;</th>--}
+                <th scope="col">Client</th>
+                <th scope="col">Job #</th>
+                <th scope="col">Project Title</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+        {exp:channel:entries dynamic="off" channel="projects" status="open|Pending|Active|Submitted|Completed|Archived" limit="1000" orderby="entry_date" sort="desc" disable="categories|category_fields|member_data|pagination"}
+            <tr>
+                {!--<td class="cell-edit"><a href="#">EDIT</a></td>--}
+                <td class="cell-client"><span title="{customer:title}">{customer:client_code} ({customer:title})</span></td>
+                <td class="cell-job">{job_number}</td>
+                {customer}
+                {/customer}
+                <td class="cell-title"><a href="/admin/project/{entry_id}/">{title}</a></td>
+                <td class="cell-status">{status}</td>
+            </tr>
+        {/exp:channel:entries}
+        </tbody>
+    </table>
+
+</div>
+</div>
+{embed="admin/pages-bottom"}
+</html>

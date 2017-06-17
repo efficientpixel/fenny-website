@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="delete_template_group.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520000000000" Dst="1" />
+<file name="edit_email_notification.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520000000000" Dst="1" />
+<file name="edit_template.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520000000000" Dst="1" />
+<file name="edit_template_group.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520000000000" Dst="1" />
+<file name="edit_template_group_order.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520000000000" Dst="1" />
+<file name="edit_theme_template.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520000000000" Dst="1" />
+<file name="email_notification.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520000000000" Dst="1" />
+<file name="global_template_preferences.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520000000000" Dst="1" />
+<file name="global_variables.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520000000000" Dst="1" />
+<file name="global_variables_create.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520000000000" Dst="1" />
+<file name="global_variables_delete.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520000000000" Dst="1" />
+<file name="global_variables_update.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520000000000" Dst="1" />
+<file name="manager.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520000000000" Dst="1" />
+<file name="member_profile_templates.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520600000000" Dst="1" />
+<file name="member_profile_templates_list.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520600000000" Dst="1" />
+<file name="new_template.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520600000000" Dst="1" />
+<file name="new_template_group.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520600000000" Dst="1" />
+<file name="new_template_group_pick.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520600000000" Dst="1" />
+<file name="revision_history.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520600000000" Dst="1" />
+<file name="snippets.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520600000000" Dst="1" />
+<file name="snippets_delete.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520600000000" Dst="1" />
+<file name="snippets_edit.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520600000000" Dst="1" />
+<file name="sync_confirm.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520600000000" Dst="1" />
+<file name="system_offline.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520600000000" Dst="1" />
+<file name="template_delete_confirm.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520600000000" Dst="1" />
+<file name="template_group_delete_confirm.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520600000000" Dst="1" />
+<file name="template_preferences_manager.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520600000000" Dst="1" />
+<file name="url_manager.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520600000000" Dst="1" />
+<file name="user_message.php" server="ftp.fennyengineering.com" local="130952698940000000" remote="130985520600000000" Dst="1" />
+</dwsync>

@@ -1,0 +1,34 @@
+<p>Load Time: {elapsed_time} seconds | Queries: {total_queries}</p>
+
+<pre>{exp:pcf:parse url="/data/pcf/testpcf-1.pcf"}{descmod find="flange" replace="FLANGE"}{type}{/descmod}
+    {endpoint1}
+    {endpoint2}
+    {centrepoint}
+    {branch1point}
+    {descmod find="" replace="" type="{type}" function="skey"}{skey}{/descmod}
+    {itemcode}
+    {itemdesc}
+    {pipingspec}
+    {spoolidentifier}
+    {itemattribute0}
+{/exp:pcf:parse}</pre>
+{!--
+     END-POINT {endpoint1:z} {endpoint1:x} {endpoint1:y}
+     END-POINT {endpoint2:z} {endpoint2:x} {endpoint2:y}
+
+    {endpoint1:z}
+    {endpoint1:x}
+    {endpoint1:y}
+    {endpoint1:size}
+    {endpoint2:z}
+    {endpoint2:x}
+    {endpoint2:y}
+    {endpoint2:size}
+    {centrepoint:z}
+    {centrepoint:x}
+    {centrepoint:y}
+    {branch1point:z}
+    {branch1point:x}
+    {branch1point:y}
+    {branch1point:size}
+--}

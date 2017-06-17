@@ -1,0 +1,93 @@
+{exp:stringy:removeemptyline}{exp:replace_plus find="ISOGEN-FILES ISOGEN.FLS|UNITS-BORE INCH|UNITS-CO-ORDS INCH|UNITS-BOLT-LENGTH INCH|UNITS-BOLT-DIA INCH|UNITS-WEIGHT LBS|PIPELINE-REFERENCE Progressive Build Drains-1" replace="" multiple="yes"}
+{exp:pcf:parse url="/data/pcf/jwd-plastic/priority-2-1.PCF" parse="inward"}
+{exp:switchee variable="{type}"}
+{case value="PIPE"}
+{if '{embed:axis}' == 'X'}
+{if '{endpoint1:x}' == '{endpoint2:x}'}
+<?PHP
+$trapz = {embed:zcoord};
+$pipex = {endpoint1:x};
+$greatestz;
+$lowestz;
+$greatestx;
+$lowestx;
+$pipeend1 = {endpoint1:z};
+$pipeend2 = {endpoint2:z};
+$trapend1 = {embed:xcoord1};
+$trapend2 = {embed:xcoord2};
+
+if (($pipeend1) > ($pipeend2)) {
+	$greatestz = $pipeend1;
+    $lowestz = $pipeend2;
+} else {
+	$greatestz = $pipeend2;
+    $lowestz = $pipeend1;
+}
+if (($trapend1) > ($trapend2)) {
+	$greatestx = $trapend1;
+    $lowestx = $trapend2;
+} else {
+	$greatestx = $trapend2;
+    $lowestx = $trapend1;
+}
+if (($trapz) < ($greatestz) && ($trapz) > ($lowestz)) {
+    if (($pipex) < ($greatestx) && ($pipex) > ($lowestx)) {
+echo '
+SUPPORT
+    CO-ORDS {embed:zcoord} {endpoint1:x} {endpoint1:y} {endpoint1:size}  PL
+    SKEY 01V2
+    {itemcode}
+    ITEM-DESCRIPTION Trapeze Support
+    ADDITIONAL-ITEM
+    {fabitem}
+    {revision}
+    {project-identifier}
+    {area}
+    {piping-spec}
+    {date-dmy}
+    {spoolidentifier}
+    {itemattribute0}
+    ITEM-ATTRIBUTE1 !!! UNDEFINED-COMPONENT !!!';
+	}
+}  
+?>
+    {/if}
+    {/if}{!--
+{if '{embed:axis}' == 'Z'}
+{if '{endpoint1:z}' == '{endpoint2:z}'}
+<?PHP
+$trapx = {embed:xcoord};
+$greatest;
+$lowest;
+$end1 = {endpoint1:x};
+$end2 = {endpoint2:x};
+if (($end1) > ($end2)) {
+	$greatest = $end1;
+    $lowest = $end2;
+} else {
+	$greatest = $end2;
+    $lowest = $end1;
+}
+if (($trapx) < ($greatest) && ($trapx) > ($lowest)) {
+echo '
+SUPPORT
+    CO-ORDS {endpoint1:z} {embed:xcoord} {endpoint1:y} {endpoint1:size}  PL
+    SKEY 01V2
+    {itemcode}
+    ITEM-DESCRIPTION Trapeze Support
+    ADDITIONAL-ITEM
+    {fabitem}
+    {revision}
+    {project-identifier}
+    {area}
+    {piping-spec}
+    {date-dmy}
+    {spoolidentifier}
+    {itemattribute0}
+    ITEM-ATTRIBUTE1 !!! UNDEFINED-COMPONENT !!!';
+}  
+?>
+    {/if}
+    {/if}--}
+{/case}
+{/exp:switchee}{/exp:pcf:parse}{/exp:replace_plus}{/exp:stringy:removeemptyline}

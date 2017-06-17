@@ -1,0 +1,825 @@
+@import "reset-v3.1.css";
+@import "main.css";
+@import "normalize.css";
+@import "components.css";
+/*===================================
+            GLOBAL
+====================================*/
+body, html {
+font-family:'Open Sans', Arial, Helvetica, sans-serif;
+background-color:#999;	
+}
+.container {
+background-color:#EFECE7;
+}
+.container-content {
+/*max-width:1400px;*/
+margin:0 auto;	
+padding:50px 30px;
+position:relative;
+}
+.content-main {
+float:left;
+width:80%;	
+}
+.container-header {
+background-color:#6C1313;
+color:#fff;
+}
+.container-history {
+background-color:#EFECE7;	
+border-bottom:1px solid #A3A29E;
+padding:6px 0 6px 0;
+}
+.history-buttons {
+padding:5px 30px;	
+font-family:"Roboto", Arial, Helvetica, sans-serif;
+font-size:15px;
+text-transform:uppercase;
+font-weight:600;
+}
+.history-button {
+text-decoration:none;	
+color:#222;
+}
+.sidebar {
+float:right;
+width:15%;
+padding:0 0 0 5%;
+}
+.header {
+max-width:1400px;
+max-width:100%;
+margin:0 auto;	
+padding:0;
+}
+.header-home-button {
+float:left;
+width:60px;
+height:60px;
+background-color:rgba(0,0,0,0.4);
+text-decoration:none;
+overflow:hidden;
+text-indent:100%;
+background-image:url(../../i/icons/svg/home.svg);
+background-position:50% 50%;
+background-repeat:no-repeat;	
+-webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+.header-home-button:hover {
+background-color:rgba(0,0,0,0.2);
+}
+.header-inner {
+display:block;
+margin:0 0 0 60px;
+padding:15px 30px 0 30px;	
+position:relative;
+}
+.branding {
+float:left;	
+font-size:20px;
+line-height:28px;
+}
+.header-account {
+white-space:nowrap;
+float:right;
+}
+.header-loggedin {
+float:right;
+white-space:nowrap;	
+}
+.header-tabs {
+list-style:none;
+margin:0;
+padding:0;	
+float:left;
+padding-left:50px;
+padding-top:6px;
+}
+.header-tabs li {
+float:left;
+margin:0 20px 0 0;
+}
+.header-tabs a {
+color:#fff;	
+}
+.header-account a {
+color:#fff;	
+line-height:28px;
+}
+.page-header {
+padding:20px 0;
+margin:0 0 20px 0;	
+}
+.page-header h1 {
+margin:0;
+font-size:28px;	
+}
+.page-header h2 {
+font-size:22px;	
+}
+.page-header .project-title {
+font-size:25px;
+margin-top:20px;	
+}
+.existing-clients {
+list-style:none;
+margin:0;
+padding:0;	
+}
+.existing-clients li {
+line-height:20px;
+margin:0 0 8px 0;
+}
+.field-link {
+display:inline-block;
+margin:5px 0 0 0;	
+color:#000;
+}
+.msg {
+position:absolute;
+top:0;
+width:100%;
+text-align:center;
+padding:7px 0;
+line-height:20px;
+}
+.msg-updated {
+background-color:#BDE5F8;
+color:#00529B;
+}
+.page-header-title {
+float:left;	
+}
+.page-header-button {
+margin-left:5px;	
+}
+.invoice-list {
+list-style:none;	
+margin:0;
+padding:0;
+}
+.invoice-item {
+margin:0 0 8px 0;	
+}
+.header-right {
+white-space:nowrap;
+float:right;	
+}
+.admin-container-footer {
+background-color:#999;	
+}
+.admin-footer {
+max-width:1400px;
+margin:0 auto;	
+padding:50px 30px;
+position:relative;
+font-size:14px;
+font-weight:600;
+}
+.sidebar h3 {
+font-size:18px;
+line-height:20px;
+margin:0 0 10px 0;	
+}
+.item-status {
+border-radius:100px;
+background-color:#CEC8B9;
+display:inline-block;
+padding:3px 5px;
+}
+.status-Submitted {
+background-color:#F3F5B4;	
+}
+.projects-list-container {
+margin:0 0 30px 0;	
+}
+.project-list-header {
+font-size:16px;
+margin:0 0 8px 0;	
+}
+.projects-header {
+margin:60px 0 0 0;	
+}
+.crumbs {
+    margin: 0 0 17px 0;
+    font-size: 17px;	
+}
+.help-content {
+text-align:left;	
+}
+.help-content p {
+line-height:22px;
+margin:0 0 10px 0;
+}
+/*===================================
+            COMPONENTS
+====================================*/
+.btn {
+display:inline-block;
+text-align:center;
+border:0;
+text-decoration:none;
+color:#222;
+font-size:13px;	
+background-color:#ccc;
+line-height:20px;
+padding:4px 12px;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+border-radius:3px;
+font-weight:600;
+}
+.btn:hover {
+background-color:#999;	
+}
+.btn-submit {
+background-color:#7D1804;
+color:#fff;
+line-height:24px;
+font-size:15px;
+padding:7px 15px;
+}
+.pill {
+list-style:none;
+margin:0;
+padding:0;	
+position:relative;
+display:inline-block;
+/*padding:1px;*/
+background-color:rgba(255,255,255,0.2);
+}
+.pill-item {
+float:left;
+margin:0 1px 0 0;
+padding:0;	
+}
+.pill-item a,.pill-item strong {
+float:left;
+text-decoration:none;
+line-height:20px;
+font-size:15px;
+font-weight:600;
+padding:5px 10px;
+background-color:#D1C9BA;
+margin:0;
+}
+.pill-item:last-child {
+margin:0;	
+}
+.pill-item a {
+color:#222;
+background-color:#DBD5CA;
+}
+.pill-item a:hover {
+	background-color:#999;	
+}
+.pill-item strong {
+background-color:#B9AB95;
+font-weight:700;
+}
+.tabs-item {
+float:left;
+margin:0 10px 0 0;	
+}
+
+/*===================================
+            PROJECTS
+====================================*/
+.projects-table {
+width:100%;
+}
+.projects-table th {
+text-align:left;
+padding:14px 10px 14px 10px;	
+color:#444;
+font-size:18px;
+font-weight:700;
+}
+.projects-table .tablesorter-header-inner {
+padding-right:20px;	
+}
+.projects-table tbody td {
+padding:9px 10px;	
+background-color:#fff;
+border-top:2px solid #E6E2DB;
+font-weight:600;
+color:#191919;
+color:#444;
+font-size:15px;
+position:relative;
+min-height:26px;
+height:26px;
+vertical-align:middle;
+}
+.projects-table .cell-state {
+width:50px;
+}
+.projects-table .cell-client {
+width:50px;
+}
+.projects-table .cell-pm {
+width:50px;
+}
+.projects-table .cell-archive {
+width:50px;
+}
+
+.projects-table tbody .primary {
+color:#222;	
+font-weight:700;
+}
+.projects-table tbody tr:last-child td {
+border-bottom:2px solid #E6E2DB;
+}
+.projects-table tbody tr:first-child td {
+border-top:0;
+}
+/*
+.projects-list-completed tr:first-child td {
+border-top:1px solid #999;	
+}
+.projects-list-completed td {
+background-color:#ddd;	
+}*/
+.projects-table tbody tr:hover td {
+background-color:#E6E2DB;
+position:relative;
+}
+.projects-table tbody tr td:first-child:before {
+content:'';
+position:absolute;
+top:-2px;
+left:-4px;
+width:4px;
+height:58px;
+background:#504F4F;	
+visibility:hidden;
+}
+.projects-table tbody tr:first-child td:first-child:before {
+top:0;
+height:56px;
+}
+.projects-table tbody tr:hover td:first-child:before {
+visibility:visible;
+}
+.projects-table tbody tr.row-completed td {
+background-color:#DFF0D8;	
+border-top-color:#C7E1B0;
+}
+.projects-table tbody tr.row-completed:last-child td {
+border-bottom-color:#C7E1B0;
+}
+.projects-table tbody tr.row-completed + tr td {
+border-top-color:#C7E1B0;
+}
+.projects-table tbody tr.row-completed td:first-child:before {
+visibility:visible;
+background:#3C763D;	
+
+}
+.table-heading {
+margin:0 0 8px 0;
+padding:8px 8px;	
+}
+.projects-table tfoot td {
+padding:15px 0;	
+}
+.projects-table td a {
+text-decoration:none;	
+color:#191919;
+color:#444;
+}
+.projects-table td a:hover {
+text-decoration:underline;	
+color:#7D1804;
+}
+.projects-table thead .header-archive {
+text-align:right;
+}
+.projects-table tbody .cell-title {
+padding-left:20px;	
+}
+.cell-client {
+width:50px;	
+}
+.cell-job {
+width:50px;	
+}
+.cell-pm {
+width:50px;	
+}
+.cell-date {
+width:50px;	
+}
+.cell-status {
+width:130px;	
+}
+.projects-table tbody .cell-archive {
+text-align:right;
+width:22px;	
+}
+.projects-table tbody .cell-timer {
+width:24px;	
+}
+.table-footer {
+text-align:right;
+padding:15px 0;	
+}
+/*===================================
+            FORMS
+====================================*/
+.form-main {
+float:left;
+width:58%;	
+padding:3% 5% 5% 0;
+border-right:1px solid #999;
+}
+.form-side {
+float:right;
+width:32.5%;	
+padding:3% 2% 0 0;
+}
+.form-row {
+display:block;
+margin:0 0 20px 0;	
+}
+.form-side .form-row {
+margin:0 0 35px 0;	
+}
+.field-label {
+font-family:'Open Sans', Arial, Helvetica, sans-serif;
+font-size:18px;
+font-weight:600;
+display:inline-block;
+margin:0 0 8px 0;
+text-align:left;
+}
+
+.field-text {
+display:block;
+width:96%;
+padding:8px 12px;	
+border:1px solid #777;
+height:24px;
+}
+.field-price-input {
+max-width:140px;	
+float:left;
+}
+.currency-symbol {
+float:left;
+line-height:38px;
+margin:0 5px 0 0;	
+}
+.field-dropdown {
+padding:8px 12px;	
+border:1px solid #777;
+height:42px;
+}
+.field-date {
+max-width:150px;
+display:block;
+width:96%;
+padding:8px 12px;	
+border:1px solid #777;	
+height:24px;
+}
+.inline-field {
+float:left;
+margin:0 2% 0 0;	
+}
+.field-item {
+margin:0 0 10px 0;	
+}
+.field-textbox {
+display:block;
+width:300px;
+max-width:96%;
+min-width:300px;
+padding:8px 12px;	
+border:1px solid #777;
+height:auto;
+line-height:22px;
+}
+.field-submit {
+height:44px;
+width:140px;
+text-align:center;
+background-color:#6C1313;
+color:#fff;
+font-weight:600;	
+border:0;
+}
+.date-invoice,.date-invoice2 {
+padding:4px 9px;	
+border:1px solid #777;	
+width:100%;
+float:left;
+width:125px;
+margin:0;
+}
+.price-invoice {
+padding:4px 9px;	
+border:1px solid #777;	
+width:100%;
+float:left;
+width:100px;
+margin:0;
+}
+.price-id {
+padding:4px 9px;	
+border:1px solid #777;	
+width:100%;
+float:left;
+width:80px;
+margin:0;
+}
+
+.invoice-inputs {
+border:1px solid #777;	
+float:left;	
+margin:0 5px 0 0;
+}
+.invoice-inputs input {
+border:0;	
+}
+.invoice-inputs .date-invoice,.invoice-inputs .price-invoice {
+border-right:1px solid #ccc;	
+}
+/* unique fields */
+#field-clientcode {
+max-width:100px;	
+}
+#field-jobnum {
+max-width:70px;	
+}
+#field-projectnotes {
+width:96%;	
+}
+.container-delete {
+float:right;	
+}
+/*================================
+			PROJECTS LIST
+===============================*/
+.status-flag {
+padding:5px 12px;
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+border-radius:10px;
+display:inline-block;
+}
+.status-submitted {
+background-color:#F3F5B4;	
+}
+.icon-stamp {
+background-image:url(../../i/icons/svg/person-add.svg);
+background-size:100% auto;
+background-repeat:no-repeat;
+display:inline-block;
+width:16px;
+height:18px;
+text-indent:100%;
+overflow:hidden;
+position:relative;	
+left:6px;
+top:3px;
+}
+.projects-list {
+list-style:none;
+margin:0;4
+padding:0;	
+}
+.projects-list li {
+margin:0 0 10px 0;	
+line-height:20px;
+}
+.member-name-header {
+margin:0 0 22px 0;	
+}
+.initial-header {
+float:left;
+border-radius:100px;
+background-color:#777;
+color:#fff;
+width:30px;
+height:30px;
+line-height:30px;	
+text-align:center;
+font-weight:600;
+position:relative;
+top:-5px;
+left:-2px;
+margin:0 5px 0 0;
+}
+.member-heading-name {
+font-size:20px;
+margin:0;
+float:left;	
+}
+.team-list {
+list-style:none;
+margin:0;
+padding:0;	
+}
+.member-item {
+line-height:20px;
+margin:0 0 8px 0;	
+}
+.projects-total-price {
+padding:10px;background-color:#ccc;
+border:1px solid #999;	
+}
+.header-invdate,.header-invprice,.header-invpaid,.header-invid {
+    line-height: 26px;
+    font-size: 17px;
+    float: left;
+    font-weight: 600;
+}
+.header-invdate {
+width:146px;
+}
+.header-invprice {
+width:120px;
+}
+.header-invid {
+width:100px;
+}
+
+.header-invpaid {
+margin-left:5px;
+}
+.invoice-item .btn-delete {
+margin-left:10px;	
+}
+.filter-table {
+float:right;
+white-space:nowrap;	
+height:auto;
+}
+.filter-table .quick { margin-left: 0.5em; font-size: 0.8em; text-decoration: none; }
+.fitler-table .quick:hover { text-decoration: underline; }
+td.alt { background-color: #ffc; background-color: rgba(255, 255, 0, 0.2); }
+.container-filter {
+float:right;
+white-space:nowrap;	
+}
+#field-status-memo {
+min-width:650px;
+}
+.status-timeline {
+list-style:none;
+margin:10px 0 8px 0;
+padding:0;	
+background-color:#fff;
+border:1px solid #999;
+}
+.status-timeline li {
+line-height:20px;
+margin:0;
+border-bottom:1px solid #999;
+padding:6px 6px;	
+}
+.status-timeline li:last-child {
+border:0;	
+}
+.history-link {
+font-size:14px;
+color:#222;
+}
+.client-notes {
+padding:15px;
+background-color:#fff;
+border:1px solid #999;
+margin:0 0 20px 0;
+}
+.client-notes h4 {
+font-size:17px;
+line-height:20px;
+margin:0 0 5px 0;
+}
+.client-notes p {
+line-height:18px;
+margin:0 0 10px 0;	
+}
+.resources-categories {
+margin:0;
+padding:0;
+list-style:none;	
+}
+.resources-categories > li {
+line-height:18px;
+margin:0 0 10px 0;	
+}
+.resources-list {
+margin:7px 0 10px 20px;
+padding:0;
+list-style:none;	
+}
+.client-address {
+margin:0 0 20px 0;
+}
+.client-address p {
+line-height:20px;
+margin:0 0 10px 0;	
+}
+.log-list {
+list-style:none;
+margin:20px 0;
+padding:10px;	
+}
+.log-item {
+font-size:14px;
+color:#222;	
+}
+.invoices-table {
+font-family:"Roboto", Arial, Helvetica, sans-serif;
+font-size:16px;
+color:#222;
+width:100%;
+}
+.invoices-table th {
+padding:10px 20px 20px 10px;
+text-align:left;
+font-weight:500;
+border-bottom:2px solid #666;
+text-transform:uppercase;
+}
+.invoice-item td {
+padding:20px 20px 15px 10px;
+border-bottom:1px solid #999;
+}
+.invoices-table tbody tr:first-child td {
+padding-top:25px;
+}
+.invoice-item .invoice-client {
+display:block;
+font-weight:600;
+line-height:14px;
+margin:0 0 4px 0;	
+position:relative;
+top:-1px;
+}
+.invoice-item .invoice-item-client {
+line-height:18px;	
+}
+.container-invoices {
+padding:50px 40px 40px 40px;
+background-color:#fff;	
+}
+.paid-invoices {
+list-style:none;
+margin:0;
+padding:0;	
+}
+.paid-invoices li {
+line-height:18px;
+margin:0 0 16px 0;
+font-size:14px;	
+}
+.field-email-link {
+padding:7px 0;	
+}
+/*================================
+			MODAL 
+===============================*/
+.modal-header {
+font-size:21px;
+margin:0 0 22px 0;
+text-align:left;	
+}
+.submitter {
+text-align:center;
+margin:10px 0 0 0;	
+display:none;
+}
+.submit-indicator {
+display:inline-block;
+}
+.history-list {
+text-align:left;	
+list-style:none;
+padding:0;
+margin:0;
+}
+.history-list li {
+text-align:left;	
+line-height:20px;
+margin:0 0 20px 0;
+}
+.modal-content {
+text-align:left;	
+}
+.modal-invoice-request {
+	
+}
+.invoice-project-title {
+margin:0 0 15px 0;	
+}
+.modal-invoice-description {
+margin:0 0 20px 0;	
+}

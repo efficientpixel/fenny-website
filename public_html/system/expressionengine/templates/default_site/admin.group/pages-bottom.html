@@ -1,0 +1,26 @@
+        {!--<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>--}
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	  <script>window.jQuery || document.write('<script src="/js/admin/jquery-3.1.1.min.js"><\/script>')</script>
+		<script src="/js/admin/datepicker.js"></script>
+        <script src="/js/admin/datepicker.en.js"></script>
+        <script src="/js/admin/icheck.js"></script>
+        <script src="/js/admin/jquery.tablesorter.js"></script>
+        <script src="/js/admin/jquery.tablesorter.widgets.js"></script>
+        <script src="/js/admin/remodal.js"></script>
+        <script src="/js/admin/jquery.form.js"></script>
+        <script src="/js/admin/jquery.filtertable.min.js"></script>
+        
+        {if segment_2 == 'project' OR segment_3 == 'new'}
+        <script src="/js/admin/trumbowyg.min.js"></script>
+        {!--<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>--}  
+        {/if}
+
+<script>
+$(document).ready(function() {
+	{embed='admin-scripts/.global' scripts='{embed:script}'}
+});
+</script>
+{if '{embed:include_harvest}' == 'y'}
+<script async src="https://platform.harvestapp.com/assets/platform.js"></script>
+{/if}
+</body>

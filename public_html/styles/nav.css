@@ -1,0 +1,55 @@
+/*-----------------------------------------
+------------ Main Navigation --------------
+------------------------------------------*/
+#nav-main {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.nav-item {
+	float:left;
+	border-right:1px solid #c6beab;
+	font-size:14px;
+	height:16px;
+	overflow:visible;
+	font-family:"Franklin Gothic Book", Arial, Helvetica, sans-serif;
+}
+.nav-link {
+	float:left;
+	padding:0 15px;
+	line-height:14px;
+	text-decoration:none;
+	color:#3b362c;
+	text-transform:uppercase;
+	position:relative;
+	top:-3px;
+}
+.nav-link span {
+float:left;
+line-height:14px;
+padding:4px 0 5px 0;
+cursor:pointer;
+}
+.nav-item .current span {
+	border-bottom:1px solid #3b362c;
+	padding:4px 0;	
+}
+.nav-link:hover span {
+border-bottom:1px solid #ccc;	
+padding:4px 0;	
+}
+.nav-right {
+float:right;
+padding:4px 14px;
+border:0;	
+}
+.nav-link:hover {
+text-decoration:underline;	
+}
+.current .nav-link span {
+color:#581111;
+font-weight:bold;
+	border-bottom:1px solid #3b362c;
+	padding:4px 0;	
+
+}

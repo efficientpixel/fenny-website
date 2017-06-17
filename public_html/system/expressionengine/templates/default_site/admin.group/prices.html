@@ -1,0 +1,13 @@
+ {if in_group_1_7}
+{exp:switchee variable='{segment_3}' parse='inward'}
+{case value='|updated'}
+${exp:tally:total collection="prices-active" decimals="2"} &nbsp;(active + submitted)
+{/case}
+{case value='completed'}
+${exp:tally:total collection="prices-completed-{segment_4}" decimals="2"} for {segment_4}
+{/case}
+{case value='quotes'}
+${exp:tally:total collection="prices-current-quotes" decimals="2"}
+{/case}
+{/exp:switchee}
+{/if}

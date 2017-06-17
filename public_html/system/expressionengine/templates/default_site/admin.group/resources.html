@@ -1,0 +1,45 @@
+{embed="admin/head"}
+<body>
+{embed="admin/header"}
+<div class="container">
+	<div class="container-content">
+    <div class="page-header">
+        <h1 class="page-title page-header-title">Resources</h1>
+    </div>
+    <div class="projects-list-container content-main">
+    <ul class="resources-categories">
+    	<li class="resource-item">Conversion</li>
+    	<li class="resource-item">Flanges</li>
+    	<li class="resource-item"><a href="/admin/resources/materials/">Materials</a>
+        {if segment_3 == 'materials'}
+        	<h4>Custom Material Values</h4>
+        	<ul class="resources-list">
+            	<li><a href="http://www.engineeringtoolbox.com/young-modulus-d_773.html" target="_blank">Modulus of Elasticity</a></li>
+            	<li><a href="http://www.engineeringtoolbox.com/metal-alloys-densities-d_50.html" target="_blank">Densities</a></li>
+            	<li><a href="http://www.engineeringtoolbox.com/metals-poissons-ratio-d_1268.html" target="_blank">Poisson's Ratio of Metals</a></li>
+            	<li><a href="http://www.engineeringtoolbox.com/modulus-rigidity-d_946.html" target="_blank">Shear Modulus of Rigidity</a></li>
+            </ul>
+        	<ul class="resources-list">
+            	<li><a href="http://www.engineeringtoolbox.com/astm-copper-tubes-d_779.html" target="_blank">Water and Gas Copper Tubes according ASTM B 88 - imperial units</a></li>
+            </ul>
+        {/if}
+        </li>
+    	<li class="resource-item">Supports</li>
+    	<li class="resource-item"><a href="/admin/resources/structural/">Structural</a> (i.e. steel)
+        {if segment_3 == 'structural'}
+        	<ul class="resources-list">
+            	<li><a href="http://steeldetail.aisc.org/L8.aspx" target="_blank">AISC Structural Steel Detailing Tool</a></li>
+            	<li><a href="/uploads/resources/AISC%20Shapes%20Database%20v14.1.xls" target="_blank">AISC Shapes Databse v14.1.xls</a></li>
+            </ul>
+        {/if}
+        </li>
+    	<li class="resource-item">Valves</li>
+    </ul>
+    </div>
+{embed="admin/projects-sidebar"}
+</div>
+
+</div>
+{admin-footer}
+{embed="admin/pages-bottom" script="filter"}
+</html>

@@ -1,0 +1,42 @@
+   Units Coordinates: INCH
+   Units Factor     :      0.083
+ 
+NTL Processing................
+ 
+ Segment    1  :    Pipe   723.9119   1404.1766    181.2057
+ AutoPIPE Units     :    117.015    15.100    60.326
+------------------------------------------------------------
+  Pipe  
+  Global Coordinates:    848.552    1404.177     181.192
+  Offset Coordinates:    -10.387      -0.000      -0.001
+ 
+  Flange  
+  Global Coordinates:      0.000       0.000       0.000
+  Offset Coordinates:     70.713     117.015     -15.099
+ 
+ Segment    4  :    Pipe   849.4668   1404.1772    173.5465
+ AutoPIPE Units     :    117.015    14.462    70.789
+------------------------------------------------------------
+  Pipe  
+  Global Coordinates:    849.467    1404.177     179.893
+  Offset Coordinates:     -0.000      -0.000       0.529
+ 
+  Flange  
+  Global Coordinates:      0.000       0.000       0.000
+  Offset Coordinates:     70.789     117.015     -14.991
+ 
+  Flange  
+  Global Coordinates:    850.382    1404.177     181.192
+  Offset Coordinates:    -70.865    -117.015      15.099
+ 
+ Segment    7  :    Pipe   850.3820   1404.1771    181.1941
+ AutoPIPE Units     :    117.015    15.100    70.865
+------------------------------------------------------------
+  Pipe  
+  Global Coordinates:    928.712    1404.177     181.186
+  Offset Coordinates:     -6.528      -0.000      -0.001
+ 
+------------------------------------------------------------
+NTL Processing Complete.......
+------------------------------------------------------------
+ 

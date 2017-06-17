@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Fenny Engineering Load Sheet</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/main.css">
+{!--<link rel="stylesheet" href="/css/themes/blue/style.css" />--}
+<link rel="stylesheet" href="/css/load-sheet.css" />
+
+        <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+
+
+<body>
+
+
+<p>Load Time: {elapsed_time} seconds | Queries: {total_queries}</p>
+<div class="sheet">
+<p>View <a href="/load-sheet/new/full/">Full Sheet</a></p>
+{exp:switchee variable="{segment_3}" parse="inward"}
+{case value="full"}
+{embed='load-sheet/points' points='{exp:channel:entries channel="load_sheet_points" dynamic="off" limit="100000" disable="categories|member_fields" orderby="entry_date" sort="asc" paginate="bottom"}{point}|{/exp:channel:entries}'}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+
+});
+</script>
+
+{/case}
+{case default="Yes"}
+{exp:channel:entries channel="load_sheet_points" dynamic="off" limit="200" disable="categories|member_fields" orderby="entry_date" sort="asc" paginate="bottom"}
+{paginate}{pagination_links}{/paginate}
+{/exp:channel:entries}
+{embed='load-sheet/points' points='{exp:channel:entries channel="load_sheet_points" dynamic="off" limit="200" disable="categories|member_fields" orderby="entry_date" sort="asc" paginate="hidden"}{point}|{/exp:channel:entries}'}
+{exp:channel:entries channel="load_sheet_points" dynamic="off" limit="200" disable="categories|member_fields" orderby="entry_date" sort="asc" paginate="bottom"}
+{paginate}{pagination_links}{/paginate}
+{/exp:channel:entries}
+<div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+{exp:channel:entries channel="load_sheet_points" dynamic="off" limit="200" disable="categories|member_fields" orderby="entry_date" sort="asc" paginate="bottom"}
+{paginate}{pagination_links}
+{if segment_3 == ''}
+<script>
+$(document).ready(function() {
+
+var currentPage = 1;
+var queryLength = 200;
+var totalPages = {total_pages};
+var loadNewRows = function() {
+	if(currentPage < totalPages) {
+		var currentPID = currentPage * queryLength;
+		$.ajax({
+		  url: '/load-sheet/load/P'+currentPID+'/',
+		  success: function(data) {
+			  $(data).appendTo("tbody");
+			  currentPage = currentPage + 1;
+			  console.log('rows loaded from /'+currentPID+'/, Page '+currentPage+' of '+totalPages+' Pages');
+			  loadNewRows();
+		  },
+		  dataType: 'html'
+		});
+	} else {
+	console.log('done ading rows');	
+	alert('Done Loading Load Summary');
+	}
+}
+loadNewRows();
+});
+</script>
+{/if}
+{/pagination_links}
+{/paginate}
+{/exp:channel:entries}
+
+{/case}
+{/exp:switchee}
+</body>
+</html>

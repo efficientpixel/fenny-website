@@ -1,0 +1,57 @@
+/* Load Sheet*/
+/*
+tr th {
+display:none;	
+}
+tr th:nth-child(8n) {
+display:table-cell;
+}
+tr td {
+display:none;	
+}
+tr td:nth-child(8n) {
+display:table-cell;
+}
+
+*/
+body {
+padding:10px;	
+}
+.sheet {
+max-width:1000px;
+margin:0 auto;	
+}
+table {
+border-collapse:collapse;	
+}
+td {
+	
+}
+
+.sorted tbody tr {
+opacity:0.3;
+display:none;
+}
+.sorted tbody tr:nth-child(8n) {
+opacity:1.0;
+display:table-row;
+}
+
+tbody tr:hover td {
+background-color:#eee;	
+}
+table thead th {
+background-color:#FFFFCC;
+border:2px solid #000;
+padding:5px;
+font-size:13px;
+font-weight:bold;
+}
+table tbody td {
+border:1px solid #000;	
+text-align:center;
+font-size:12px;
+vertical-align:middle;
+padding:5px;
+white-space:nowrap;
+}

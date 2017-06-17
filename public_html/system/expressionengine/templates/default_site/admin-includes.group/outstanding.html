@@ -1,0 +1,5 @@
+${exp:math formula="[1] - [2]" params="{embed:invoiced}|{embed:paid}" decimals="2" trailing_zeros="yes"}
+<br>
+<br>
+{exp:stash:set name="tobeinvoiced"}{exp:math formula="[1] - [2]" params="{embed:price}|{embed:invoiced}" decimals="2" trailing_zeros="yes"}{/exp:stash:set}
+(${exp:math formula="[1] - [2]" params="{embed:price}|{embed:invoiced}" decimals="2" trailing_zeros="yes"} remaining to be invoiced)

@@ -1,0 +1,71 @@
+@import "normalize.css";
+@import "reset-v3.1.css";
+
+body {
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+max-width:1000px;
+margin:0 auto;
+outline:1px solid #3CF;
+padding:10px;	
+}
+nav ul {
+list-style:none;	
+padding:10px;
+}
+nav li {
+float:left;
+margin:0 20px 0 0;	
+font-size:14px;
+}
+h1,h2,h3,h4,h5,h6 {
+outline:1px dotted #F0F;
+padding:5px;
+margin:10px 0;	
+}
+h1 {
+font-size:20px;	
+}
+h2 {
+font-size:17px;	
+}
+h3 {
+font-size:14px;	
+}
+h4 {
+font-size:12px;	
+}
+p {
+outline:1px dotted #0000FF;
+margin:0 0 20px 0;
+padding:5px;	
+line-height:20px;
+}
+/* HTML5 Structure Elements */
+header,nav,main,aside,section,article,footer {
+margin:10px;	
+}
+header {
+outline:1px solid red;
+padding:5px;	
+}
+nav {
+outline:1px solid #093;	
+}
+main {
+float:left;
+width:65%;
+outline:1px solid #033;	
+padding:10px;
+}
+aside {
+float:right;
+padding:10px;
+margin:10px;
+outline:1px solid pink;	
+width:27%;
+}
+footer {
+outline:1px solid #666;
+padding:10px;	
+}

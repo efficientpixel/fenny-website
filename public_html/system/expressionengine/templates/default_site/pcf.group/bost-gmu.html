@@ -1,0 +1,89 @@
+<pre>{exp:replace_plus find="CID[2047]" replace="CID=[2047]" multiple="yes"}{exp:stringy:removeemptyline}{exp:pcf:parse url="/data/pcf/bost/MP-03B.PCF" parse="inward"}
+{exp:switchee variable="{descmod findreplace="flange=FLANGE|clevis=SUPPORT|Coupling=COUPLING|Reducer=REDUCER"}{type}{/descmod}"}
+{case value="CAP|TEE-SET-ON|REDUCER-ECCENTRIC-TEED|SUPPORT|COUPLING"}{/case}
+{case value="REDUCER-ECCENTRIC-TEED"}REDUCER-ECCENTRIC-TEED
+    END-POINT {branch1point:z} {endpoint1:x} {endpoint2:y} {branch1point:size} PL
+    END-POINT {endpoint2:z} {endpoint1:x} {endpoint2:y} {endpoint2:size} PL
+    CENTRE-POINT  {endpoint1:z}  {endpoint1:x}  {endpoint2:y}
+    BRANCH1-POINT  {endpoint1:z}  {endpoint1:x}  {endpoint1:y}  {endpoint1:size}  PL
+    {descmod findreplace="tee=TEPL"}{skey}{/descmod}
+    {descmod findreplace="CxC=3679|NoWT-600 - Tee=3679"}{itemcode}{/descmod}
+    {descmod findreplace="CxC=Reducing Tee|NoWT-600 - Tee=Reducing Tee"}{itemdesc}{/descmod}
+    {fabitem}
+    {revision}
+    {project-identifier}
+    {area}
+    {piping-spec}
+    {date-dmy}
+    {spoolidentifier}
+    {descmod findreplace="CxC=CID[2047]"}{itemattribute0}{/descmod}
+{/case}
+{case value="REDUCER-CONCENTRIC-TEED"}
+REDUCER-CONCENTRIC
+    END-POINT {endpoint1:z} {endpoint1:x} {endpoint1:y} {endpoint1:size} PL
+    END-POINT {endpoint2:z} {endpoint2:x} {endpoint2:y} {endpoint2:size} PL
+    SKEY RCPL
+    ITEM-CODE  16
+    ITEM-DESCRIPTION  NoWC-403 - Fitting Reducer 90 (FTGxC)
+    {fabitem}
+    {revision}
+    {project-identifier}
+    {area}
+    {piping-spec}
+    {date-dmy}
+    {spoolidentifier}
+    {itemattribute0}
+{/case}
+{case value="SUPPORT"}
+SUPPORT
+    CO-ORDS {endpoint1:z} {endpoint1:x} {endpoint1:y} {endpoint1:size} PL
+    SKEY 01V2
+    {itemcode}
+    {itemdesc}
+    ADDITIONAL-ITEM
+    {fabitem}
+    {revision}
+    {project-identifier}
+    {area}
+    {piping-spec}
+    {date-dmy}
+    {spoolidentifier}
+    {itemattribute0}
+    ITEM-ATTRIBUTE1 !!! UNDEFINED-COMPONENT !!!
+{/case}
+{case default="Yes"}{descmod findreplace="flange=FLANGE|elbow=ELBOW|clevis=SUPPORT"}{type}{/descmod}
+    {endpoint1}
+    {endpoint2}
+    {centrepoint}
+    {branch1point}
+    {descmod findreplace="blind flange=FLBL|weld neck=FLWN|WN Flange=FLWN"}{skey}{/descmod}
+    {itemcode}
+    {itemdesc}
+    {fabitem}
+    {revision}
+    {project-identifier}
+    {area}
+    {piping-spec}
+    {date-dmy}
+    {spoolidentifier}
+    {itemattribute0}
+{/case}{/exp:switchee}{/exp:pcf:parse}{/exp:stringy:removeemptyline}{/exp:replace_plus}</pre>{!--
+     END-POINT {endpoint1:z} {endpoint1:x} {endpoint1:y}
+     END-POINT {endpoint2:z} {endpoint2:x} {endpoint2:y}
+
+    {endpoint1:z}
+    {endpoint1:x}
+    {endpoint1:y}
+    {endpoint1:size}
+    {endpoint2:z}
+    {endpoint2:x}
+    {endpoint2:y}
+    {endpoint2:size}
+    {centrepoint:z}
+    {centrepoint:x}
+    {centrepoint:y}
+    {branch1point:z}
+    {branch1point:x}
+    {branch1point:y}
+    {branch1point:size}
+--}

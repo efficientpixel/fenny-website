@@ -1,0 +1,59 @@
+{embed="admin/head"}
+<body>
+{embed="admin/header"}
+<div class="container">
+	<div class="container-content">
+    <div class="page-header">
+        <div class="crumbs">
+        </div>
+        <h1 class="page-title">Login</h1>
+    </div>
+    <div class="page-content">
+    {exp:switchee variable='{segment_3}' parse='inward'}
+    	{case value='sent'}
+        <p>You have been sent an email containing a link to reset your password.</p><br>
+<br>
+
+        {/case}
+        {case value='updated'}
+        <p>Your password has been updated. Please login below.</p><br>
+<br>
+
+        {/case}
+        {case default='Yes'}
+        
+        {/case}
+    {/exp:switchee}
+    
+    {!--{exp:freemember:login return="/admin/projects/"}--}
+    {exp:member:login_form
+    return="/admin/projects/"
+}
+            	<div class="form-row">
+                	<label class="field-label field-row-header" for="field-username">Username/Email Address:</label>
+                    <div class="form-fields">
+                    	<input type="text" class="field-text field-email" name="username" id="field-username" value="" />
+                    </div>
+                </div>
+            	<div class="form-row">
+                	<label class="field-label field-row-header" for="field-password">Password:</label>
+                    <div class="form-fields">
+                    	<input type="password" class="field-text field-password" name="password" id="field-password" value="" />
+                    </div>
+                </div>
+                <div class="form-row">
+                 {if auto_login}
+                    <p><input type="checkbox" name="auto_login" value="1" checked="checked"> Auto-login on future visits</p>
+                  {/if}
+                </div>
+            	<div class="form-row">
+                <input type="submit" name="submit" value="Login" class="field-submit" /> &nbsp; <a href="/admin/forgot-password/">Forgot Password?</a>
+                </div>
+
+    </div>
+    {/exp:member:login_form}
+{!--{/exp:freemember:login}--}
+</div>
+</div>
+{embed="admin/pages-bottom"}
+</html>

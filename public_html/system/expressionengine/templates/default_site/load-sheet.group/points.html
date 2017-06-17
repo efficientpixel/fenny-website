@@ -1,0 +1,8 @@
+{exp:switchee variable='{segment_2}' parse='inward'}
+{case value='supports|new|load'}
+{embed="load-sheet/sheet" array="{exp:array_mill function='array_unique' param1='{exp:trimmer right="1"}{embed:points}{/exp:trimmer}' array_params='param1' parse='inward'}{array_mill_result}{/exp:array_mill}"}
+{/case}
+{case value='anchors'}
+{embed="load-sheet/sheet-anchors" array="{exp:array_mill function='array_unique' param1='{exp:trimmer right="1"}{embed:points}{/exp:trimmer}' array_params='param1' parse='inward'}{array_mill_result}{/exp:array_mill}"}
+{/case}
+{/exp:switchee}

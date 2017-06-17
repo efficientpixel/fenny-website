@@ -1,0 +1,26 @@
+/* 
+.cke_show_borders is only used in the iframe
+*/
+
+.cke_editable p,
+.cke_editable h1,
+.cke_editable h2,
+.cke_editable h3,
+.cke_editable h4,
+.cke_editable h5,
+.cke_editable h6,
+.cke_editable ul,
+.cke_editable ol,
+.cke_editable table,
+.cke_editable blockquote,
+.cke_editable pre,
+.cke_editable caption,
+.cke_editable div { 
+    /* 
+    following rule only works in non IE browsers. 
+    If this is used in IE, it adds hasLayout, so all elements are 'editable' 
+    
+    so tags are not visible behind floated images. hat tip to e-man.
+    */
+    overflow: hidden; 
+}

@@ -1,0 +1,5 @@
+  {exp:channel:entries channel="team_members" dynamic="off" disable="pagination"}
+                    	<div class="field-item">
+                            <label><input type="checkbox" name="field_id_47[data][]" value="{entry_id}" id="member-item-{entry_id}"{exp:pvl_checkif value='{entry_id}' is_in='{embed:selected}'} checked="checked"{/exp:pvl_checkif}> {first_name} {last_name}</label>
+                        </div>
+{/exp:channel:entries}

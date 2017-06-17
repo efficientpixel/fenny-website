@@ -1,0 +1,14 @@
+              {exp:sv_redirects:output_message}
+                                  {if no_message}
+                    No alerts or messages to report at this time
+                    {/if}
+
+                    {if '{md:title}' == 'Error'}
+                        <strong>{md:content}</strong>
+                        {sv_post_data_reload}
+                    {if:else}
+                        {md:content}
+                    {/if}
+                    
+                    {sv_debug_data}
+               {/exp:sv_redirects:output_message}

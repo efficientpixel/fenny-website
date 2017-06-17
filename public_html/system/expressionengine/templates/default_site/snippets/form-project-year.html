@@ -1,0 +1,10 @@
+            	{if '{current_time format="%m"}' == 11 OR '{current_time format="%m"}' == 12}
+                <div class="form-row">
+                	<label for="field-year" class="field-label field-row-header">Project Year:</label>
+                    <div class="form-fields">
+                            <label class="radio-check">{current_year} <span class="field-fancy"><input type="radio" name="project_year" value="{current_year}"{if '{project_year}' == '{current_year}' OR '{project_year}' == ''} checked="checked"{/if} /></span>
+                            <label class="radio-check">{next_year} <span class="field-fancy"><input type="radio" name="project_year" value="2017"{if '{project_year}' == '{next_year}'} checked="checked"{/if} /></span>
+                    </div>
+                    <span class="assist">Note: This field is only visible from Nov through Dec</span>
+                </div>
+                {/if}

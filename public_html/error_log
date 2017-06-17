@@ -1,0 +1,202 @@
+[28-Mar-2015 00:27:47 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[28-Mar-2015 00:27:51 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[28-Mar-2015 00:28:16 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[28-Mar-2015 00:29:10 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[28-Mar-2015 00:29:13 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[28-Mar-2015 00:29:18 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[28-Mar-2015 00:31:24 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[28-Mar-2015 00:31:29 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[12-May-2015 10:03:19 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[12-May-2015 10:03:30 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[12-May-2015 10:05:02 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[12-May-2015 10:05:10 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[12-May-2015 10:05:25 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[12-May-2015 10:18:54 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[12-May-2015 10:19:12 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[12-May-2015 10:19:19 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[22-May-2015 16:56:16 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[22-May-2015 16:56:23 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[22-May-2015 16:57:34 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[25-Aug-2015 13:10:58 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[25-Aug-2015 13:11:12 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[25-Aug-2015 13:16:43 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[25-Aug-2015 13:16:53 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[25-Aug-2015 13:17:46 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[25-Aug-2015 13:17:52 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[25-Aug-2015 13:19:09 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[01-Nov-2015 18:51:42 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[19-Nov-2015 18:52:44 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[19-Nov-2015 18:53:05 America/Chicago] PHP Warning:  Unknown: Input variables exceeded 1000. To increase the limit change max_input_vars in php.ini. in Unknown on line 0
+[02-Dec-2015 11:51:31 America/New_York] PHP Fatal error:  Only variables can be passed by reference in /home3/fec/public_html/system/expressionengine/third_party/array_mill/pi.array_mill.php on line 101
+[02-Dec-2015 11:51:59 America/New_York] PHP Fatal error:  Only variables can be passed by reference in /home3/fec/public_html/system/expressionengine/third_party/array_mill/pi.array_mill.php on line 101
+[02-Dec-2015 11:52:02 America/New_York] PHP Fatal error:  Only variables can be passed by reference in /home3/fec/public_html/system/expressionengine/third_party/array_mill/pi.array_mill.php on line 101
+[02-Dec-2015 11:52:04 America/New_York] PHP Fatal error:  Only variables can be passed by reference in /home3/fec/public_html/system/expressionengine/third_party/array_mill/pi.array_mill.php on line 101
+[02-Dec-2015 13:13:24 America/New_York] PHP Parse error:  syntax error, unexpected '', $list);' (T_ENCAPSED_AND_WHITESPACE) in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 26
+[02-Dec-2015 13:15:49 America/New_York] PHP Parse error:  syntax error, unexpected 'is' (T_STRING) in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 32
+[02-Dec-2015 12:16:33 America/Chicago] PHP Parse error:  syntax error, unexpected 'is' (T_STRING) in /home3/fec/public_html/php.php on line 10
+[02-Dec-2015 12:17:11 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home3/fec/public_html/php.php on line 11
+[02-Dec-2015 12:18:29 America/Chicago] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home3/fec/public_html/php.php on line 11
+[02-Dec-2015 12:19:31 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home3/fec/public_html/php.php on line 12
+[02-Dec-2015 12:20:20 America/Chicago] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting ',' or ';' in /home3/fec/public_html/php.php on line 11
+[02-Dec-2015 12:21:15 America/Chicago] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home3/fec/public_html/php.php on line 24
+[02-Dec-2015 12:25:49 America/Chicago] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home3/fec/public_html/php.php on line 30
+[02-Dec-2015 12:26:14 America/Chicago] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home3/fec/public_html/php.php on line 30
+[02-Dec-2015 12:26:15 America/Chicago] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home3/fec/public_html/php.php on line 30
+[02-Dec-2015 12:26:15 America/Chicago] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home3/fec/public_html/php.php on line 30
+[02-Dec-2015 12:26:15 America/Chicago] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home3/fec/public_html/php.php on line 30
+[02-Dec-2015 12:26:15 America/Chicago] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home3/fec/public_html/php.php on line 30
+[02-Dec-2015 12:26:29 America/Chicago] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home3/fec/public_html/php.php on line 30
+[03-Dec-2015 22:04:17 America/New_York] PHP Parse error:  syntax error, unexpected '?' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 84
+[04-Dec-2015 12:42:16 America/Chicago] PHP Warning:  file_get_contents(/data/load-sheet.csv): failed to open stream: No such file or directory in /home3/fec/public_html/php.php on line 3
+[04-Dec-2015 12:51:16 America/Chicago] PHP Parse error:  syntax error, unexpected ',', expecting ']' in /home3/fec/public_html/php.php on line 9
+[04-Dec-2015 12:51:38 America/Chicago] PHP Fatal error:  Cannot use [] for reading in /home3/fec/public_html/php.php on line 9
+[04-Dec-2015 13:03:29 America/Chicago] PHP Fatal error:  Cannot use [] for reading in /home3/fec/public_html/php.php on line 9
+[04-Dec-2015 13:03:29 America/Chicago] PHP Fatal error:  Cannot use [] for reading in /home3/fec/public_html/php.php on line 9
+[26-Feb-2016 13:18:27 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[26-Feb-2016 13:18:32 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[26-Feb-2016 13:18:41 America/New_York] PHP Fatal error:  Call to undefined method Backup_pro_lib::l() in /home3/fec/public_html/system/expressionengine/third_party/backup_pro/mcp.backup_pro.php on line 492
+[07-Mar-2016 17:51:43 America/New_York] PHP Fatal error:  Call to undefined method Cp::set_variable() in /home3/fec/public_html/system/expressionengine/third_party/structure/mcp.structure.php on line 831
+[10-Mar-2016 12:26:42 America/New_York] PHP Fatal error:  Call to a member function query() on a non-object in /home3/fec/public_html/system/expressionengine/third_party/ed_pagination/ext.ed_pagination.php on line 89
+[14-Mar-2016 20:28:19 America/New_York] PHP Fatal error:  Call to undefined method EE_Fieldtype::EE_Fieldtype() in /home3/fec/public_html/system/expressionengine/third_party/cki_mblist/ft.cki_mblist.php on line 20
+[15-Apr-2016 02:57:32 America/New_York] PHP Fatal error:  Call to undefined method Pcf::_helper() in /home3/fec/public_html/system/expressionengine/third_party/pcf/pi.pcf.php on line 63
+[15-Apr-2016 02:58:06 America/New_York] PHP Fatal error:  Class 'Pcf' not found in /home3/fec/public_html/system/expressionengine/libraries/Template.php on line 1562
+[16-Apr-2016 04:30:09 America/New_York] PHP Fatal error:  Class 'Pcf' not found in /home3/fec/public_html/system/expressionengine/libraries/Template.php on line 1562
+[16-Apr-2016 04:30:50 America/New_York] PHP Parse error:  syntax error, unexpected end of file in /home3/fec/public_html/system/expressionengine/third_party/pcf/pi.pcf.php on line 211
+[16-Apr-2016 13:45:49 America/New_York] PHP Parse error:  syntax error, unexpected end of file in /home3/fec/public_html/system/expressionengine/third_party/pcf/pi.pcf.php on line 201
+[16-Apr-2016 13:55:56 America/New_York] PHP Parse error:  syntax error, unexpected 'function_process_descmods' (T_STRING), expecting variable (T_VARIABLE) in /home3/fec/public_html/system/expressionengine/third_party/pcf/pi.pcf.php on line 113
+[16-Apr-2016 13:56:09 America/New_York] PHP Parse error:  syntax error, unexpected 'function_process_descmods' (T_STRING), expecting variable (T_VARIABLE) in /home3/fec/public_html/system/expressionengine/third_party/pcf/pi.pcf.php on line 113
+[16-Apr-2016 13:56:15 America/New_York] PHP Parse error:  syntax error, unexpected 'function_process_descmods' (T_STRING), expecting variable (T_VARIABLE) in /home3/fec/public_html/system/expressionengine/third_party/pcf/pi.pcf.php on line 113
+[16-Apr-2016 13:58:28 America/New_York] PHP Parse error:  syntax error, unexpected end of file in /home3/fec/public_html/system/expressionengine/third_party/pcf/pi.pcf.php on line 193
+[16-Apr-2016 14:07:58 America/New_York] PHP Parse error:  syntax error, unexpected end of file in /home3/fec/public_html/system/expressionengine/third_party/pcf/pi.pcf.php on line 180
+[16-Apr-2016 14:10:46 America/New_York] PHP Parse error:  syntax error, unexpected 'a' (T_STRING) in /home3/fec/public_html/system/expressionengine/third_party/pcf/pi.pcf.php on line 181
+[16-Apr-2016 14:12:50 America/New_York] PHP Fatal error:  Class 'Pcf' not found in /home3/fec/public_html/system/expressionengine/libraries/Template.php on line 1562
+[18-Apr-2016 18:19:56 America/New_York] PHP Parse error:  syntax error, unexpected end of file in /home3/fec/public_html/system/expressionengine/third_party/pcf/pi.pcf.php on line 185
+[16-May-2016 13:13:03 America/New_York] PHP Parse error:  syntax error, unexpected '==' (T_IS_EQUAL) in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 24
+[16-May-2016 13:13:35 America/New_York] PHP Parse error:  syntax error, unexpected '{' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 90
+[16-May-2016 13:13:47 America/New_York] PHP Parse error:  syntax error, unexpected '==' (T_IS_EQUAL) in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 24
+[16-May-2016 13:16:58 America/New_York] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 23
+[16-May-2016 13:17:59 America/New_York] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 23
+[16-May-2016 13:18:32 America/New_York] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 23
+[16-May-2016 13:18:53 America/New_York] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 23
+[16-May-2016 13:19:09 America/New_York] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 23
+[27-May-2016 15:23:30 America/New_York] PHP Fatal error:  Maximum execution time of 90 seconds exceeded in /home3/fec/public_html/system/expressionengine/third_party/pcf/pi.pcf.php on line 316
+[27-May-2016 16:49:09 America/New_York] PHP Fatal error:  Maximum execution time of 90 seconds exceeded in /home3/fec/public_html/system/EllisLab/ExpressionEngine/Library/Parser/AbstractLexer.php on line 86
+[02-Jun-2016 15:06:16 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:17 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:18 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:19 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:20 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:21 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:22 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:23 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:24 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:25 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:26 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:27 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:28 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:29 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:30 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:31 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:32 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:33 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:34 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:35 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:36 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:37 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:38 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:39 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:40 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:41 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:42 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:43 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:44 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:45 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:46 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:47 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:48 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:06:49 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:10 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:11 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:11 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:12 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:13 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:14 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:15 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:16 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:17 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:18 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:18 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:19 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:20 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:21 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:22 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:23 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:24 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:25 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:26 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:27 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:28 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:28 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:30 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:30 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:31 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:32 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:33 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:34 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:35 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:36 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:37 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:38 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:39 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:18:39 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:22:49 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:22:50 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:22:51 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:22:52 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:22:53 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:22:54 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:22:55 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:22:55 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:22:56 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:22:57 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:22:58 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:22:58 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:22:59 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:00 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:01 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:02 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:03 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:04 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:04 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:05 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:06 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:07 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:08 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:09 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:10 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:10 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:11 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:12 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:13 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:14 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:15 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:16 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:17 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[02-Jun-2016 15:23:18 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 11
+[28-Jul-2016 19:33:13 America/New_York] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home3/fec/public_html/system/expressionengine/libraries/Template.php on line 3049
+[24-Jan-2017 11:21:39 America/New_York] PHP Fatal error:  Maximum execution time of 90 seconds exceeded in /home3/fec/public_html/system/expressionengine/third_party/switchee/pi.switchee.php on line 97
+[24-Jan-2017 11:33:25 America/New_York] PHP Fatal error:  Maximum execution time of 90 seconds exceeded in /home3/fec/public_html/system/expressionengine/libraries/Template.php on line 1491
+[11-Feb-2017 11:16:36 America/Chicago] PHP Fatal error:  Call to undefined function ee() in /home3/fec/public_html/index.php on line 96
+[11-Feb-2017 11:17:55 America/Chicago] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ')' in /home3/fec/public_html/index.php on line 96
+[11-Feb-2017 11:24:39 America/Chicago] PHP Fatal error:  Call to undefined function ee() in /home3/fec/public_html/index.php on line 96
+[11-Feb-2017 11:24:41 America/Chicago] PHP Fatal error:  Call to undefined function ee() in /home3/fec/public_html/index.php on line 96
+[11-Feb-2017 11:31:18 America/Chicago] PHP Fatal error:  Call to undefined function ee() in /home3/fec/public_html/index.php on line 93
+[11-Feb-2017 11:33:52 America/Chicago] PHP Fatal error:  Using $this when not in object context in /home3/fec/public_html/index.php on line 93
+[11-Feb-2017 11:34:38 America/Chicago] PHP Parse error:  syntax error, unexpected '$access_invoices' (T_VARIABLE), expecting function (T_FUNCTION) in /home3/fec/public_html/index.php on line 94
+[11-Feb-2017 11:34:40 America/Chicago] PHP Parse error:  syntax error, unexpected '$access_invoices' (T_VARIABLE), expecting function (T_FUNCTION) in /home3/fec/public_html/index.php on line 94
+[15-Feb-2017 11:42:18 America/New_York] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home3/fec/public_html/system/expressionengine/libraries/Functions.php(688) : eval()'d code on line 45
+[15-Feb-2017 17:15:12 America/New_York] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 84 bytes) in /home3/fec/public_html/system/codeigniter/system/database/drivers/mysql/mysql_result.php on line 147
+[15-Feb-2017 17:15:43 America/New_York] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 83 bytes) in /home3/fec/public_html/system/codeigniter/system/database/drivers/mysql/mysql_result.php on line 147
+[15-Feb-2017 17:26:38 America/New_York] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 83 bytes) in /home3/fec/public_html/system/codeigniter/system/database/drivers/mysql/mysql_result.php on line 147
+[15-Feb-2017 17:27:05 America/New_York] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 84 bytes) in /home3/fec/public_html/system/codeigniter/system/database/drivers/mysql/mysql_result.php on line 147
+[03-Mar-2017 17:51:17 America/New_York] PHP Fatal error:  __clone method called on non-object in /home3/fec/public_html/system/expressionengine/third_party/postmaster/libraries/Postmaster_lib.php on line 222

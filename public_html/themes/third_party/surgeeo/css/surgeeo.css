@@ -1,0 +1,209 @@
+#surgeeo_pages h3 {
+	text-shadow: 1px 1px #FFF;
+}
+
+#surgeeo_pages dl {
+	border: 1px solid #b5c0c2;
+	border-radius: 5px;
+	position: relative;
+	/* for ee 2.1.3: */
+	display:table;
+	width: 100%;
+}
+
+#surgeeo_pages dt {
+	height: 30px;
+	cursor: pointer;
+
+	border-top: 1px solid #FFF;
+	border-bottom: 1px solid #b5c0c2;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(rgba(0,04,0,0.06)));
+	background: -moz-linear-gradient(top, transparent, rgba(0,0,0,0.06));
+
+	color: #5F6C74;
+	font-family: Helvetica, arial, freesans, clean, sans-serif;
+	font-weight: 300px;
+	font-size: 13px;
+	text-shadow: 1px 1px #FFF;
+}
+
+#surgeeo_pages dt span {
+	display: block;
+	padding: 0 24px 0 26px;
+	margin-left: 12px;
+	height: 15px;
+	line-height: 15px;
+	margin-top: 6px;
+	background-image: url(/themes/third_party/surgeeo/images/menu_btn.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	/* disable selecting text */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#surgeeo_pages .add dt span,
+#surgeeo_pages .collapsed.add dt span {
+	background-image: url(/themes/third_party/surgeeo/images/add_btn.png);
+	background-position: 0 -20px;
+	height: 20px;
+	line-height: 20px;
+	margin-top: 4px;
+}
+
+#surgeeo_pages .add dt span:active {
+	background-position: 0 -40px;
+}
+
+#surgeeo_pages .collapsed dt {
+	border-bottom: none;
+}
+
+#surgeeo_pages .collapsed dt span {
+	background-position: 0 -15px;
+}
+
+#surgeeo_pages .collapsed dd {
+	display: none;
+}
+
+#surgeeo_pages dd.deleter {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	height: 30px;
+	cursor: pointer;
+}
+
+#surgeeo_pages dl:hover dd.deleter {
+	display: block;
+}
+
+#surgeeo_pages dd.deleter a {
+	display: block;
+	height: 31px;
+	line-height: 30px;
+	padding: 0 20px;
+
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #da4f49;
+	*background-color: #bd362f;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
+	background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
+	background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
+	background-image: linear-gradient(to bottom, #ee5f5b, #bd362f);
+	background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
+	background-repeat: repeat-x;
+	border-color: #bd362f #bd362f #802420;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+	filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+
+	border-left: 1px solid #be3730;
+}
+
+#surgeeo_pages dd.deleter a:hover {
+	color: #ffffff;
+	background-color: #bd362f;
+	*background-color: #a9302a;
+
+	text-decoration: none;
+	/* Buttons in IE7 don't get borders, so darken on hover */
+
+	background-position: 0 -15px;
+	-webkit-transition: background-position 0.1s linear;
+	-moz-transition: background-position 0.1s linear;
+	-o-transition: background-position 0.1s linear;
+	transition: background-position 0.1s linear;
+}
+
+#surgeeo_pages dd.deleter a:active {
+	background-color: #942a25 \9;
+  	background-image: none;
+  	outline: 0;
+  	-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+#surgeeo_pages dd {
+	margin:0;
+}
+
+#surgeeo_pages dd li {
+	display: block;
+	margin-top: 12px;
+	padding: 8px 0;
+}
+
+#surgeeo_pages dd li:first-child {
+	margin-top: 0;
+}
+
+#surgeeo_pages dd li:hover {
+	background: #e4e9ec;
+}
+
+#surgeeo_pages dd li.top {
+	background: #e4e9ec;
+	padding:0;
+	border-bottom: 1px solid #FFF;
+}
+
+#surgeeo_pages dd .top div {
+	padding: 8px 0;
+	border-bottom: 1px solid #b5c0c2;
+}
+
+#surgeeo_pages dd label,
+#surgeeo_pages dd input,
+#surgeeo_pages dd textarea {
+	display: block;
+	float: left;
+}
+
+#surgeeo_pages dd label {
+	width: 50px;
+	padding: 0 24px;
+	margin: 0 16px 0 0;
+	line-height: 25px;
+}
+
+#surgeeo_pages dd input,
+#surgeeo_pages dd textarea {
+	width: 400px;
+}
+
+#surgeeo_pages dd textarea {
+	height: 60px;
+}
+
+/*
+ * Contain floats: h5bp.com/q
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}

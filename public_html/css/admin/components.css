@@ -1,0 +1,58 @@
+.assist {
+font-size:14px;
+font-style:italic;
+display:inline-block;
+padding:6px 0;	
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+line-height:42px;
+}
+.select2-container .select2-selection--single {
+height:42px;	
+border: 1px solid #777;
+border-radius:0;
+}
+.egnyte-button {
+display:inline-block;
+line-height:34px;
+text-decoration:none;
+color:#fff;
+font-size:18px;
+padding:10px 70px 10px 16px;
+border-radius:5px;
+background-color:#4A9895;	
+background-image:url(../../i/icons/svg/folder-open.svg);
+background-position:90% 50%;
+background-repeat:no-repeat;
+}
+.scope-number {
+width:16px;
+height:16px;
+background-color:#6C1313;
+color:#fff;
+border-radius:22px;
+text-decoration:none;
+text-align:center;
+line-height:16px;
+display:inline-block;
+font-weight:600;
+font-size:11px;
+}
+.icon {
+display:inline-block;	
+}
+.icon-invoice {
+background-color: #060;
+color: #fff;
+line-height: 20px;
+width: 20px;
+border-radius: 22px;
+text-align: center;
+font-size: 13px;
+font-weight: 400;	
+}
+.modal-content {
+max-height: 600px;
+    overflow-y: scroll;
+    padding-right: 20px;	
+}

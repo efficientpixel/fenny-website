@@ -1,0 +1,58 @@
+----------------------------------------------------------------------------------------------------------------
+RED-TEE                                                                                                         
+04/19/2016 MP-01-2                                                    BENTLEY                                   
+02:54 PM                                                              AutoPIPE Advanced 9.6.2.06 CHECK  PAGE   1
+----------------------------------------------------------------------------------------------------------------
+
+                                                                                                                
+     *** GLOBAL CONSISTENCY MESSAGES ***                                                                        
+
+
+ * * * W A R N I N G - MODEL * * *
+     W2164-93:The value of "Fluid Density Factor" is zero in following analysis sets.                           
+                                                                                
+        1                                                                       
+
+
+ * * * W A R N I N G - MODEL * * *
+     W726-8:  Kink in straight run at following point(s)                        
+                                                                                
+     2         120.9  deg                                                       
+                                                                                
+
+
+ * * * W A R N I N G - MODEL * * *
+     W726-93: Zero weight flange found at following point(s)                    
+                                                                                
+     2                                                                          
+
+
+ * * * W A R N I N G - MODEL * * *
+     W2164-93:The value of "Fluid Density Factor" is zero in following analysis sets.                           
+                                                                                
+        1                                                                       
+
+
+ * * * W A R N I N G - MODEL * * *
+     W726-69: Invalid tee data. Modified tee type to welding tee at following point(s)                          
+                                                                                
+     3                                                                          
+
+
+ * * * W A R N I N G - MODEL * * *
+     W726-8:  Kink in straight run at following point(s)                        
+                                                                                
+     2         120.9  deg                                                       
+     5          96.3  deg                                                       
+                                                                                
+
+
+ * * * W A R N I N G - MODEL * * *
+     W726-93: Zero weight flange found at following point(s)                    
+                                                                                
+     2, 5, 6                                                                    
+ 
+ 
+  No error    10 Warning(s)                                                     
+ 
+

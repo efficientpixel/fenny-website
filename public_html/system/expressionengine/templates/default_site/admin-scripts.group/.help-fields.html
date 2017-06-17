@@ -1,0 +1,7 @@
+var helpLink = $('.icon-helptip');
+helpLink.click(function() {
+	var thisModal = $(this).attr('data-remodal');
+	rmdl = $('[data-remodal-id='+thisModal+']').remodal(thisModal+'Options');
+	rmdl.open();
+    return false;
+});

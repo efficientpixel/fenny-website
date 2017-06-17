@@ -1,0 +1,35 @@
+<pre>{exp:stringy:removeemptyline}{exp:pcf:parse url="/data/pcf/jwd-sullivan/HG-01-Vent.PCF" parse="inward"}
+{exp:switchee variable="{descmod findreplace="SLEEVE=SLEEVE"}{type}{/descmod}"}
+{case value="SLEEVE"}
+SUPPORT
+    CO-ORDS {endpoint1:z} {endpoint1:x} {endpoint1:y} {endpoint1:size} PL
+    SKEY 01G1
+    {itemcode}
+    {itemdesc}
+    ADDITIONAL-ITEM
+    {fabitem}
+    {revision}
+    {project-identifier}
+    {area}
+    {piping-spec}
+    {date-dmy}
+    {spoolidentifier}
+    {itemattribute0}
+    ITEM-ATTRIBUTE1 !!! UNDEFINED-COMPONENT !!!
+SUPPORT
+    CO-ORDS {endpoint2:z} {endpoint2:x} {endpoint2:y} {endpoint2:size} PL
+    SKEY 01G1
+    {itemcode}
+    {itemdesc}
+    ADDITIONAL-ITEM
+    {fabitem}
+    {revision}
+    {project-identifier}
+    {area}
+    {piping-spec}
+    {date-dmy}
+    {spoolidentifier}
+    {itemattribute0}
+    ITEM-ATTRIBUTE1 !!! UNDEFINED-COMPONENT !!!
+{/case}
+{/exp:switchee}{/exp:pcf:parse}{/exp:stringy:removeemptyline}</pre>

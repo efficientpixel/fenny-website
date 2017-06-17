@@ -1,0 +1,53 @@
+{embed="admin/head"}
+<body>
+{embed="admin/header"}
+<div class="container">
+	<div class="container-content">
+    {if segment_3 == 'updated'}
+    <div class="msg msg-updated">
+        <strong>Your project(s) have been updated</strong>
+    </div>
+    {/if}
+    <div class="page-header">
+       {!-- <div class="crumbs">
+            <span>&nbsp;</span>
+        </div>
+        --}
+        <h1 class="page-title page-header-title">Clients</h1>
+        <a href="/admin/clients/new/" class="page-header-button btn button-new btn-submit">Create New [+]</a>
+    </div>
+    <div class="table-heading">
+    </div>
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="projects-table">
+        <thead>
+            <tr>
+                <th scope="col">Client Name</th>
+                <th scope="col">Client Code</th>
+            </tr>
+        </thead>
+        <tbody class="projects-list-active">
+          {exp:channel:entries channel="clients" sort="asc" orderby="title" dynamic="off" disable=""}
+        	<tr>
+            	<td>
+                <a href="/admin/projects/client/{entry_id}/">{title}</a>
+                </td>
+            	<td class="cell-code">
+                {client_code}
+                </td>
+            </tr>
+            {/exp:channel:entries}
+        </tbody>
+        {!--
+        <tfoot>
+            <tr>
+                <td colspan="6">&nbsp;</td>
+                <td class="cell-delete"><input type="submit" name="mefu" class="btn btn-update" value="{if segment_3 == 'archived'}Make Active{if:else}Archive Selected{/if}" /></td>
+            </tr>
+        </tfoot>
+        --}
+    </table>
+
+</div>
+</div>
+{embed="admin/pages-bottom"}
+</html>

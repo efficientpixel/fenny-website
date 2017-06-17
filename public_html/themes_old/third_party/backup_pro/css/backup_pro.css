@@ -1,0 +1,117 @@
+.bp_nav {
+	//padding:			0 25px;
+	float: left;
+}
+
+.bp_nav span.button {
+	float:				  left;
+	margin-bottom:  10px;
+    margin-right: 6px;
+}
+ .bp_nav .nav_button {
+	font-weight:	normal;
+	background:		#d0d9e1;
+	color:			#34424b;
+}
+
+.bp_nav span.button a.nav_button{
+	color: #34424b;
+    font: 12px/12px Arial, 'Hevlvetica Neue', sans-serif;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.bp_nav span.button a.nav_button:hover {
+	background-color:#e11842;
+	text-decoration:none;
+	color: #fff;
+}
+.bp_nav span.button a.current {
+	background-color:#e11842;
+	text-decoration:none;
+	color: #fff;
+}
+.backup_pro_system_error {
+	border:1px solid #bf0012;
+	background:#ffbc9f url(../images/backup_pro_logo.png) no-repeat right top;
+	padding:15px 45px 15px 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	color:#18362D;
+	font-size:18px;
+	margin:0 0 10px 0;
+}
+.backup_pro_system_error a{
+	color:#a10a0a;
+	font-size:14px;
+}
+#mainContent h3.accordion {
+    cursor: pointer;
+    padding: 3px 4px 3px 8px;
+}
+
+.no_backup_found {
+	padding:10px;	
+}
+
+.bp_good_space {
+	background-color:#4d6821 !important;
+	color:#FFFFFF;
+}
+
+#db_backup_archive_pre_sql, 
+	#db_backup_archive_post_sql, 
+	#db_backup_execute_pre_sql, 
+	#db_backup_execute_post_sql, 
+	#exclude_paths, 
+	#backup_file_location
+{
+	height:100px;
+}
+
+.s3_settings_header 
+{
+	background-image: url(../images/s3.png);
+	background-repeat: no-repeat;
+	padding-left:20px;
+}
+.gcs_settings_header 
+{
+	background-image: url(../images/gcs.png);
+	background-repeat: no-repeat;
+	padding-left:20px;
+}
+
+.cf_settings_header 
+{
+	background-image: url(../images/cf.png);
+	background-repeat: no-repeat;
+	padding-left:20px;	
+}
+
+.ftp_settings_header 
+{
+	background-image: url(../images/ftp.png);
+	background-repeat: no-repeat;
+	padding-left:20px;	
+}
+.cron_settings_header 
+{
+	background-image: url(../images/cron.png);
+	background-repeat: no-repeat;
+	padding-left:20px;	
+}
+
+img.desaturate { 
+
+    opacity: 0.3;
+    filter: alpha(opacity=30); /* For IE8 and earlier */	
+
+}
+
+div.bp_editable {
+	cursor: pointer; cursor: hand;
+}
+
+.ui-widget-header {
+	/* background: url("../images/pbar-ani.gif") repeat-x scroll 50% 50% #8ea1ad; */
+	
+}

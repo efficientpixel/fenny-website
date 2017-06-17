@@ -1,0 +1,82 @@
+// new project
+$('.field-date').datepicker({
+language: 'en',
+dateFormat: 'mm/dd/yyyy'
+});
+var clearModalFields = function() {
+	$('.remodal input[type="text"]').val('');
+	$('.remodal textarea').text('');
+    $('.submitter').hide();
+}
+
+var btnNewCustomer = $('#btn-new-customer');
+var customersField = $('#field-customer');
+var fieldClientNew = $('#field-client-title');
+var fieldCodeNew = $('#field-clientcode');
+
+var newclientOptions = {
+ hashTracking: false,
+ closeOnConfirm: false
+}
+var rmdl;
+
+
+btnNewCustomer.click(function() {
+	var thisModal = $(this).attr('data-modal');
+	rmdl = $('[data-remodal-id='+thisModal+']').remodal(thisModal+'Options');
+	rmdl.open();
+	return false;
+});
+
+customersField.change(function() {
+    //var dataCode = $('option:selected', this).attr('data-code');
+    	$.ajax({
+        	url: '/admin/suggest/job/number/',
+            }).done(function(data) {
+            	$('#field-jobnum').val(data);
+            });
+});
+
+var clientForm = $('#form-new-client'); 
+
+clientForm.on('submit', function(e) {
+    $('.submitter').show();
+    var newClient = fieldClientNew.val();
+    var newClientCode = fieldCodeNew.val();
+    $(this).ajaxSubmit({
+        dataType: 'json',
+        success: function(data) {
+        console.log(data);
+                if (data.success) {
+                	var newClientID = data.entry_id;
+                    alert('New Customer Created!');
+                    rmdl.close();
+                    $('.submitter').hide();
+                    customersField.children('optgroup').append('<option value="'+newClientID+'" data-code="'+newClientCode+'">'+newClientCode+' - '+newClient+'</option>');
+                	customersField.val(newClientID);
+                } else {
+                	alert('Please fill in all fields');
+                    $('.submitter').hide();
+                    console.log(data);
+                }
+            }        
+    });
+        e.preventDefault(); // prevent native submit
+
+});
+$(document).on('closed', '.remodal', function (e) {
+	clearModalFields();
+});
+var memoField = $('#field-status-memo');
+var memoDate = $('#status-date');
+var memoMember = $('#status-member');
+
+
+$('#publishForm').submit(function() {
+	var statusMemo = memoField.val();
+    if(statusMemo == '') {
+    	memoField.removeAttr('name');
+    	memoDate.removeAttr('name');
+        memoMember.removeAttr('name');
+    } 
+});

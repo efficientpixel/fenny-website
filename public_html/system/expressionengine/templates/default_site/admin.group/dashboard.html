@@ -1,0 +1,103 @@
+{embed="admin/head"}
+<body>
+{embed="admin/header"}
+<div class="container">
+	<div class="container-content">
+    {if segment_3 == 'updated'}
+    <div class="msg msg-updated">
+        <strong>Your project(s) have been updated</strong>
+    </div>
+    {/if}
+    <div class="page-header">
+       {!-- <div class="crumbs">
+            <span>&nbsp;</span>
+        </div>
+        --}
+        <h1 class="page-title page-header-title">Projects Dashboard</h1>
+        <div class="header-right">
+            <a href="/admin/projects/new/" class="page-header-button btn button-new btn-submit">New Project [+]</a>
+            <a href="/admin/clients/new/" class="page-header-button btn button-new btn-submit">New Customer [+]</a>
+        </div>
+    </div>
+    <div class="table-heading">
+            {exp:switchee variable='{segment_3}' parse='inward'}
+        {case value='archived'}
+    	<ul class="pill">
+        	<li class="pill-item pill-start">
+            	<a href="/admin/projects/">Current Projects</a>
+            </li>
+            <li class="pill-item pill-end">
+            	<strong>Archived Projects</strong>
+            </li>
+         </ul>
+        {/case}
+        {case default='Yes'}
+    	<ul class="pill">
+        	<li class="pill-item pill-start">
+            	<strong>Current Projects</strong>
+            </li>
+            <li class="pill-item pill-end">
+            	<a href="/admin/projects/archived/">Archived Projects</a>
+            </li>
+         </ul>
+        {/case}
+        {/exp:switchee}
+    </div>
+    {if segment_3 == 'updated'}
+    {exp:mefu:save}{/exp:mefu:save}
+    {/if}
+    <form method="post" name="mu-form" action="/admin/projects/updated/">
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="projects-table">
+        <thead>
+            <tr>
+                <th scope="col">Project Title</th>
+                <th scope="col">Client</th>
+                <th scope="col">Job#</th>
+                <th scope="col">PM</th>
+                <th scope="col">Date</th>
+                {!--<th scope="col">Pricing</th>--}
+                <th scope="col">Status</th>
+                <th scope="col" class="header-archive" data-sorter="false">{if segment_3 == 'archived'}Active{if:else}Archive{/if}</th>
+            </tr>
+        </thead>
+        {exp:switchee variable='{segment_3}' parse='inward'}
+        {case value='archived'}
+        <tbody class="projects-list-active">
+        {exp:channel:entries dynamic="off" channel="projects" status="Archived" limit="1000" orderby="date_order_received" sort="asc" disable="categories|category_fields|member_data|pagination"}
+          {project-rows}
+        {/exp:channel:entries}
+        </tbody>
+        {/case}
+        {case default='Yes'}
+        <tbody class="projects-list-active">
+        {exp:channel:entries dynamic="off" channel="projects" status="open|Pending|Active|Submitted|Completed" limit="1000" orderby="date_order_received" sort="asc" disable="categories|category_fields|member_data|pagination"}
+          {project-rows}
+          {if count == total_results}
+        </tbody>
+        <tfoot>
+        	<tr>
+            	<td colspan="7" style="padding-left:20px;"><em>{total_results} Total Projects</em></td>
+            </tr>
+        </tfoot>
+          {/if}
+        {/exp:channel:entries}
+        {!--
+        <tbody class="projects-list-completed">
+        {exp:channel:entries dynamic="off" channel="projects" status="Completed" limit="1000" orderby="entry_date" sort="desc" disable="categories|category_fields|member_data|pagination"}
+          {project-rows}
+        {/exp:channel:entries}
+        </tbody>
+        --}
+        {/case}
+        {/exp:switchee}
+    </table>
+        <div class="table-footer">
+        	<input type="submit" name="mefu" class="btn btn-update" value="{if segment_3 == 'archived'}Make Active{if:else}Archive Selected{/if}" /></td>
+        </div>
+    </form>
+
+</div>
+</div>
+{admin-footer}
+{embed="admin/pages-bottom"}
+</html>

@@ -1,0 +1,200 @@
+body {
+	margin:0;
+}
+/*-----------------------------------------
+------------ Containers --------------
+------------------------------------------*/
+#container {
+	min-width:1020px;
+}
+#container-header {
+	padding:0;
+	background-image:url(../i/bg_brushed_top.gif);
+	Background-position:0 100%;
+	background-repeat:repeat-x;
+	-webkit-box-shadow:0 1px 4px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 1px 4px rgba(0,0,0,0.2);
+	box-shadow:0 1px 4px rgba(0,0,0,0.2);
+	position:relative;
+	z-index:10;
+}
+#home #container-header {
+-webkit-box-shadow:0;	
+}
+#container-nav {
+}
+#container-body {
+}
+#home #container-body {
+	/*
+background-image:url(../i/bg_brushed_bottom.gif);
+background-position:0 365px;
+background-repeat:repeat-x;
+*/
+}
+#container-content {
+	width:960px;
+	margin:0 auto;
+	padding:50px 0;
+}
+#container-footer {
+	width:960px;
+	margin:0 auto;
+}
+#registration {
+border-top:1px solid #999;
+}
+.reg-title {
+width:175px;
+float:left;
+border-right:1px solid #999;
+padding:35px 0 34px 0;
+margin:0 24px 0 0;	
+}
+.reg-info {
+float:left;
+width:500px;
+font-size:13px;
+line-height:18px;
+padding:35px 55px 0 15px;	
+}
+.reg-info h4 {
+font-weight:bold;
+font-size:15px;
+margin:0 0 3px 0;	
+}
+.reg-info p {
+margin:0;
+line-height:16px;
+font-size:13px;
+}
+.reg-states {
+padding:0 0 0 0;	
+}
+#footer {
+	padding:20px 0;
+	font-size:13px;
+	border-top:1px solid #999;	
+
+}
+#locations {
+font-size:14px;
+padding:15px 0 0 0;
+}
+#locations p {
+font-size:14px;	
+}
+#footer p {
+margin:0 0 6px 0;	
+}
+#side-col {
+width:200px;
+float:left;
+margin:0 25px 0 0;
+}
+#main-column {
+}
+#main {
+width:470px;
+width:600px;
+float:left;	
+}
+#sidebar {
+width:175px;
+width:275px;
+float:right;
+}
+#container-breadcrumbs {
+}
+#content {
+}
+#navigation {
+width:960px;
+margin:0 auto;	
+position:relative;
+left:-15px;
+}
+.section {
+margin:0 0 60px 0;	
+}
+.block {
+border:1px solid #E7DDC2;
+margin:0 0 40px 0;
+background-color:#FCFAF5;
+}
+/*-----------------------------------------
+------------ Header and Logo --------------
+------------------------------------------*/
+#header {
+	width:960px;
+	margin:0 auto;
+	height:110px;
+	position:relative;
+	padding:10px 0 0 0;
+}
+#branding {
+	background-image:url(../i/logo2.gif);
+	background-position:0 0;
+	background-repeat:no-repeat;
+	width:349px;
+	height:64px;
+	text-indent:-99999px;
+	position:relative;
+	top:15px;
+}
+#branding a {
+	display:block;
+		width:349px;
+	height:64px;
+text-decoration:none;
+cursor:pointer;
+}
+#sidebar {
+padding-top:52px;	
+}
+/*-----------------------------------------
+------------ Forms --------------
+------------------------------------------*/
+.form {
+list-style:none;
+margin:0;
+padding:0;	
+}
+.form > li {
+margin:0 0 20px 0;	
+}
+.col-title {
+float:left;
+margin:0 30px 0 0;	
+width:160px;
+padding:5px 0 0 0;
+}
+.ind-col {
+margin:0 0 0 190px;	
+}
+input.ind-col {
+width:70px;
+height:28px;
+cursor:pointer;	
+}
+.field-group {
+margin:0 0 0 190px;	
+}
+.bk {
+display:block;	
+}
+.form textarea {
+padding:4px 10px;	
+font-family:Arial, Helvetica, sans-serif;	
+border:1px solid #ccc;
+}
+.address {
+display:block;
+margin:0 0 5px 0;	
+}
+.text-field {
+width:220px;
+height:18px;
+padding:4px 10px;	
+border:1px solid #ccc;
+}

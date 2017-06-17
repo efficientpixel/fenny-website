@@ -1,0 +1,8 @@
+{exp:switchee variable='{segment_2}' parse='inward'}
+{case value='supports|new|load'}
+{embed='load-sheet/points' points='{exp:channel:entries channel="load_sheet_points" dynamic="off" limit="100" disable="categories|member_fields" orderby="entry_date" sort="asc" paginate="bottom"}{point}|{paginate}{pagination_links}{/pagination_links}{/paginate}{/exp:channel:entries}'}
+{/case}
+{case value='anchors'}
+{embed='load-sheet/points' points='{exp:channel:entries channel="load_sheet_anchors" dynamic="off" limit="200" disable="categories|member_fields" orderby="entry_date" sort="asc" paginate="bottom" offset="1"}{point}|{paginate}{pagination_links}{/pagination_links}{/paginate}{/exp:channel:entries}'}
+{/case}
+{/exp:switchee}

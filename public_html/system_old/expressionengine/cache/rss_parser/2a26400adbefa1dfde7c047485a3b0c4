@@ -1,0 +1,220 @@
+a:3:{s:4:"time";i:1431439593;s:3:"ttl";i:0;s:4:"data";a:4:{s:5:"child";a:1:{s:0:"";a:1:{s:3:"rss";a:1:{i:0;a:6:{s:4:"data";s:4:"
+
+	
+";s:7:"attribs";a:1:{s:0:"";a:1:{s:7:"version";s:3:"2.0";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:1:{s:0:"";a:1:{s:7:"channel";a:1:{i:0;a:6:{s:4:"data";s:32:"
+
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+	";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:2:{s:0:"";a:8:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:13:"EllisLab Blog";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:26:"https://ellislab.com/blog/";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:11:"description";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:8:"language";a:1:{i:0;a:5:{s:4:"data";s:2:"en";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:14:"managingEditor";a:1:{i:0;a:5:{s:4:"data";s:38:"derek.jones@ellislab.com (Derek Jones)";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:9:"copyright";a:1:{i:0;a:5:{s:4:"data";s:14:"Copyright 2015";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"pubDate";a:1:{i:0;a:5:{s:4:"data";s:31:"Fri, 01 May 2015 21:44:00 +0000";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"item";a:10:{i:0;a:6:{s:4:"data";s:39:"
+				
+				
+				
+				
+				
+				
+				
+			";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:2:{s:0:"";a:6:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:32:"ExpressionEngine 2.10.0 Released";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:64:"https://ellislab.com/blog/entry/expressionengine-2.10.0-released";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"guid";a:1:{i:0;a:5:{s:4:"data";s:64:"https://ellislab.com/blog/entry/expressionengine-2.10.0-released";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:6:"author";a:1:{i:0;a:5:{s:4:"data";s:36:"kevin.cupp@ellislab.com (Kevin Cupp)";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:11:"description";a:1:{i:0;a:5:{s:4:"data";s:1051:"<p>ExpressionEngine 2.10.0<sup id="fnref:not_decimal"><a href="#fn:not_decimal" class="footnote-ref">1</a></sup> has been released as a security and stability release, along with Discussion Forum 3.1.19. These upgrades are recommended for all installations. Some of the security enhancements include:</p>
+
+<ul>
+<li>File uploads are now validated against a whitelist of acceptable MIME types.</li>
+<li>Added a config override to <a href="https://ellislab.com/expressionengine/user-guide/general/system_configuration_overrides.html#upload-file-name-blacklist">blacklist certain filenames from being uploaded</a>.</li>
+<li>Added hidden file upload prevention.</li>
+<li>Added <code>.htaccess</code> to images directory to <a href="https://ellislab.com/expressionengine/user-guide/security/arbitrary_code_execution.html">prevent execution of PHP files</a>.</li>
+<li>Removed <code>config</code> from the</li></ul>&hellip;<p><a href="https://ellislab.com/blog/entry/expressionengine-2.10.0-released" title="ExpressionEngine 2.10.0 Released">Read more</a></p>";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"pubDate";a:1:{i:0;a:5:{s:4:"data";s:31:"Wed, 29 Apr 2015 14:12:00 +0000";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:32:"http://purl.org/dc/elements/1.1/";a:1:{s:7:"subject";a:1:{i:0;a:5:{s:4:"data";s:42:"CP Accessory Feed, ExpressionEngine, News,";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:1;a:6:{s:4:"data";s:39:"
+				
+				
+				
+				
+				
+				
+				
+			";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:2:{s:0:"";a:6:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:31:"ExpressionEngine 2.9.3 Released";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:63:"https://ellislab.com/blog/entry/expressionengine-2.9.3-released";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"guid";a:1:{i:0;a:5:{s:4:"data";s:63:"https://ellislab.com/blog/entry/expressionengine-2.9.3-released";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:6:"author";a:1:{i:0;a:5:{s:4:"data";s:38:"derek.jones@ellislab.com (Derek Jones)";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:11:"description";a:1:{i:0;a:5:{s:4:"data";s:800:"<p>ExpressionEngine 2.9.3 has been released and is a stability release with 11 minor improvements, 44 bug fixes, 3 developer enchancements, and is recommended for all installations. This release mostly cleans up some small annoyances, but has a few relevant changes that will improve your site and how you work. For example:</p>
+
+<ul>
+<li>Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/20621/variables-with-modifiers-not-working-in-conditionals-without-braces">#20621</a>) where fieldtype modifiers were not working in conditionals unless they were braced and quoted.</li>
+</ul>
+
+<p>This change means that you should be able to stop using</p>&hellip;<p><a href="https://ellislab.com/blog/entry/expressionengine-2.9.3-released" title="ExpressionEngine 2.9.3 Released">Read more</a></p>";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"pubDate";a:1:{i:0;a:5:{s:4:"data";s:31:"Tue, 24 Mar 2015 18:47:00 +0000";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:32:"http://purl.org/dc/elements/1.1/";a:1:{s:7:"subject";a:1:{i:0;a:5:{s:4:"data";s:42:"CP Accessory Feed, ExpressionEngine, News,";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:2;a:6:{s:4:"data";s:39:"
+				
+				
+				
+				
+				
+				
+				
+			";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:2:{s:0:"";a:6:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:27:"MinneWebCon Ticket Giveaway";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:59:"https://ellislab.com/blog/entry/minnewebcon-ticket-giveaway";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"guid";a:1:{i:0;a:5:{s:4:"data";s:59:"https://ellislab.com/blog/entry/minnewebcon-ticket-giveaway";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:6:"author";a:1:{i:0;a:5:{s:4:"data";s:38:"derek.jones@ellislab.com (Derek Jones)";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:11:"description";a:1:{i:0;a:5:{s:4:"data";s:717:"<p>We are giving away a ticket to this year&#8217;s <a href="http://minnewebcon.org">MinneWebCon</a> in Minneapolis, Minnesota on April 13–14. MinneWebCon focuses on grassroots knowledge-sharing. If that doesn&#8217;t sound like the ExpressionEngine community, I don&#8217;t know what does! MinneWebCon attracts many people who work in public and non-profit sectors, but has something for everybody. It was a no brainer for us to sponsor.</p>
+
+<p>To enter, tweet why you love ExpressionEngine, following the official rules:</p>
+
+<ul>
+<li>Tweet a brief reason why you love</li></ul>&hellip;<p><a href="https://ellislab.com/blog/entry/minnewebcon-ticket-giveaway" title="MinneWebCon Ticket Giveaway">Read more</a></p>";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"pubDate";a:1:{i:0;a:5:{s:4:"data";s:31:"Tue, 17 Mar 2015 23:41:00 +0000";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:32:"http://purl.org/dc/elements/1.1/";a:1:{s:7:"subject";a:1:{i:0;a:5:{s:4:"data";s:74:"CP Accessory Feed, Education & Training, EllisLab, ExpressionEngine, News,";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:3;a:6:{s:4:"data";s:39:"
+				
+				
+				
+				
+				
+				
+				
+			";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:2:{s:0:"";a:6:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:31:"ExpressionEngine 2.9.1 Released";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:63:"https://ellislab.com/blog/entry/expressionengine-2.9.1-released";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"guid";a:1:{i:0;a:5:{s:4:"data";s:63:"https://ellislab.com/blog/entry/expressionengine-2.9.1-released";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:6:"author";a:1:{i:0;a:5:{s:4:"data";s:36:"kevin.cupp@ellislab.com (Kevin Cupp)";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:11:"description";a:1:{i:0;a:5:{s:4:"data";s:878:"<p>ExpressionEngine 2.9.1 and Discussion Forum 3.1.17 are now <a href="https://store.ellislab.com/manage">available for download</a>. ExpressionEngine 2.9.1 is a security and stability release recommended for all users. In addition to improving security, it includes over 40 bug fixes. Some of the more noteworthy bug fixes or improvements to functionality or security are:</p>
+
+<ul>
+<li>Made <code>{cp_edit_entry_url}</code> available to Admin Notification of New Entry.</li>
+<li>Improved Control Panel <a href="https://ellislab.com/expressionengine/user-guide/development/cp_styles/index.html#customizing-the-control-panel-theme">custom theme organization</a>: view files can now be stored in a <code>views</code> subfolder.</li></ul>&hellip;<p><a href="https://ellislab.com/blog/entry/expressionengine-2.9.1-released" title="ExpressionEngine 2.9.1 Released">Read more</a></p>";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"pubDate";a:1:{i:0;a:5:{s:4:"data";s:31:"Fri, 03 Oct 2014 18:15:00 +0000";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:32:"http://purl.org/dc/elements/1.1/";a:1:{s:7:"subject";a:1:{i:0;a:5:{s:4:"data";s:42:"CP Accessory Feed, ExpressionEngine, News,";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:4;a:6:{s:4:"data";s:39:"
+				
+				
+				
+				
+				
+				
+				
+			";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:2:{s:0:"";a:6:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:30:"New Conditionals Parser in 2.9";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:62:"https://ellislab.com/blog/entry/new-conditionals-parser-in-2.9";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"guid";a:1:{i:0;a:5:{s:4:"data";s:62:"https://ellislab.com/blog/entry/new-conditionals-parser-in-2.9";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:6:"author";a:1:{i:0;a:5:{s:4:"data";s:38:"seth.barber@ellislab.com (Seth Barber)";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:11:"description";a:1:{i:0;a:5:{s:4:"data";s:8216:"<p>In 2.9 we rewrote the conditional parser. It is more performant, more
+consistent, and has new operators.</p>
+
+<h2>Performance<div class="codeblock"><code><span style="color: #000000">
+<span style="color: #f5f8cc">&#123;if&nbsp;segment_3&nbsp;</span><span style="color: #91f291">==&nbsp;</span><span style="color: #FFFFFF">'books'</span><span style="color: #f5f8cc">&#125;<br />&nbsp;&nbsp;&nbsp;&nbsp;&#123;exp</span><span style="color: #91f291">:</span><span style="color: #f5f8cc">channel</span><span style="color: #91f291">:</span><span style="color: #f5f8cc">entries&nbsp;channel</span><span style="color: #91f291">=</span><span style="color: #FFFFFF">"book_reviews"&nbsp;</span><span style="color: #f5f8cc">limit</span><span style="color: #91f291">=</span><span style="color: #FFFFFF">"5"</span><span style="color: #f5f8cc">&#125;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#123;title&#125;<br />&nbsp;&nbsp;&nbsp;&nbsp;&#123;</span><span style="color: #91f291">/</span><span style="color: #f5f8cc">exp</span><span style="color: #91f291">:</span><span style="color: #f5f8cc">channel</span><span style="color: #91f291">:</span><span style="color: #f5f8cc">entries&#125;<br />&#123;if</span><span style="color: #91f291">:elseif&nbsp;</span><span style="color: #f5f8cc">segment_3&nbsp;</span><span style="color: #91f291">==&nbsp;</span><span style="color: #FFFFFF">'games'</span><span style="color: #f5f8cc">&#125;<br />&nbsp;&nbsp;&nbsp;&nbsp;&#123;exp</span><span style="color: #91f291">:</span><span style="color: #f5f8cc">channel</span><span style="color: #91f291">:</span><span style="color: #f5f8cc">entries&nbsp;channel</span><span style="color: #91f291">=</span><span style="color: #FFFFFF">"game_reviews"&nbsp;</span><span style="color: #f5f8cc">limit</span><span style="color: #91f291">=</span><span style="color: #FFFFFF">"5"</span><span style="color: #f5f8cc">&#125;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#123;title&#125;<br />&nbsp;&nbsp;&nbsp;&nbsp;&#123;</span><span style="color: #91f291">/</span><span style="color: #f5f8cc">exp</span><span style="color: #91f291">:</span><span style="color: #f5f8cc">channel</span><span style="color: #91f291">:</span><span style="color: #f5f8cc">entries&#125;<br />&#123;if</span><span style="color: #91f291">:</span><span style="color: #f5f8cc">else&#125;<br />&nbsp;&nbsp;&nbsp;&nbsp;&#123;exp</span><span style="color: #91f291">:</span><span style="color: #f5f8cc">channel</span><span style="color: #91f291">:</span><span style="color: #f5f8cc">entries&nbsp;channel</span><span style="color: #91f291">=</span><span style="color: #FFFFFF">"misc_reviews"&nbsp;</span><span style="color: #f5f8cc">limit</span><span style="color: #91f291">=</span><span style="color: #FFFFFF">"5"</span><span style="color: #f5f8cc">&#125;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#123;title&#125;<br />&nbsp;&nbsp;&nbsp;&nbsp;&#123;</span><span style="color: #91f291">/</span><span style="color: #f5f8cc">exp</span><span style="color: #91f291">:</span><span style="color: #f5f8cc">channel</span><span style="color: #91f291">:</span><span style="color: #f5f8cc">entries&#125;<br />&#123;</span><span style="color: #91f291">/</span><span style="color: #f5f8cc">if&#125;&nbsp;</span>
+</span>
+</code></div></h2>
+
+<p>Starting with 2.9 conditionals evaluate <em>when ready</em>. When a conditional
+statement&#8217;s variables are known the statement will be evaluated as either
+<code>TRUE</code> or <code>FALSE</code>. In the above example, when <code>segment_3</code> is &#8220;games&#8221; we will
+remove the other two channel entries tags from the template. Instead of
+processing 3 channel entries tags and then deciding which one to show, we now
+determine which tag to process.</p>
+
+<h2>Consistency</h2>
+
+<p>The distinction between &#8220;simple&#8221; and &#8220;advanced&#8221; conditionals is gone. Write
+your conditionals anyway you want. Put the variable first (<code>&#123;if my_snippet ==
+"awesome"}</code>) or put it last (<code>&#123;if "awesome" == my_snippet}</code>). Use as many
+<code>if:elseif</code> statements as you desire. Use boolean operators. They are now all
+evaluated when ready.</p>
+
+<h2>New Operators</h2>
+
+<p>We have added mathematical operators to our conditionals. In addition to the
+modulus operator (<code>%</code>) you can now add (<code>+</code>), subtract (<code>-</code>), multiply (<code>*</code>),
+divide (<code>/</code>), and compute exponents (<code>^</code>) on your numbers. We&#8217;ve also added a
+string concatenation operator (<code>.</code>):<div class="codeblock"><code><span style="color: #000000">
+<span style="color: #f5f8cc">&#123;if&nbsp;segment_1</span><span style="color: #91f291">.</span><span style="color: #FFFFFF">"/"</span><span style="color: #91f291">.</span><span style="color: #f5f8cc">segment_2&nbsp;</span><span style="color: #91f291">==&nbsp;</span><span style="color: #FFFFFF">"site/index"</span><span style="color: #f5f8cc">&#125;&nbsp;</span>
+</span>
+</code></div></p>
+
+<p>We didn&#8217;t stop there. We&#8217;ve also added three special comparison operators,
+inspired by CSS attribute selectors: begins with (<code>^=</code>), ends with (<code>$=</code>), and
+contains (<code>*=</code>). Using a snippet of &#8220;Conditionals in ExpressionEngine 2.9
+Rock!&#8221; named <code>my_snippet</code> these all evaluate to true:<div class="codeblock"><code><span style="color: #000000">
+<span style="color: #f5f8cc">&#123;if&nbsp;my_snippet&nbsp;</span><span style="color: #91f291">^=&nbsp;</span><span style="color: #FFFFFF">"Conditionals"</span><span style="color: #f5f8cc">&#125;<br />&#123;if&nbsp;my_snippet&nbsp;</span><span style="color: #91f291">$=&nbsp;</span><span style="color: #FFFFFF">"Rock!"</span><span style="color: #f5f8cc">&#125;<br />&#123;if&nbsp;my_snippet&nbsp;</span><span style="color: #91f291">*=&nbsp;</span><span style="color: #FFFFFF">"ExpressionEngine&nbsp;2.9"</span><span style="color: #f5f8cc">&#125;&nbsp;</span>
+</span>
+</code></div></p>
+
+<p>We also added a regular expression operator (<code>~</code>) so now you can do this:<div class="codeblock"><code><span style="color: #000000">
+<span style="color: #f5f8cc">&#123;if&nbsp;segment_3&nbsp;</span><span style="color: #91f291">~&nbsp;</span><span style="color: #FFFFFF">"/^P\d+/"</span><span style="color: #f5f8cc">&#125;<br />&nbsp;&nbsp;&nbsp;&nbsp;I</span><span style="color: #FFFFFF">'m&nbsp;paginated!<br />&#123;/if&#125;&nbsp;</span>
+</span>
+</code></div></p>
+
+<p>And for good measure we added a boolean not operator (<code>!</code>) so this works:<div class="codeblock"><code><span style="color: #000000">
+<span style="color: #f5f8cc">&#123;if&nbsp;</span><span style="color: #91f291">!&nbsp;(</span><span style="color: #f5f8cc">segment_3&nbsp;</span><span style="color: #91f291">~&nbsp;</span><span style="color: #FFFFFF">"/^P\d+/"</span><span style="color: #91f291">)</span><span style="color: #f5f8cc">&#125;<br />&nbsp;&nbsp;&nbsp;&nbsp;No&nbsp;pagination&nbsp;here</span><span style="color: #91f291">.<br /></span><span style="color: #f5f8cc">&#123;</span><span style="color: #91f291">/</span><span style="color: #f5f8cc">if&#125;&nbsp;</span>
+</span>
+</code></div></p>
+
+<p>Or if you prefer:<div class="codeblock"><code><span style="color: #000000">
+<span style="color: #f5f8cc">&#123;if&nbsp;</span><span style="color: #91f291">!&nbsp;(</span><span style="color: #f5f8cc">the_droids&nbsp;</span><span style="color: #91f291">*=&nbsp;</span><span style="color: #f5f8cc">looking_for</span><span style="color: #91f291">)</span><span style="color: #f5f8cc">&#125;&nbsp;</span>
+</span>
+</code></div></p>
+
+<p>And if you want to ponder a philosophical point:<div class="codeblock"><code><span style="color: #000000">
+<span style="color: #f5f8cc">&#123;if&nbsp;2B&nbsp;</span><span style="color: #91f291">||&nbsp;!&nbsp;</span><span style="color: #f5f8cc">2B&#125;&nbsp;</span>
+</span>
+</code></div></p>
+
+<p>These are some of the major new features of the new conditional parser in
+ExpressionEngine 2.9. We can&#8217;t wait to see what you do with it.</p><p><a href="https://ellislab.com/blog/entry/new-conditionals-parser-in-2.9" title="New Conditionals Parser in 2.9">Read more</a></p>";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"pubDate";a:1:{i:0;a:5:{s:4:"data";s:31:"Mon, 16 Jun 2014 16:49:00 +0000";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:32:"http://purl.org/dc/elements/1.1/";a:1:{s:7:"subject";a:1:{i:0;a:5:{s:4:"data";s:42:"CP Accessory Feed, ExpressionEngine, News,";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:5;a:6:{s:4:"data";s:39:"
+				
+				
+				
+				
+				
+				
+				
+			";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:2:{s:0:"";a:6:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:27:"Improved License Management";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:59:"https://ellislab.com/blog/entry/improved-license-management";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"guid";a:1:{i:0;a:5:{s:4:"data";s:59:"https://ellislab.com/blog/entry/improved-license-management";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:6:"author";a:1:{i:0;a:5:{s:4:"data";s:38:"derek.jones@ellislab.com (Derek Jones)";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:11:"description";a:1:{i:0;a:5:{s:4:"data";s:5416:"<p>For many years we have heard from agencies about the difficulties they have in keeping track of client licenses for ExpressionEngine. Good record keeping is a necessity, and can be as simple as a spreadsheet with the client&#8217;s name and license numbers for ExpressionEngine and any third-party add-ons used for their build. On our end we&#8217;ve provided a few things to assist, such as a &#8220;Notes&#8221; field in the <a href="https://store.ellislab.com/manage">Manage Purchases page</a> with each license that can be used for the client&#8217;s name or other identifying information.</p>
+
+<p>Even with these things in place, it&#8217;s easy after a few years of ExpressionEngine work to have accumulated so many licenses that some fall through the cracks. Many factors are at play: sheer volume, using a base install and forgetting to update the license, transferring some licenses to clients while maintaining others, etc. A far too common result of these many branching pathways and points for potential license confusion are conversations like this one:</p>
+
+<blockquote>
+  <p><strong>End user:</strong> Hi EllisLab, we&#8217;d like to upgrade to the latest version, but we don&#8217;t know how to access the software on your site.</p>
+  
+  <p><strong>EllisLab:</strong> No problem, what is your license number in Admin > General Configuration? We can help you locate your account.</p>
+  
+  <p><strong>End user:</strong> It&#8217;s blank / It says &lt;insert license number that is for a third-party add-on&gt; / &lt;insert valid license number that is not owned by the end user&gt;</p>
+  
+  <p><strong>EllisLab:</strong> No problem, do you know who built your site for you?</p>
+  
+  <p><strong>End user:</strong> Yes but we haven&#8217;t been able to contact them / no, nobody still working here remembers who set it up.</p>
+</blockquote>
+
+<p>At that point we try to help the client track down the developer, sometimes with success, sometimes not. Ultimately the developer simply neglected to key in the license number, forgot to purchase a license before taking the site live, or meant to transfer the license to their client but didn&#8217;t. To give a sense of scale to the problem, in just the last year clients have collectively experienced almost three years of waiting (25,394 hours) while sorting out their license ownership with all parties involved.</p>
+
+<p>To try to address these challenges more directly, starting in ExpressionEngine 2.9, the Software License number has been moved to its own section of the control panel, and we&#8217;ve added a field to help clients (and EllisLab) know who to contact if they have questions about their license.</p>
+
+<figure><img src="https://ellislab.com/asset/images/blog/software-license-page.png" alt="software license page"  /></figure>
+
+<p>Note that this contact email address doesn&#8217;t have to be associated with your EllisLab.com account, as this is more for your client&#8217;s benefit down the road. In the example above, we&#8217;re taking advantage of <a href="https://www.fastmail.fm/help/receive/addressing.html">plus addressing</a> in the email address to use one account but still readily identify the client. If the information on this page is for some reason blank (due to using a base install, or removed from config), the control panel will prompt you to fill in that information to properly register your software. This registration information gets sent to EllisLab<sup id="fnref:2014-06-04-1"><a href="#fn:2014-06-04-1" class="footnote-ref">1</a></sup> and when you are logged in, is <a href="https://store.ellislab.com/manage">displayed for you</a> next to the license and your existing notes.</p>
+
+<figure><img src="https://ellislab.com/asset/images/blog/license-use-info.png" alt="license use info"  /></figure>
+
+<p>You will be able to see where the license is in use, as well as the last time the ping occurred. Using this information, you can monitor your clients&#8217; sites by taking a quick glance at your Manage Purchases page and ensure none of your clients have a site that&#8217;s been down for months. E.g.: if you see a client site that hasn&#8217;t sent a ping in six months, it could be a sign that they need you for some services.</p>
+
+<p>EllisLab has always taken a soft approach to license registration so we treaded very lightly here. You will never be locked out of your software nor will the behavior and output of your site be impacted by this in any way. But now agencies, freelancers, and clients are assured to have reliable information keyed in prior to launching their site, and readily on hand for managing their ExpressionEngine licenses down the road.</p>
+
+<div class="footnotes">
+<hr />
+<ol>
+
+<li id="fn:2014-06-04-1">
+<p>We also include the server IP, domain name, ExpressionEngine version, and PHP version. Having that version information allows us to make more informed development decisions, and rather than have a separate ping, we are piggybacking this one for performance. Further, this ping only occurs in the control panel on select pages and with a two week cache, so it will never interrupt the use of your site, your content authors, or your site visitors.&#160;<a href="#fnref:2014-06-04-1" class="footnote-backref">&#8617;</a></p>
+</li>
+
+</ol>
+</div><p><a href="https://ellislab.com/blog/entry/improved-license-management" title="Improved License Management">Read more</a></p>";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"pubDate";a:1:{i:0;a:5:{s:4:"data";s:31:"Wed, 04 Jun 2014 17:28:00 +0000";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:32:"http://purl.org/dc/elements/1.1/";a:1:{s:7:"subject";a:1:{i:0;a:5:{s:4:"data";s:52:"CP Accessory Feed, EllisLab, ExpressionEngine, News,";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:6;a:6:{s:4:"data";s:39:"
+				
+				
+				
+				
+				
+				
+				
+			";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:2:{s:0:"";a:6:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:44:"Memory-Based Caching in ExpressionEngine 2.8";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:76:"https://ellislab.com/blog/entry/memory-based-caching-in-expressionengine-2.8";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"guid";a:1:{i:0;a:5:{s:4:"data";s:76:"https://ellislab.com/blog/entry/memory-based-caching-in-expressionengine-2.8";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:6:"author";a:1:{i:0;a:5:{s:4:"data";s:36:"kevin.cupp@ellislab.com (Kevin Cupp)";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:11:"description";a:1:{i:0;a:5:{s:4:"data";s:694:"<p>ExpressionEngine has always stored cached data on the disk. This is fine for most sites, but for the sites that get heavy traffic, caching to the filesystem can become a bottleneck. The solution is to store cached data in a memory-based cache store for faster retrieval. In ExpressionEngine 2.8, we&#8217;ve brought over caching drivers from CodeIgniter, allowing cached data to be  stored in the filesystem or in a memory-based store such as <a href="http://memcached.org">Memcached</a> or <a href="http://redis.io">Redis</a>.</p><p><a href="https://ellislab.com/blog/entry/memory-based-caching-in-expressionengine-2.8" title="Memory-Based Caching in ExpressionEngine 2.8">Read more</a></p>";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"pubDate";a:1:{i:0;a:5:{s:4:"data";s:31:"Thu, 13 Feb 2014 20:33:00 +0000";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:32:"http://purl.org/dc/elements/1.1/";a:1:{s:7:"subject";a:1:{i:0;a:5:{s:4:"data";s:58:"CP Accessory Feed, Developer Blog, ExpressionEngine, News,";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:7;a:6:{s:4:"data";s:39:"
+				
+				
+				
+				
+				
+				
+				
+			";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:2:{s:0:"";a:6:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:31:"ExpressionEngine 2.7.3 Released";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:63:"https://ellislab.com/blog/entry/expressionengine-2.7.3-released";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"guid";a:1:{i:0;a:5:{s:4:"data";s:63:"https://ellislab.com/blog/entry/expressionengine-2.7.3-released";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:6:"author";a:1:{i:0;a:5:{s:4:"data";s:34:"wes.baker@ellislab.com (Wes Baker)";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:11:"description";a:1:{i:0;a:5:{s:4:"data";s:347:"<p>ExpressionEngine 2.7.3 is now <a href="https://store.ellislab.com/manage">available for download</a>. It is a stability release recommended for all users that includes a few additions and over 40 bug fixes.</p><p><a href="https://ellislab.com/blog/entry/expressionengine-2.7.3-released" title="ExpressionEngine 2.7.3 Released">Read more</a></p>";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"pubDate";a:1:{i:0;a:5:{s:4:"data";s:31:"Tue, 10 Dec 2013 19:41:00 +0000";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:32:"http://purl.org/dc/elements/1.1/";a:1:{s:7:"subject";a:1:{i:0;a:5:{s:4:"data";s:36:"CP Accessory Feed, ExpressionEngine,";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:8;a:6:{s:4:"data";s:39:"
+				
+				
+				
+				
+				
+				
+				
+			";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:2:{s:0:"";a:6:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:58:"Reminder: Support for ExpressionEngine 1 Ends December 7th";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:89:"https://ellislab.com/blog/entry/reminder-support-for-expressionengine-1-ends-december-7th";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"guid";a:1:{i:0;a:5:{s:4:"data";s:89:"https://ellislab.com/blog/entry/reminder-support-for-expressionengine-1-ends-december-7th";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:6:"author";a:1:{i:0;a:5:{s:4:"data";s:33:"kevin@gohearsay.com (Kevin Smith)";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:11:"description";a:1:{i:0;a:5:{s:4:"data";s:596:"<p>In a little under two months, ExpressionEngine 1 will be retired, which means it will no longer receive updates of any kind and will no longer be eligible for <a href="https://ellislab.com/support">EllisLab Support</a>. To ensure that expert help from EllisLab continues to be available for all your client sites, we encourage you to upgrade your remaining ExpressionEngine 1 sites as soon as possible.</p><p><a href="https://ellislab.com/blog/entry/reminder-support-for-expressionengine-1-ends-december-7th" title="Reminder: Support for ExpressionEngine 1 Ends December 7th">Read more</a></p>";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"pubDate";a:1:{i:0;a:5:{s:4:"data";s:31:"Thu, 10 Oct 2013 18:05:00 +0000";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:32:"http://purl.org/dc/elements/1.1/";a:1:{s:7:"subject";a:1:{i:0;a:5:{s:4:"data";s:36:"CP Accessory Feed, ExpressionEngine,";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:9;a:6:{s:4:"data";s:39:"
+				
+				
+				
+				
+				
+				
+				
+			";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:2:{s:0:"";a:6:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:31:"ExpressionEngine 2.7.2 Released";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:63:"https://ellislab.com/blog/entry/expressionengine-2.7.2-released";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"guid";a:1:{i:0;a:5:{s:4:"data";s:63:"https://ellislab.com/blog/entry/expressionengine-2.7.2-released";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:6:"author";a:1:{i:0;a:5:{s:4:"data";s:36:"kevin.cupp@ellislab.com (Kevin Cupp)";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:11:"description";a:1:{i:0;a:5:{s:4:"data";s:374:"<p>ExpressionEngine 2.7.2 is now <a href="https://store.ellislab.com/manage">available for download</a>. It is a security and stability release recommended for all users. In addition to improving security, it includes over 20 bug fixes.</p><p><a href="https://ellislab.com/blog/entry/expressionengine-2.7.2-released" title="ExpressionEngine 2.7.2 Released">Read more</a></p>";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"pubDate";a:1:{i:0;a:5:{s:4:"data";s:31:"Tue, 08 Oct 2013 20:56:20 +0000";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:32:"http://purl.org/dc/elements/1.1/";a:1:{s:7:"subject";a:1:{i:0;a:5:{s:4:"data";s:42:"CP Accessory Feed, ExpressionEngine, News,";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}}}s:22:"http://webns.net/mvcb/";a:1:{s:14:"generatorAgent";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:43:"http://www.w3.org/1999/02/22-rdf-syntax-ns#";a:1:{s:8:"resource";s:37:"https://ellislab.com/expressionengine";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}}}}}}}}s:4:"type";i:128;s:7:"headers";a:11:{s:4:"date";s:29:"Tue, 12 May 2015 14:06:34 GMT";s:6:"server";s:6:"Apache";s:10:"set-cookie";s:786:"exp_last_visit=1116079594; expires=Wed, 11-May-2016 14:06:34 GMT; Max-Age=31536000; path=/; domain=.ellislab.com; secure; httponly, exp_last_activity=1431439594; expires=Wed, 11-May-2016 14:06:34 GMT; Max-Age=31536000; path=/; domain=.ellislab.com; secure; httponly, exp_tracker=%7B%220%22%3A%22blog%2Frss-feed%2Fcpnews%22%2C%22token%22%3A%22c446e42bd4c98c0299d90d1ec2a1872a%22%7D; path=/; domain=.ellislab.com; secure; httponly, exp_csrf_token=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.ellislab.com; secure; httponly, exp_csrf_token=a9724b97365bbf40d35ee7d3fe31cdd4ab752cce; expires=Tue, 12-May-2015 16:06:34 GMT; Max-Age=7200; path=/; domain=.ellislab.com; secure; httponly, PHPSESSID=p72o02jso76ijc9puv19b7n122; domain=.ellislab.com; secure; HttpOnly";s:7:"expires";s:29:"Sat, 02 May 2015 07:12:04 GMT";s:13:"last-modified";s:29:"Sat, 02 May 2015 06:12:04 GMT";s:13:"cache-control";s:62:"no-store, no-cache, must-revalidate, post-check=0, pre-check=0";s:6:"pragma";s:8:"no-cache";s:25:"strict-transport-security";s:34:"max-age=7776000; includeSubDomains";s:15:"x-frame-options";s:10:"SAMEORIGIN";s:22:"x-content-type-options";s:7:"nosniff";s:12:"content-type";s:23:"text/xml; charset=utf-8";}s:5:"build";s:14:"20150326124040";}}

@@ -1,0 +1,6 @@
+<pre>{exp:stringy:removeemptyline}{exp:replace_plus find="CID[2047]" replace="CID=[2047]" multiple="yes"}{exp:pcf:parse url="/data/pcf/jwd-plastic/priority-3.PCF" parse="inward"}
+{exp:switchee variable="{descmod findreplace="Unistrut Hanger=TRAPEZE SUPPORT"}{type}{/descmod}"}
+{case value="TRAPEZE SUPPORT"}{if '{endpoint1:z}' == '{endpoint2:z}'}{embed="pcf-includes/supports" axis="X" zcoord="{endpoint1:z}" xcoord1="{endpoint1:x}" xcoord2="{endpoint2:x}"}{if:else}{embed="pcf-includes/supports" axis="Z" xcoord="{endpoint1:x}"}{/if}{/case}
+{/exp:switchee}{/exp:pcf:parse}
+{/exp:replace_plus}{/exp:stringy:removeemptyline}
+</pre>

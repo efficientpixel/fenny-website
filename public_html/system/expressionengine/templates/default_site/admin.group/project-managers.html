@@ -1,0 +1,6 @@
+                             <select name="field_id_37[data][]" id="field-fecpm" class="field-dropdown" placeholder="Select a Team Member">
+                                <option value="">Select a Team Member</option>
+                              {exp:channel:entries channel="team_members" dynamic="off" disable="pagination"}
+                                        <option value="{entry_id}"id="member-item-{entry_id}"{if '{embed:selected}' == '{entry_id}'} selected="selected"{/if}>{first_name} {last_name}</option>
+								{/exp:channel:entries}
+                                </select>

@@ -1,0 +1,25 @@
+            <tr class="row-{exp:create_url_title}{parents:status}{/exp:create_url_title}">
+                <td class="cell-title"><a href="/admin/project/{parents:entry_id}/">{parents:title}</a></td>
+                 {if in_group_1_7}
+                <td class="cell-price">${parents:project_price}</td>
+                {/if}
+                <td class="cell-client"><span title="{parents:customer:title}">{parents:customer:client_code}{!-- ({customer:title})--}</span></td>
+                <td class="cell-job">{if parents:job_number == 0}N/A{if:else}{parents:job_number}{/if}</td>
+                <td class="cell-state">{parents:pe_seal_state}{region_alpha2}{/parents:pe_seal_state}{parents:stamp_pe_engineer}{if parents:stamp_pe_engineer:title != 'Jack Fenny'}<i class="icon-stamp" title="Need an outside stamp">Need Stamp</i>{/if}{/parents:stamp_pe_engineer}</td>
+                <td class="cell-pm">{parents:fec_project_manager}<a href="mailto:{parents:fec_project_manager:email_address}?subject={parents:job_number}-{parents:customer:client_code} {parents:title}" title="Email {parents:fec_project_manager:first_name} regarding this project">{exp:util:first data="{parents:fec_project_manager:first_name}"}{exp:util:first data="{parents:fec_project_manager:last_name}"}</a>{/parents:fec_project_manager}</td>
+                <td class="cell-date">{parents:date_order_received format="%m/%d/%Y"}</td>
+                <td class="cell-date">{parents:due_date format="%m/%d/%Y"}</td>
+                {!--<td class="cell-pricing">{job_pricing}</td>--}
+                <td class="cell-status"><span class="status-flag{if parents:status == 'Submitted' OR parents:status == 'Quote Submitted'} status-submitted{/if}">{if parents:status == 'Quote Submitted'}Submitted{if:else}{parents:status}{/if}</span></td>
+                 {if in_group_1_7}
+                <td class="cell-archive"><input title="Mark as Completed" type="checkbox" name="{parents:entry_id}:status" value="{if segment_3 == 'completed'}Archive{if:elseif segment_3 == 'quotes'}Active{if:else}Completed{/if}" /></td>
+            	{/if}
+                <td class="cell-timer">
+                {if parents:harvest_project_id}
+                <div class="harvest-timer"
+                  data-item='{"id":{parents:entry_id},"project_id":{parents:harvest_project_id},"name":""}'>
+                </div>
+                
+                {/if}
+                </td>
+            </tr>

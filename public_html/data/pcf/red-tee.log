@@ -1,0 +1,100 @@
+c:\users\fec\websites\hg_fennyengineering_com\public_html\data\pcf\red-tee.pcf
+Parsing..................
+ 
+UNITS-CO-ORDS :      1.000 INCH .Converted to=>      0.083,. unitfactor=12.000     
+UNITS-WEIGHT :      1.000 LBS .Converted to=>      1.000, unitfactor=1.000      
+UNITS-BORE :      1.000 INCH .Converted to=>      1.000, unitfactor=1.000      
+Compute unit for length :      1.000 INCH .Converted to=>      1.000, unitfactor=1.000      
+ 
+Component Name: Pipe  
+     Start-Point    :    723.912    1404.177     181.206
+     End-Point      :    848.552    1404.177     181.192
+ 
+     Component-Attribute1 Operating Pressure :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute2 Operating Temperature  :      0.000  .Converted to=>      0.000,. unitfactor=0.000      
+     Component-Attribute3 Material  : A285 .Converted to=> A106-A
+     Component-Attribute4 Wall Thickness :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute5 Insulation Thickness :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute6 Insulation Density :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute7 Corrosion Allowance :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute8 Rigid Weight (Dry Weight) :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute9 Fluid Density :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute10 Hydro Pressure :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+ 
+Component Name: Pipe  
+     Start-Point    :    849.467    1404.177     173.547
+     End-Point      :    849.467    1404.177     179.893
+ 
+     Component-Attribute1 Operating Pressure :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute2 Operating Temperature  :      0.000  .Converted to=>      0.000,. unitfactor=0.000      
+     Component-Attribute3 Material  : A285 .Converted to=> A106-A
+     Component-Attribute4 Wall Thickness :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute5 Insulation Thickness :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute6 Insulation Density :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute7 Corrosion Allowance :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute8 Rigid Weight (Dry Weight) :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute9 Fluid Density :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute10 Hydro Pressure :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+ 
+Component Name: Pipe  
+     Start-Point    :    850.382    1404.177     181.194
+     End-Point      :    928.712    1404.177     181.186
+ 
+     Component-Attribute1 Operating Pressure :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute2 Operating Temperature  :      0.000  .Converted to=>      0.000,. unitfactor=0.000      
+     Component-Attribute3 Material  : A285 .Converted to=> A106-A
+     Component-Attribute4 Wall Thickness :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute5 Insulation Thickness :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute6 Insulation Density :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute7 Corrosion Allowance :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute8 Rigid Weight (Dry Weight) :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute9 Fluid Density :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute10 Hydro Pressure :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+ 
+Component Name: Flange  
+     Start-Point    :    849.467    1404.177     179.893
+     End-Point      :      0.000       0.000       0.000
+ 
+     Component-Attribute1 Operating Pressure :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute2 Operating Temperature  :      0.000  .Converted to=>      0.000,. unitfactor=0.000      
+     Component-Attribute3 Material  : A285 .Converted to=> A106-A
+     Component-Attribute4 Wall Thickness :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute5 Insulation Thickness :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute6 Insulation Density :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute7 Corrosion Allowance :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute8 Rigid Weight (Dry Weight) :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute9 Fluid Density :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute10 Hydro Pressure :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+ 
+Component Name: Flange  
+     Start-Point    :      0.000       0.000       0.000
+     End-Point      :    850.382    1404.177     181.192
+ 
+     Component-Attribute1 Operating Pressure :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute2 Operating Temperature  :      0.000  .Converted to=>      0.000,. unitfactor=0.000      
+     Component-Attribute3 Material  : A285 .Converted to=> A106-A
+     Component-Attribute4 Wall Thickness :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute5 Insulation Thickness :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute6 Insulation Density :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute7 Corrosion Allowance :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute8 Rigid Weight (Dry Weight) :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute9 Fluid Density :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute10 Hydro Pressure :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+ 
+Component Name: Flange  
+     Start-Point    :      0.000       0.000       0.000
+     End-Point      :    848.552    1404.177     181.192
+ 
+     Component-Attribute1 Operating Pressure :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute2 Operating Temperature  :      0.000  .Converted to=>      0.000,. unitfactor=0.000      
+     Component-Attribute3 Material  : A285 .Converted to=> A106-A
+     Component-Attribute4 Wall Thickness :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute5 Insulation Thickness :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute6 Insulation Density :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute7 Corrosion Allowance :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute8 Rigid Weight (Dry Weight) :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute9 Fluid Density :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+     Component-Attribute10 Hydro Pressure :      0.000  .Converted to=>      0.000, unitfactor=0.000      
+ 
+Parsing Complete...........
+ 

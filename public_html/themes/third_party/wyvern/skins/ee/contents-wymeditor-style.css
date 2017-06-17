@@ -1,0 +1,63 @@
+/* 
+.cke_show_borders is only used in the iframe
+*/
+
+.cke_editable p,
+.cke_editable h1,
+.cke_editable h2,
+.cke_editable h3,
+.cke_editable h4,
+.cke_editable h5,
+.cke_editable h6,
+.cke_editable ul,
+.cke_editable ol,
+.cke_editable table,
+.cke_editable blockquote,
+.cke_editable pre,
+.cke_editable caption,
+.cke_editable div { 
+    background: transparent no-repeat 2px 2px;
+    padding: 8px 5px 5px;
+    margin: 10px 0; 
+    border: 1px dashed #b2b2b2;
+}
+
+.cke_editable span {
+    border: 1px dashed #b2b2b2;
+}
+
+.cke_editable blockquote,
+.cke_editable pre,
+.cke_editable caption { 
+    margin: 10px; 
+}
+
+.cke_editable ul,
+.cke_editable ol {
+    padding-left: 3em;
+}
+
+.cke_editable li { 
+    margin-bottom: 0.5em;
+}
+
+.cke_editable ul { 
+    list-style: disc;
+}
+
+.cke_editable ol { 
+    list-style: decimal; 
+}
+
+.cke_editable p         { background-image: url(images/lbl-p.png); line-height: 1.3em; }
+.cke_editable h1        { background-image: url(images/lbl-h1.png); }
+.cke_editable h2        { background-image: url(images/lbl-h2.png); }
+.cke_editable h3        { background-image: url(images/lbl-h3.png); }
+.cke_editable h4        { background-image: url(images/lbl-h4.png); }
+.cke_editable h5        { background-image: url(images/lbl-h5.png); }
+.cke_editable h6        { background-image: url(images/lbl-h6.png); }
+.cke_editable blockquote{ background-image: url(images/lbl-blockquote.png); }
+.cke_editable pre       { background-image: url(images/lbl-pre.png); }
+.cke_editable div       { background-image: url(images/lbl-div.png); }
+.cke_editable ol        { background-image: url(images/lbl-ol.png); }
+.cke_editable ul        { background-image: url(images/lbl-ul.png); }

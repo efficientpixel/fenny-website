@@ -1,0 +1,71 @@
+#banner-featured-container {
+background-color:#d3cab8;
+height:150px;
+background-image:url(../i/bg_home_featued.jpg);
+background-position:0 100%;
+background-position:0 0;
+background-repeat:repeat-x;
+}
+#banner-featured {
+width:960px;
+margin:0 auto;
+position:relative;
+padding:50px 0 15px 0;
+height:85px;	
+}
+#banner-featured-holder {
+background-image:url(../i/bg_home_featured_01.jpg);
+background-position:top center;
+background-repeat:no-repeat;	
+}
+#banner-featured h1 {
+font-size:30px;
+font-weight:normal;
+line-height:30px;	
+text-transform:uppercase;
+color:#581111;
+margin:0 0 15px 0;
+}
+.banner-featured-info {
+width:800px;
+float:left;	
+color:#444;
+font-size:15px;
+}
+.project-list {
+list-style:none;
+margin:0;
+padding:0;
+font-size:15px;	
+}
+.project-list li {
+margin:0 0 16px 0;	
+}
+.project-list em {
+color:#777;
+font-size:13px;	
+}
+.image-launch {
+text-decoration:none;
+display:block;	
+border:1px solid #999;
+position:relative;
+margin:0 0 18px 0;
+}
+.launch-tag {
+color:#fff;
+white-space:nowrap;	
+background-color:#6C1313;
+line-height:16px;
+font-size:12px;
+position:absolute;
+left:0px;
+bottom:0px;
+padding:5px 15px;
+}
+.image-launch:hover .launch-tag {
+text-decoration:underline;
+}
+#sidebar .image-launch {
+margin:0 15px 18px 15px;	
+}

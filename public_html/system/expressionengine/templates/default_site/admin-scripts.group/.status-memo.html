@@ -1,0 +1,13 @@
+var memoField = $('#field-status-memo');
+var memoDate = $('#status-date');
+var memoMember = $('#status-member');
+
+
+$('#form-edit-project').submit(function() {
+	var statusMemo = memoField.val();
+    if(statusMemo == '') {
+    	memoField.removeAttr('name');
+    	memoDate.removeAttr('name');
+        memoMember.removeAttr('name');
+    } 
+});

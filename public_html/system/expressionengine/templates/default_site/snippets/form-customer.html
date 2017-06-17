@@ -1,0 +1,23 @@
+            	<div class="form-row">
+                	<div class="inline-field">
+                        <label for="field-customer" class="field-label field-row-header">FEC Customer:</label>
+                        <div class="form-fields">
+                            <select name="field_id_33[data][]" id="field-customer" class="field-dropdown" placeholder="Select a customer">
+                                <option value="">Select a Customer</option>
+                                <optgroup label="Current Customers">
+                                {embed="admin/field-clients" selected="{customer}{customer:entry_id}{/customer}"}
+                                </optgroup>
+                                {!--
+                                <optgroup label="New Clients">
+                                    <option value="create">Create New[+]</option>
+                                </optgroup>
+                                --}
+                            </select>
+                           
+                            <br />
+                            <a href="#" class="field-link btn app-btn" id="btn-new-customer" data-modal="newclient">New Customer[+]</a>
+                            {!--
+                            <a href="/admin/clients/new/" class="field-link btn" target="_blank">New Customer[+]</a>
+                            --}
+                        </div>
+                    </div>

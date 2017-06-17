@@ -1,0 +1,267 @@
+{embed="admin/head"}
+<body>
+{embed="admin/header"}
+<div class="container">
+	<div class="container-content">
+    {if segment_3 == 'updated'}
+    <div class="msg msg-updated">
+        <strong>Your project(s) have been updated</strong>
+    </div>
+    {/if}
+    <div class="page-header">
+       {!-- <div class="crumbs">
+            <span>&nbsp;</span>
+        </div>
+        --}
+        <h1 class="page-title page-header-title">PE Reviews</h1>
+        <div class="header-right">
+            <a href="/admin/projects/new/" class="page-header-button btn button-new btn-submit">New Project [+]</a>
+            <a href="/admin/clients/new/" class="page-header-button btn button-new btn-submit">New Customer [+]</a>
+        </div>
+    </div>
+    <div class="table-heading">
+    {!--
+    <!--
+            {exp:switchee variable='{segment_3}' parse='inward'}
+        {case value='archived'}
+    	<ul class="pill">
+        	<li class="pill-item pill-start">
+            	<a href="/admin/projects/">All Current Projects</a>
+            </li>
+            <li class="pill-item pill-end">
+            	<strong>Archived Projects</strong>
+            </li>
+         </ul>
+        {/case}
+        {case value='completed'}
+    	<ul class="pill">
+        	<li class="pill-item pill-start">
+            	<a href="/admin/projects/">All Current Projects</a>
+            </li>
+            <li class="pill-item pill-end">
+            	<strong>{segment_4} Completed Projects</strong>
+            </li>
+            <li class="pill-item pill-end">
+            	<a href="/admin/projects/quotes/">Quotes</a>
+            </li>
+         </ul>
+        {/case}
+        {case value='quotes'}
+    	<ul class="pill">
+        	<li class="pill-item pill-start">
+            	<a href="/admin/projects/">All Current Projects</a>
+            </li>
+            <li class="pill-item pill-end">
+            	<a href="/admin/projects/completed/{current_time format='%Y'}/">{current_time format="%Y"} Completed Projects</a>
+            </li>
+            <li class="pill-item pill-end">
+            	<strong>Quotes</strong>
+            </li>
+         </ul>
+        {/case}
+        {case default='Yes'}
+                {/case}
+        {/exp:switchee}
+
+        -->
+        --}
+        <div class="tabs-holder">
+        	<div class="tabs-item">
+                <ul class="pill">
+                {if in_group_6}
+                    <li class="pill-item pill-start">
+                        <a href="/admin/projects/"{if segment_3 == ''} class="active"{/if}>Your Projects</a>
+                    </li>
+                {/if}
+                    <li class="pill-item pill-start">
+                        <a href="/admin/projects/{if in_group_6}all/{/if}"{if segment_3 == 'all'} class="active"{/if}>All Current Projects</a>
+                    </li>
+                    {!--
+                    <li class="pill-item pill-end">
+                        <a href="/admin/projects/completed/{current_time format='%Y'}/"{if segment_3 == 'completed'} class="active"{/if}>{current_time format="%Y"} Completed Projects</a>
+                    </li>
+                    --}
+                    <li class="pill-item pill-end">
+                        <a href="/admin/projects/quotes/"{if segment_3 == 'quotes'} class="active"{/if}>Quotes</a>
+                    </li>
+                   {!-- <li class="pill-item pill-end">
+                        <a href="/admin/projects/{logged_in_member_id}/">My Projects</a>
+                    </li>--}
+                 </ul>
+             </div>
+             <div class="tabs-item">
+             	<select name="completed_year" id="projects-year">
+                	<option value="">View Completed</option>
+                    <option value="2017"{if segment_4 == '2017'} selected="selected"{/if}>2017 Completed Projects</option>
+                    <option value="2016"{if segment_4 == '2016'} selected="selected"{/if}>2016 Completed Projects</option>
+                </select>
+             </div>
+           </div>
+           <h2 class="projects-header">
+           
+           {exp:switchee variable='{segment_3}' parse='inward'}
+           	{case value=''}{if in_group_6}Your {/if}{if in_group_1_7}All {/if}Current PE Reviews{/case}
+            {case value='completed'}{segment_4} Completed Projects{/case}
+            {case value='quotes'}Current Quotes{/case}
+            {case value='all'}All Current PE Reviews{/case}
+            {case default='Yes'}My Projects{/case}
+           {/exp:switchee}
+           </h2>
+        <div class="container-filter filter-table">
+        	
+        </div>
+    </div>
+    {if segment_3 == 'updated'}
+    {exp:mefu:save}{/exp:mefu:save}
+    {/if}
+    <div class="projects-list-container content-main">
+    {if segment_3 == ''}
+    {!--
+    <div class="controls controls-right">
+    	<div class="control-unit">
+        	Filter:
+        </div>
+    	<div class="control-unit">
+        	Filter:
+        </div>
+    </div>
+    --}
+    {/if}
+    <form method="post" name="mu-form" action="/admin/projects/updated/">
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="projects-table">
+        <thead>
+            <tr>
+                <th scope="col">FEC Customer</th>
+                 {if in_group_1_7}
+                <th scope="col">Price</th>
+                {/if}
+                <th scope="col">Client</th>
+                <th scope="col">Job#</th>
+                {if in_group_1_7}
+                <th scope="col" class="header-archive" data-sorter="false">&nbsp;</th>
+               {/if}
+               <th scope="col" style="white-space:nowrap">&nbsp;</th>
+            </tr>
+        </thead>
+        {exp:switchee variable='{segment_3}' parse='inward'}
+        {case value='archived'}
+        <tbody class="projects-list-active">
+        {exp:channel:entries dynamic="off" channel="projects" status="Archived" limit="1000" orderby="date_order_received" sort="asc" disable="categories|category_fields|member_data|pagination"}
+          {review-rows}
+        {/exp:channel:entries}
+        </tbody>
+        {/case}
+        {case value='completed'}
+        <tbody class="projects-list-active">
+        {exp:channel:entries dynamic="off" channel="projects" status="Completed" search:project_year="{segment_4}" limit="1000" orderby="date_order_received" sort="asc" disable="categories|category_fields|member_data|pagination"}
+          {review-rows}
+          {if no_results}
+          	<tr>
+                 {if in_group_1_7}
+                 <td colspan="9">There are no {segment_4} jobs at this time</td>
+                 {if:else}
+                 <td colspan="8">There are no {segment_4} jobs at this time</td>
+                 {/if}
+            </tr>
+          {/if}
+              {exp:tally:add collection="prices-completed-{segment_4}" value="{project_price}" count="{count}" search:project_year="{segment_4}"}
+       {if count == total_results}
+        </tbody>
+        <tfoot>
+        	<tr>
+            	<td style="padding-left:20px;"><em>{total_results} Total Completed Projects for {segment_4}</em></td>
+            	<td colspan="7" style="padding-left:10px;"><em>{embed="admin/prices"}</em></td>
+            </tr>
+        </tfoot>
+        {/if}
+        {/exp:channel:entries}
+{embed="reports/_total"}
+
+        {/case}
+        {case value='quotes'}
+        <tbody class="projects-list-active">
+        {exp:channel:entries dynamic="off" channel="projects" status="Quote|Quote Submitted" limit="1000" orderby="entry_date" sort="desc" disable="categories|category_fields|member_data|pagination"}
+          {review-rows}
+              {exp:tally:add collection="prices-current-quotes" value="{project_price}" count="{count}"}
+       {if count == total_results}
+        </tbody>
+        <tfoot>
+        	<tr>
+            	<td style="padding-left:20px;"><em>{total_results} Total Quoted Projects</em></td>
+            	<td colspan="7" style="padding-left:10px;"><em>{embed="admin/prices"}</em></td>
+            </tr>
+        </tfoot>
+        {/if}
+        {/exp:channel:entries}
+{embed="reports/_total"}
+
+        {/case}
+        {case value='all'}
+        <tbody class="projects-list-active">
+                {exp:channel:entries dynamic="off" channel="projects|added_scope" status="open|Pending|Active|Submitted|Flagged" limit="1000" orderby="date_order_received" sort="asc" disable="categories|category_fields|member_data|pagination" search:project_year="{current_time format='%Y'}"}
+                  {exp:tally:add collection="prices-active" value="{project_price}" count="{count}"}
+                {/exp:channel:entries}
+                
+        {exp:channel:entries dynamic="off" channel="projects|added_scope" status="open|Pending|Active|Submitted|Flagged" limit="1000" orderby="date_order_received" sort="asc" disable="categories|category_fields|member_data|pagination"}{!-- search:project_year="{current_time format='%Y'}" --}
+          {review-rows}
+          {if count == total_results}
+        </tbody>
+        <tfoot>
+        	<tr>
+            	<td style="padding-left:20px;"><em>{total_results} Total Current Projects</em></td>
+            	<td colspan="7" style="padding-left:10px;"><em>{embed="admin/prices"}</em></td>
+            </tr>
+        </tfoot>
+          {/if}
+        {/exp:channel:entries}
+        {/case}
+        {case default='Yes'}
+        {if in_group_1_7}
+        <tbody class="projects-list-active">
+                {exp:channel:entries dynamic="off" channel="projects" status="open|Pending|Active|Submitted|Flagged" limit="1000" orderby="date_order_received" sort="asc" disable="categories|category_fields|member_data|pagination" search:project_year="{current_year}" search:pe_stamp_only_job="y"}
+                  {exp:tally:add collection="prices-active" value="{project_price}" count="{count}"}
+                {/exp:channel:entries}
+        {exp:channel:entries dynamic="off" channel="projects" status="open|Pending|Active|Submitted|Flagged|On Hold" limit="1000" orderby="date_order_received" sort="asc" disable="categories|category_fields|member_data|pagination" search:pe_stamp_only_job="y"}
+          {review-rows}
+          {if count == total_results}
+        </tbody>
+        <tfoot>
+        	<tr>
+            	<td style="padding-left:20px;"><em>{total_results} Total Client Reviews</em></td>
+            	<td colspan="7" style="padding-left:10px;"><em>{embed="admin/prices"}</em></td>
+            </tr>
+        </tfoot>
+          {/if}
+        {/exp:channel:entries}
+        {/if}
+        {if in_group_6}
+        <tbody class="projects-list-active">
+		    {exp:channel:entries channel="team_members" dynamic="off" disable="pagination|categories|member_data" author_id="CURRENT_USER" limit="1"}
+                {parents field='assigned_to' status='Active|Submitted' orderby='status' sort='asc'}  
+                  {rel-project-rows}
+                {/parents}          
+            {/exp:channel:entries}
+        </tbody>
+        {/if}
+        {/case}
+        {/exp:switchee}
+    </table>
+        <div class="table-footer">
+        {if in_group_1_7}
+        	<input type="submit" name="mefu" class="btn btn-update" value="
+            {exp:switchee variable='{segment_3}' parse='inward'}
+                	{case value='completed'}Archive Selected{/case}
+                	{case value='archived|quotes'}Make Active{/case}
+                    {case default='Yes'}Complete Selected{/case}
+                {/exp:switchee}" />
+         {/if}
+        </div>
+    </form>
+    </div>
+{embed="admin/projects-sidebar"}
+</div>
+
+</div>
+{admin-footer}
+{embed="admin/pages-bottom" script="filter|field-completed|harvest" include_harvest="y"}
+</html>

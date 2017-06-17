@@ -1,0 +1,30 @@
+{exp:array_mill function="array_intersect" param1="{embed:assigned_ids}" param2="{embed:managing_ids}" array_params="param2|param1" parse="inward"}
+  {exp:channel:entries entry_id="{segment_3}" channel="team_members" dynamic="off" disable="pagination|categories|member_data"}
+        <ul class="projects-list">
+        {if '{embed:type}' == 'active'}
+        {parents field='assigned_to' status='Active' orderby='date_order_received' sort='asc' entry_id='not {array_mill_result}'}
+            <li>{parents:absolute_count}. 
+            {if parents:channel_short_name == 'added_scope'}
+            {parents:job_number}-{parents:customer}{parents:customer:client_code}{/parents:customer} {parents:added_scope_project:title} - {parents:scope_title}<sup>{parents:scope_number}</sup> | <a href="/admin/project/{parents:added_scope_project:entry_id}/">Edit Project</a>
+            {if:else}
+            {parents:job_number}-{parents:customer}{parents:customer:client_code}{/parents:customer} {parents:title} | <a href="/admin/project/{parents:entry_id}/">Edit Project</a> &nbsp;&nbsp;({parents:assigned_to}{exp:util:first data="{parents:assigned_to:first_name}"}{exp:util:first data="{parents:assigned_to:last_name}"}, {/parents:assigned_to})
+            {/if}
+            </li>
+        {if parents:no_results}
+                  <li>{embed:name} is not assigned to any active projects at this time...</li>
+                {/if}
+        {/parents}
+        {/if}
+        {if '{embed:type}' == 'submitted'}
+        <ul class="projects-list">
+        {parents field='assigned_to' status='Submitted' orderby='status' sort='asc' entry_id='not {array_mill_result}'}
+            <li>{parents:absolute_count}. {parents:job_number}-{parents:customer}{parents:customer:client_code}{/parents:customer} {parents:title}{!-- <span class="item-status status-{parents:status}">{parents:status}</span>--} | <a href="/admin/project/{parents:entry_id}/">Edit Project</a></li>
+        {if parents:no_results}
+                  <li>{embed:name} is not assigned to any submitted projects at this time...</li>
+                {/if}
+        {/parents}
+        </ul>
+        {/if}
+        </ul>
+{/exp:channel:entries}
+{/exp:array_mill}

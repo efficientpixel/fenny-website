@@ -1,0 +1,28 @@
+<div class="remodal" data-remodal-id="newclient">
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <h3 class="modal-header">New Customer</h3>
+        	{exp:channel:form channel="clients" json="yes" id="form-new-client" return="/admin/projects/" datepicker="no" include_jquery="no" include_assets="no"}
+            	<div class="form-row">
+                	<label for="field-client-title" class="field-label field-row-header">Customer Name:</label>
+                    <div class="form-fields">
+                    	<input type="text" class="field-text" name="title" id="field-client-title" placeholder="What is the name of your new customer?" />
+                    </div>
+                </div>
+            	<div class="form-row">
+                	<label for="field-clientcode" class="field-label field-row-header">Customer Short Code:</label>
+                    <div class="form-fields">
+                    	<input type="text" class="field-text" name="client_code" id="field-clientcode" maxlength="3" placeholder="ABC" />
+                    </div>
+                </div>
+                {!--
+            	<div class="form-row">
+                <input type="submit" name="submit" value="Submit" class="field-submit" />
+                </div>
+                --}
+  <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+  <button data-remodal-action="" type="submit" class="remodal-confirm">Submit</button>
+  <div class="loader submitter">
+  	<span class="submit-indicator">Submitting&hellip;</span>
+  </div>
+                          {/exp:channel:form}
+</div>

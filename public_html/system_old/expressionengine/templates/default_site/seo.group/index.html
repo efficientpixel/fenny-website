@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="">
+        {exp:channel:entries disable="categories|category_fields|member_data|pagination"}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{exp:surgeeo:title entry_id='{entry_id}'}</title>
+        <meta name="description" content="{exp:surgeeo:description entry_id='{entry_id}'}" />
+        <meta name="author" content="{exp:surgeeo:author entry_id='{entry_id}' fallback='Fenny Engineering'}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="/css/seo.css">
+        <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+    <!-- if home page, use <header> else use <div> -->
+        <div class="container-header">
+            <div class="header">
+<div itemscope itemtype="http://schema.org/Organization" id="branding">
+   <a itemprop="url" href="http://www.fennyengineering.com" title="Fenny Engineering Co., Venice, FL">
+       <img itemprop="logo" src="http://www.fennyengineering.com/i/logo2.gif" alt="Fenny Engineering Co., Venice, FL" />
+   </a>
+</div>
+            </div>
+    <nav role="">
+    	<ul>
+        	<li><a href="/">Home</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/company/">Company</a></li>
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+    </nav>
+        </div>
+    <header>
+    	<h1>{title}</h1>
+    </header>
+    <div>
+        <main role="main">
+        {content}
+        </main>
+        <aside role="complimentary">
+        {side_content}
+        </aside>
+    </div>
+    
+    
+    
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        {/exp:channel:entries}
+    <footer>
+    ©{current_time format="%Y"} Fenny Engineering Company  |  104 Gondola Park Drive Venice, FL 34292  |  <a href="tel:9414887188">941-488-7188</a> All Rights Reserved.
+    </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+{embed="admin/head"}
+<body>
+{embed="admin/header"}
+<div class="container">
+	<div class="container-content">
+    <div class="page-header">
+        <div class="crumbs">
+            <a href="/admin/projects/">Projects</a> &raquo; <span>New Project &nbsp;</span>
+        </div>
+        <h1 class="page-title">New Customer</h1>
+    </div>
+    <div class="page-content">
+    	<div class="new-project-form">
+            <div class="form-main">
+
+        	{exp:channel:form channel="clients" id="form-new-client" return="/admin/projects/" datepicker="no" include_jquery="no" include_assets="no"}
+            {field_errors}{error}{/field_errors}
+            {global_errors}{error}{/global_errors}
+            	<div class="form-row">
+                	<label for="field-title" class="field-label field-row-header">Customer Name:</label>
+                    <div class="form-fields">
+                    	<input type="text" class="field-text" name="title" id="field-title" placeholder="What is the name of your customer?" />
+                    </div>
+                </div>
+            	<div class="form-row">
+                	<label for="field-clientcode" class="field-label field-row-header">Customer Short Code:</label>
+                    <div class="form-fields">
+                    	<input type="text" class="field-text" name="client_code" id="field-clientcode" placeholder="ABC" />
+                    </div>
+                </div>
+            	<div class="form-row">
+                <input type="submit" name="submit" value="Submit" class="field-submit" />
+                </div>
+                          {/exp:channel:form}
+                          <div id="myResultsDiv"></div>
+
+            </div>
+            <div class="form-side">
+            	<div class="form-row">
+                	<label for="field-fecpm" class="field-label field-row-header">Existing Customers:</label>
+                    <div class="form-fields">
+                    <ul class="existing-clients">
+                                {exp:channel:entries channel="clients" sort="asc" orderby="title" dynamic="off" disable=""}
+                                 <li>{client_code} ({title})</li>
+                                {/exp:channel:entries}
+                     </ul>
+                    </div>
+                </div>
+                
+                
+            </div>
+           
+        </div>
+    </div>
+
+</div>
+</div>
+{admin-footer}
+{embed="admin/pages-bottom" script="new-client"}
+</html>

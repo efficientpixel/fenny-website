@@ -1,0 +1,30 @@
+<?php
+$support = '{embed:support}';
+if ($support != 'Shoe') {
+    $list = '{exp:trimmer right="1"}{embed:items}{/exp:trimmer}';
+    $strip = '{embed:strip}';
+    $arr = explode('|', $list);
+    
+    sort($arr);
+    
+    if (abs($arr[0]) > abs($arr[count($arr)-1]))
+    {
+       //$arr[0] is the furthest from 0
+       if($strip == 'y') {
+       echo abs($arr[0]);
+       } else {
+       echo $arr[0];
+       }
+    }
+    else
+    {
+       //$arr[count($arr)-1)] is the furthest from 0
+       if($strip == 'y') {
+       echo abs($arr[count($arr)-1]);
+       } else {
+       echo $arr[count($arr)-1];
+       }
+    }
+}
+
+?>

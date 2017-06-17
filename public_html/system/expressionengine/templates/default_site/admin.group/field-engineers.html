@@ -1,0 +1,4 @@
+                                {exp:channel:entries channel="pe_engineers" sort="asc" orderby="title" dynamic="off" disable=""}
+                                    <option value="{entry_id}"{if '{embed:engineerid}' == '{entry_id}'} selected="selected"{/if} data-id="{entry_id}">{first_name} {last_name}</option>
+                                {/exp:channel:entries}
+                                    <option value="Other"{if '{embed:engineerid}' == ''} selected="selected"{/if} data-id="">Other (Client)</option>

@@ -1,0 +1,95 @@
+{exp:channel:entries dynamic="off" entry_id="{segment_3}" channel="projects" status="not closed" limit="1" orderby="date_order_received" sort="asc" disable="categories|category_fields|member_data|pagination"}
+     <h4 class="invoice-project-title">Project: {title}</h3>
+     {exp:sv_redirects:output_message debug=""}
+            {if '{md:title}' == 'Error'}
+                <strong>{md:content}</strong>
+                {sv_post_data_reload}
+            {if:else}
+                {md:content}
+            {/if}
+            
+            {sv_debug_data}
+            
+       {/exp:sv_redirects:output_message}
+       <div class="modal-invoice-description">
+          <p><em>Note: Invoices go out on the 1<sup>st</sup> and 16<sup>th</sup> of each month. <strong>Today is the {current_time format="%j<sup>%S</sup>"}</strong>.</em></p>
+       </div>
+{if segment_4 == 'sent'}
+<p>Your invoice request has been sent. Thank you. </p>
+{if:else} 
+   {exp:channel:form channel="invoice_requests" return="/{segment_1}/{segment_2}/{segment_3}/invoice-requested/" datepicker="no" include_jquery="no" include_assets="no" error_handling="inline"}
+   {field_errors}{error}{/field_errors}
+   {global_errors}{error}{/global_errors}
+      <input type="hidden" name="title" value="Invoice request for {job_number}-{customer:client_code} {title}" />
+	{!-- What job is this related to --}
+   <input type="hidden" name="field_id_123[data][]" value="{entry_id}" />
+   {!-- Whos requesting this invoice --}
+   <input type="hidden" name="field_id_134[data][]" value="{m_team_id}" />
+            	<div class="form-row">
+                	<label class="field-label field-row-header">Job is Hourly:</label>
+                    <div class="form-fields">
+                    	<div class="field-item inline-field">
+                            <label><input type="radio" name="invoice_is_hourly" value="n"{if '{job_pricing}' == 'LS'} checked="checked"{/if} id="field-hourly-no"> No</label>
+                        </div> 
+                    	<div class="field-item inline-field"> &nbsp;
+                            <label><input type="radio" name="invoice_is_hourly" value="y"{if '{job_pricing}' == 'UP'} checked="checked"{/if} id="field-hourly-yes"> Yes</label>
+                        </div>
+                    </div>
+                </div>
+   
+   
+   
+   <div class="invoice-pricing" id="pricing-ls"{if job_pricing == 'UP'} style="display:none;"{/if}>
+       <div class="form-row">
+          <label for="field-customercontact" class="field-label field-row-header">Invoice Amount:</label>
+          <div class="form-fields">
+                   <input type="text" class="field-text" name="invoice_amount" id="invoice-amount" value="{project_price}" />
+          </div>
+       </div>
+   </div>
+      <div class="invoice-pricing" id="pricing-up"{if job_pricing == 'LS'} style="display:none;"{/if}>
+       <div class="form-row">
+           <div class="inline-field">
+               <label for="field-hours" class="field-label field-row-header">Total Hours:</label>
+               <div class="form-fields">
+                   <input type="text" class="field-text" name="invoice_total_hours" id="field-hours" placeholder="Total Hours" value="" />
+               </div>
+           </div>
+                 <div class="inline-field">
+               <label for="field-rate" class="field-label field-row-header">Hourly Rate:</label>
+               <div class="form-fields">
+                   <input type="text" class="field-text" name="invoice_hourly_rate" id="field-rate" placeholder="Hourly Rate" value="{customer:client_billing_rate}" />
+               </div>
+           </div>
+       </div>
+   </div>
+       <div class="form-row">
+          <label for="field-ponumber" class="field-label field-row-header">P.O. Number:</label>
+          <div class="form-fields">
+                   <input type="text" class="field-text" name="invoice_po_number" id="field-ponumber" value="" />
+          </div>
+       </div>
+       <div class="form-row">
+          <label for="field-recipient" class="field-label field-row-header">Invoice Recipient Name:</label>
+          <div class="form-fields">
+                   <input type="text" class="field-text" name="invoice_recipient_name" id="field-recipient" value="" />
+          </div>
+       </div>
+       <div class="form-row">
+          <label for="field-email" class="field-label field-row-header">Recipient Email:</label>
+          <div class="form-fields">
+                   <input type="text" class="field-text" name="invoice_recipient_email" id="field-email" value="" />
+          </div>
+       </div>
+       <div class="form-row">
+          <label for="field-notes" class="field-label field-row-header">Invoice Notes:</label>
+          <div class="form-fields">
+                   <textarea name="invoice_notes" id="field-notes" cols="50" rows="6"></textarea>
+          </div>
+       </div>
+            	<div class="form-row">
+                <input type="submit" name="submit" value="Submit Invoice Request" class="field-submit" />
+                </div>
+   {/exp:channel:form}
+{/if}
+{/exp:channel:entries}

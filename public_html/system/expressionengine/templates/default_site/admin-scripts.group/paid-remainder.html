@@ -1,0 +1,3 @@
+    {exp:channel:entries dynamic="off" channel="harvest_invoices" status="paid" limit="1000" orderby="harvest_updated_at" sort="desc" disable="categories|category_fields|member_data|pagination" year="{current_year}"}
+    {if count == 1}<p>&hellip; {total_results} more paid invoices for {current_year}</p>
+    {/exp:channel:entries}

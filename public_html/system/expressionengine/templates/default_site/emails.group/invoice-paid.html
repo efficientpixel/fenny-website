@@ -1,0 +1,14 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<p style="font-family:Arial, Helvetica, sans-serif;">Invoices have been marked as paid.</p>
+{exp:channel:entries dynamic="off" entry_id="{embed:entryids}" channel="harvest_invoices" status="paid" limit="1000" orderby="harvest_issued_at|harvest_number" sort="asc|asc" disable="categories|category_fields|member_data|pagination"}
+<p style="font-family:Arial, Helvetica, sans-serif;">#{harvest_number} | <strong class="invoice-client">{harvest_client_name}</strong> <br />{invoice_subject}</p>
+{/exp:channel:entries}
+</body>
+</html>

@@ -1,0 +1,4 @@
+{exp:channel:entries entry_id="{embed:projectids}" dynamic="off" channel="projects" status="Completed|Archived|Submitted|Active" year="{embed:year}" limit="1000" orderby="date_order_received" sort="asc" disable="categories|category_fields|member_data|pagination"}
+                  {exp:tally:add collection="client-year-total-{embed:clientid}" value="{project_price}" count="{count}"}
+{/exp:channel:entries}
+<p><strong>Total {current_year} Project Income: {embed='admin/price-total'}</strong> <br />(<em>includes active and submitted projects for {current_year}</em>)</p>

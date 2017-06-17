@@ -1,0 +1,46 @@
+<div class="container-header">
+	<div class="header">
+    	<a href="/admin/projects/" class="header-home-button" title="Back to Dashboard">Home</a>
+        <div class="header-inner">
+            <div class="branding"><strong>Fenny Engineering Admin</strong></div>
+                        <ul class="header-tabs">
+            	<li class="tab-item"><a href="/admin/projects/">Projects</a></li>
+            	<li class="tab-item"><a href="/admin/reviews/">PE Reviews</a></li>
+                {if m_access_invoices == 'Yes'}
+            	<li class="tab-item"><a href="/admin/invoices/">Invoices</a></li>
+                {/if}
+                {!--
+            	<li class="tab-item"><a href="/admin/help/">Help</a></li>
+            	<li class="tab-item"><a href="/admin/resources/">Resources</a></li>
+                --}
+            </ul>
+
+            <div class="header-account">
+            <div class="header-loggedin">
+            {if logged_in}
+            <strong>{screen_name}</strong>&nbsp; | &nbsp; 
+                <a href="{exp:freemember:logout_url return='/admin/login/'}">Logout</a>
+            {/if}
+            {if logged_out}
+                <a href="/admin/login/">Login</a>
+            {/if}
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-history">
+	<div class="history-buttons">
+    	<a href="{came_from}" class="history-button">&lt; {exp:switchee variable="{came_from}" parse="inward"}
+        	{case value="http://www.fennyengineering.com/admin/reviews/"}Reviews{/case}
+            {case value="http://www.fennyengineering.com/admin/projects/"}Projects{/case}
+            {case value="http://www.fennyengineering.com/admin/member/27615/"}Chris&rsquo;s Projects{/case}
+            {case value="http://www.fennyengineering.com/admin/member/27616/"}Jack&rsquo;s Projects{/case}
+            {case value="http://www.fennyengineering.com/admin/member/27617/"}Van&rsquo;s Projects{/case}
+            {case value="http://www.fennyengineering.com/admin/member/27618/"}Norm&rsquo;s Projects{/case}
+            {case value="http://www.fennyengineering.com/admin/member/27619/"}Doug&rsquo;s Projects{/case}
+            {case value="http://www.fennyengineering.com/admin/member/58241/"}Tom&rsquo;s Projects{/case}
+        	{case default="Yes"}Back{/case}
+        {/exp:switchee}</a>
+    </div>
+</div>

@@ -1,0 +1,184 @@
+{embed="admin/head"}
+<body>
+{embed="admin/header"}
+<div class="container remodal-bg">
+	<div class="container-content">
+    <div class="page-header">
+        <div class="crumbs">
+            <a href="/admin/projects/">Projects</a> &raquo; <span>New Project &nbsp;</span>
+        </div>
+        <h1 class="page-title">New Project</h1>
+    </div>
+    <div class="page-content">
+    	<div class="new-project-form">
+        
+        
+        	{exp:channel:form channel="projects" return="/admin/projects/" datepicker="no" include_jquery="no" include_assets="no" error_handling="inline}
+            {field_errors}{error}{/field_errors}
+            {global_errors}{error}{/global_errors}
+            {!--<input type="hidden" name="status" value="Active" />--}
+            <input type="hidden" name="project_year" value="{current_time format='%Y'}" />
+            <div class="form-main">
+            	<div class="form-row">
+                <div class="inline-field">
+                	<label for="field-status" class="field-label field-row-header">Status:</label>
+                    <div class="form-fields">
+                            <select name="status" id="field-status" class="field-dropdown">
+                            	<option value="Active"{if status == 'Active'} selected="selected"{/if}>Active (in-progress)</option>
+                                <option value="Submitted"{if status == 'Submitted'} selected="selected"{/if}>Submitted (sent to client)</option>
+                                <option value="Completed"{if status == 'Completed'} selected="selected"{/if}>Completed (paid)</option>
+                            	<option value="Quote"{if status == 'Quote'} selected="selected"{/if}>Quote</option>
+                            	<option value="Quote Submitted"{if status == 'Quote Submitted'} selected="selected"{/if}>Quote Submitted</option>
+                                <option value="Pending"{if status == 'Pending'} selected="selected"{/if}>Pending</option>
+                                <option value="Archived"{if status == 'Archived'} selected="selected"{/if}>Archived</option>
+                                {if in_group_1}
+                            	<option value="Flagged"{if status == 'Flagged'} selected="selected"{/if}>Flagged (issues with project)</option>
+                                {/if}
+                            </select> {if status == 'Quote'}&nbsp;(<em>This project has not been awarded yet</em>){/if} 
+                            {if status == 'Quote Submitted'}&nbsp;(<em>This project has been bidded on but not yet awarded</em>){/if}
+                            {if status == 'Flagged'}&nbsp;(<em>There are issues with this project and/or invoices are incomplete</em>){/if}
+                    </div>
+                </div>
+                	<div class="inline-field">
+                	<label for="field-title" class="field-label field-row-header">Status Memo:</label> <a href="#" class="icon-helptip" data-remodal="help-statusmemo">What&rsquo;s This?</a>
+                    <div class="form-fields">
+                    	<input type="text" class="field-text" name="field_id_99[row_new_0][col_id_30]" id="field-status-memo" placeholder="Tell me where this project is at" value="" />
+                    	<input type="hidden" name="field_id_99[row_new_0][col_id_31]" value="{current_time format='%m/%d/%Y %h:%i %A'}" id="status-date" />
+                        <input type="hidden" name="field_id_99[row_new_0][col_id_33][]" value="{embed='admin/member-entryid'}" id="status-member" />
+                        <input type="hidden" name="field_id_99[trigger_revisions]" value="1">
+                    </div>
+                    </div>
+                
+                </div>
+                {form-project-year}
+            	<div class="form-row">
+                	<label class="field-label field-row-header">Job Ordered:</label>
+                    {!--<span class="label-desc">When was the job received?</span>--}
+                    <div class="form-fields">
+                    <span class="date-field">
+                    	<input type="text" class="field-date" name="date_order_received" id="field-jobordered" value="{current_time format='%m/%d/%Y'}" />
+                        
+                    </span>
+                    {!--
+                        <input type="hidden" value="" name="date_order_received" id="field-jobordered" />--}
+                    </div>
+                </div>
+            
+            
+            
+            	{form-customer}
+                	<div class="inline-field">
+                        <label for="field-jobnum" class="field-label field-row-header">&nbsp;Job #:</label>
+                        <div class="form-fields">
+                            <input type="text" class="field-text" name="job_number" id="field-jobnum" placeholder="i.e. {current_time format='%y'}01" value="" />
+                        </div>
+                    </div>
+                	<div class="inline-field">
+                        <label for="field-pestate" class="field-label field-row-header">PE Stamp State:</label>
+                        <div class="form-fields">
+                           {exp:reegion_select:states hide='AE|AA|AP|MP|FM|PR|MH' selected='{pe_seal_state}{region_alpha2}{/pe_seal_state}' name='field_id_62' class='field-dropdown' type='alpha2'} 
+                        </div>
+                    </div>
+                	<div class="inline-field">
+                        <label for="field-pe-engineer" class="field-label field-row-header">PE Engineer:</label>
+                        <div class="form-fields">
+                          <select name="field_id_75[data][]" id="field-pe-engineer" class="field-dropdown" placeholder="Select an engineer">
+                                {embed="admin/field-engineers" engineerid="{stamp_pe_engineer:entry_id}"}
+                          </select>
+
+                        </div>
+                    </div>
+                    {!--
+                	<div class="inline-field">
+                        <label for="field-pestate" class="field-label field-row-header">Require Add'l PE?:</label>
+                        <div class="form-fields">
+                            <div class="field-item">
+                                <label><input type="radio" name="stamp_requires_pe" value="n"{if '{stamp_requires_pe}' == 'n'} checked="checked"{/if} id="field-perequired-no"> No</label> <label><input type="radio" name="stamp_requires_pe" value="y"{if '{stamp_requires_pe}' == 'y'} checked="checked"{/if} id="field-perequired-yes"> Yes</label>
+                            </div>
+                        </div>
+                    </div>
+                    --}
+                    
+                    
+                    
+                    
+                </div>
+            	<div class="form-row">
+                	<label for="field-title" class="field-label field-row-header">Project Title:</label>
+                    <div class="form-fields">
+                    	<input type="text" class="field-text" name="title" id="field-title" placeholder="What are you calling this project?" />
+                    </div>
+                </div>
+            	<div class="form-row">
+                	<label for="field-title" class="field-label field-row-header">Scope Title/Description:</label> <a href="#" class="icon-helptip" data-remodal="help-scopetitle">What is this?</a>
+                    <div class="form-fields">
+                    	<input type="text" class="field-text" name="scope_title" id="field-scope-title" placeholder="What is the name of the work being performed as per scope" value="{scope_title}" />
+                    </div>
+                </div>
+            	<div class="form-row">
+                	<label for="field-customercontact" class="field-label field-row-header">Customer Contact:</label>
+                    <div class="form-fields">
+                    	<textarea class="field-textbox" name="customer_contact" id="field-customercontact" rows="7" cols="40"></textarea>
+                    </div>
+                </div>
+            	<div class="form-row">
+                	<label for="field-contractor" class="field-label field-row-header">Contractor:</label>
+                    <div class="form-fields">
+                    	<textarea class="field-textbox" name="contractor" id="field-contractor" rows="7" cols="40"></textarea>
+                    </div>
+                </div>
+            	<div class="form-row">
+                	<label for="field-projectnotes" class="field-label field-row-header">Project Notes:</label>
+                    <div class="form-fields">
+                    	<textarea class="field-textbox" name="project_notes" id="field-projectnotes" rows="7" cols="40"></textarea>
+                    </div>
+                </div>
+            	<div class="form-row">
+                <input type="submit" name="submit" value="Submit Project" class="field-submit" />
+                </div>
+                
+            </div>
+            <div class="form-side">
+            	{form-fec-pm}
+            	<div class="form-row">
+                	<label for="field-fecpm" class="field-label field-row-header">Who's working on this?:</label>
+                    <div class="form-fields">
+                        {embed="admin/team-members" selected="{assigned_to}{assigned_to:entry_id}|{/assigned_to}"}
+                    </div>
+                </div>
+                
+                
+            	<div class="form-row">
+                	<label class="field-label field-row-header">Job Pricing:</label>
+                    <div class="form-fields">
+                    	<div class="field-item">
+                            <label><input type="radio" name="job_pricing" value="LS" id="field-pricingls"> LS (Lump Sum)</label>
+                        </div>
+                    	<div class="field-item">
+                            <label><input type="radio" name="job_pricing" value="UP" id="field-pricingup"> UP (Unit Price)</label>
+                        </div>
+                    </div>
+                </div>
+            	<div class="form-row">
+                	<label for="field-price" class="field-label field-row-header">Project Price:</label>
+                    <div class="form-fields">
+                    	<span class="field-price"><span class="currency-symbol">$</span> <input type="text" class="field-text field-price-input" name="project_price" id="field-price" placeholder="How much was this scope quoted for?" value="{project_price}" /></span>
+                    </div>
+                </div>
+                
+            </div>
+          {/exp:channel:form}
+           
+        </div>
+    </div>
+
+</div>
+</div>
+{admin-footer}
+{form-client-modal}
+{modal-status-history}
+{modal-delete-project}
+{modal-help-scopetitle}
+{modal-help-statusmemo}
+{embed="admin/pages-bottom" script="editor|help-fields|new-project|create-customer"}
+</html>

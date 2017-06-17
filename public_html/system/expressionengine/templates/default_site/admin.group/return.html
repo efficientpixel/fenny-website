@@ -1,0 +1,7 @@
+{exp:switchee variable="{segment_3}" parse="inward"}
+	{case value="job"}
+    	        {exp:channel:entries dynamic="off" channel="clients" status="open" limit="1" orderby="entry_date" sort="desc" disable="categories|category_fields|member_data|pagination" search:client_code="{segment_4}"}
+                {parents field='customer' channel='projects' status='not Closed'}{parents:job_number}<br />{/parents}
+                {/exp:channel:entries}
+    {/case}
+{/exp:switchee}

@@ -1,0 +1,35 @@
+            <tr class="row-{exp:create_url_title}{status}{/exp:create_url_title}">
+                <td class="cell-title">
+                {if channel_short_name == 'projects'}
+                    <a href="/admin/project/{entry_id}/">
+                    {if segment_2 == 'reviews'}
+                    {customer:title}
+                    {if:else}
+                    {title}
+                    {/if}
+                    </a>
+                {if:elseif channel_short_name == 'added_scope'}
+                    <a href="/admin/project/{added_scope_project:entry_id}/">{added_scope_project:title} - {scope_title} <sup class="scope-number" title="Added scope version {scope_number}">{scope_number}</sup></a>
+                {/if}
+                </td>
+                 {if in_group_1_7}
+                <td class="cell-price">${exp:price_format price="{project_price}"}</td>
+                {/if}
+                <td class="cell-client"><span title="{customer:title}">{customer:client_code}{!-- ({customer:title})--}</span></td>
+                <td class="cell-job">{if job_number == 0}N/A{if:else}{job_number}{/if}</td>
+                <td class="cell-state">{pe_seal_state}{region_alpha2}{/pe_seal_state}{stamp_pe_engineer}{if stamp_pe_engineer:title != 'Jack Fenny'}<i class="icon-stamp" title="Need an outside stamp">Need Stamp</i>{/if}{/stamp_pe_engineer}</td>
+                <td class="cell-pm">{fec_project_manager}<a href="mailto:{fec_project_manager:email_address}?subject={job_number}-{customer:client_code}  {title}" title="Email {fec_project_manager:first_name} regarding this project">{exp:util:first data="{fec_project_manager:first_name}"}{exp:util:first data="{fec_project_manager:last_name}"}</a>{/fec_project_manager}</td>
+                {!--<td class="cell-date">{date_order_received format="%m/%d/%Y"}</td>--}
+                <td class="cell-date">{due_date format="%m/%d/%Y"}</td>
+                {!--<td class="cell-pricing">${exp:price_format price="{job_pricing}"}</td>--}
+                <td class="cell-status"><span class="status-flag{if status == 'Submitted' OR status == 'Quote Submitted'} status-submitted{/if}">{if status == 'Quote Submitted'}Submitted{if:else}{status}{/if}</span>{if '{related_invoices:count}' != ''} <i class="icon icon-invoice" title="Project has invoices">$</i>{/if}</td>
+                <td class="cell-archive"><input title="Mark as Completed" type="checkbox" name="{entry_id}:status" value="{if segment_3 == 'completed'}Archive{if:elseif segment_3 == 'quotes'}Active{if:else}Completed{/if}" /></td>
+            	<td class="cell-timer">{!--
+                {if harvest_project_id}
+                <div class="harvest-timer"
+                  data-item='{"id":{entry_id},"project_id":{harvest_project_id},"name":""}'>
+                </div>
+                
+                {/if}--}
+                </td>
+            </tr>

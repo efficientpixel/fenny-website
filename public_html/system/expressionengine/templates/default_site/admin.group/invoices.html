@@ -1,0 +1,106 @@
+{embed="admin/head"}
+<body>
+{embed="admin/header"}
+<div class="container">
+	<div class="container-content">
+    {if segment_3 == 'updated'}
+    <div class="msg msg-updated">
+        <strong>Your invoice(s) have been updated</strong>
+    </div>
+    {/if}
+    <div class="page-header">
+       {!-- <div class="crumbs">
+            <span>&nbsp;</span>
+        </div>
+        --}
+        <h1 class="page-title page-header-title">Issued Invoices</h1>
+
+        <div class="header-right">
+            <a href="/admin/projects/new/" class="page-header-button btn button-new btn-submit">New Project [+]</a>
+            <a href="/admin/clients/new/" class="page-header-button btn button-new btn-submit">New Customer [+]</a>
+        </div>
+    </div>
+    {if segment_3 == 'updated'}
+    {exp:mefu:save}{/exp:mefu:save}
+    <div class="email-content" style="display:none;">
+   {exp:email_from_template to="chris@fenny.com" from="noreply@fennyengineering.com" subject="Invoices have been paid"}
+   			{embed='emails/invoice-paid' entryids='{exp:mefu:getids}'}
+   {/exp:email_from_template}
+   </div>
+    {/if}
+
+    <div class="projects-list-container content-main">
+    <div class="container-invoices">
+        {exp:channel:entries dynamic="off" channel="harvest_invoices" status="Open" limit="1000" orderby="harvest_updated_at" sort="desc" disable="categories|category_fields|member_data|pagination" year="{current_year}"}
+        {exp:tally:add collection="sent-totals" value="{harvest_amount}" count="{count}"}
+    {/exp:channel:entries}
+
+        <form method="post" name="mu-form" action="/admin/invoices/updated/">
+        <table class="invoices-table" border="0" cellpadding="0" cellspacing="0">
+        <tfoot>
+        	<tr>
+            	<td colspan="5">&nbsp;</td>
+                <td>{embed="admin-includes/sent-totals"}</td>
+                <td align="right"><input type="submit" name="submit" value="Mark as Paid" /></td>
+            </tr>
+        </tfoot>
+        <thead>
+        	<th scope="col">Invoice#</th>
+            <th scope="col">Issued</th>
+            <th scope="col">Due</th>
+            <th scope="col">Client/Invoice Subject</th>
+            <th scope="col">Job#</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Paid</th>
+        </thead>
+        <tbody>
+        {exp:channel:entries dynamic="off" channel="harvest_invoices" status="Open" limit="1000" orderby="harvest_issued_at|harvest_number" sort="asc|asc" disable="categories|category_fields|member_data|pagination"}
+        	<tr class="invoice-item">
+            	<td class="invoice-item-number">{harvest_number}{!--{if '{exp:rye_date date="{harvest_due_at}" format="%Y%m%d"}' < '{current_time format="%Y%m%d"}'} (<em><strong>Late</strong></em>){/if}--} </td>
+            	<td class="invoice-item-issued">{exp:rye_date date="{harvest_issued_at}" format="%m/%d/%Y"}{!-- (<em>Due: {exp:rye_date date="{harvest_due_at}" format="%D, %F %d, %Y"}</em>)--}</td>
+            	<td class="invoice-item-due">{exp:rye_date date="{harvest_due_at}" format="%m/%d/%Y"}<br />{if '{exp:rye_date date="{harvest_due_at}" format="%Y%m%d"}' < '{current_time format="%Y%m%d"}'} (<em><strong>Late  {embed="admin-includes/days-late" sentdate="{harvest_due_at}"}</strong></em>){/if}</td>
+                <td class="invoice-item-client"><strong class="invoice-client">{harvest_client_name}</strong> {invoice_subject}</td>
+                <td class="invoice-item-job">{parents channel="projects" status="Submitted|Active|Completed"}{if '{parents:count}' == 2}<br />{/if}<a href="/admin/project/{parents:entry_id}/" title="{parents:title}">{parents:job_number}-{parents:customer:client_code}</a>{/parents}</td>
+                <td class="invoice-item-price">${exp:price_format price="{harvest_amount}"}</td>
+                {!--<div class="invoice-item-pdf"><a href="https://fennyengineering.harvestapp.com/invoices/{harvest_id}.pdf" target="_blank">View Invoice PDF</a></div>--}
+            	<td class="invoice-item-paid">
+                    <input title="Mark as Completed" type="checkbox" name="{entry_id}:status" value="Paid" />
+                    <input type="hidden" name="{entry_id}:harvest_updated_at" value="{current_time format='%Y-%m-%dT%G:%i:%sZ'}" />
+                </td>
+            </tr>
+        {/exp:channel:entries}
+        </tbody>
+        </table>
+        
+        </form>
+        </div>
+    </div>
+<aside class="sidebar" style="width:17%;padding-left:3%;">
+	<h3>Recently Paid Invoices</h3>
+    <ul class="paid-invoices">
+      {exp:channel:entries dynamic="off" channel="harvest_invoices" status="paid" limit="10" orderby="harvest_updated_at" sort="desc" disable="categories|category_fields|member_data|pagination" year="{current_year}"}
+    	<li class="paid-item">
+       		 <div class="invoice-item-client">
+             <em>#{harvest_number} | Paid: {exp:rye_date date="{harvest_updated_at}" format="%m/%d/%Y"}</em> (${exp:price_format price="{harvest_amount}"})<br />
+             <strong class="invoice-client">{harvest_client_name}</strong><br /> {invoice_subject}</div>
+        </li>
+        {if count == total_results}
+        	{if total_results == 10}
+            	<li>{embed="admin-includes/paid-remainder"}</li>
+            {/if}
+        {/if}
+        {/exp:channel:entries}
+    {exp:channel:entries dynamic="off" channel="harvest_invoices" status="paid" limit="1000" orderby="harvest_updated_at" sort="desc" disable="categories|category_fields|member_data|pagination" year="{current_year}"}
+        {exp:tally:add collection="paid-totals" value="{harvest_amount}" count="{count}"}
+    {/exp:channel:entries}
+    </ul>
+    
+    {embed="admin-includes/invoice-totals"}
+</aside>
+
+</div>
+
+</div>
+{admin-footer}
+{embed="admin/pages-bottom" script=""}
+</html>

@@ -1,0 +1,7 @@
+       {exp:channel:entries dynamic="off" entry_id="{segment_3}" channel="projects" status="not closed" limit="1" orderby="date_order_received" sort="asc" disable="categories|category_fields|member_data|pagination"}
+               <ul class="log-list">
+                {parents channel='invoice_requests' sort='desc' orderby='entry_date' status="open|Requested"}
+                	<li class="log-item">{parents:entry_date format='%m/%d/%y @ %g:%i%a'} - Invoice Request Submitted by {exp:util:first data='{parents:who_is_requesting_this_invoice:first_name}'}{exp:util:first data='{parents:who_is_requesting_this_invoice:last_name}'}{!-- (<a href="#">View</a>)--}</li>
+                {/parents}
+                </ul>
+{/exp:channel:entries}

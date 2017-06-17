@@ -1,0 +1,379 @@
+{embed="admin/head"}
+<body>
+{embed="admin/header"}
+<div class="container">
+	<div class="container-content">
+    <div class="page-header">
+        <div class="crumbs">
+            <a href="/admin/projects/">Projects</a> &raquo; <span>Edit Project &nbsp;</span>
+        </div>
+        {exp:channel:entries dynamic="off" entry_id="{segment_3}" channel="projects" status="not closed" limit="1" orderby="date_order_received" sort="asc" disable="categories|category_fields|member_data|pagination"}
+        <div class="page-header-title">
+            <h1 class="page-title">Edit Project</h1>
+            <h2 class="project-title">{job_number}-{customer:client_code} &nbsp;|&nbsp; {title}</h2>
+        </div>
+        <div class="header-right">
+            <a href="/admin/projects/new/{segment_3}/" class="page-header-button btn button-new btn-submit">Add Scope [+]</a>
+        </div>
+
+        {/exp:channel:entries}
+    </div>
+    <div class="page-content">
+    	<div class="new-project-form">
+        <div class="container-top-form">
+        	<div class="container-delete">
+            <a href="#" id="delete-link">Delete Project</a>
+            </div>
+        </div>
+
+            {exp:channel:entries dynamic="off" entry_id="{segment_3}" channel="projects" status="not closed" limit="1" orderby="date_order_received" sort="asc" disable="categories|category_fields|member_data|pagination"}
+    {if segment_4 == 'invoice-requested'}
+           <div class="email-content" style="display:none;">
+           {exp:email_from_template to="chris@fenny.com" from="noreply@fennyengineering.com" subject="Invoice Requested: {title}"}
+                <p style="font-family:Arial, Helvetica, sans-serif;">An invoice have been requested.</p>
+                <p style="font-family:Arial, Helvetica, sans-serif;">Job: {job_number}-{customer:client_code} {title}</p>
+           {/exp:email_from_template}
+           </div>
+    {/if}
+    {exp:ce_cache:it id="project-edit-{segment_3}" global="yes"}
+
+            {exp:channel:form channel="projects" id="form-edit-project" entry_id="{segment_3}" return="/admin/project/{segment_3}/" datepicker="no" include_jquery="no" include_assets="no" error_handling="inline}
+            {field_errors}{error}{/field_errors}
+            {global_errors}{error}{/global_errors}
+            
+ <div class="hidden-fields">
+{!-- Entry Update Logging --}
+<input type="hidden" name="field_id_115[row_new_0][col_id_34]" value="" id="update-status" />
+<input type="hidden" name="field_id_115[row_new_0][col_id_35][]" value="{embed='admin/member-entryid'}" id="update-member" />
+<input type="hidden" name="field_id_115[row_new_0][col_id_36]" value="{current_time format='%m/%d/%Y %h:%i %A'}" id="update-date" />
+<input type="hidden" name="field_id_115[trigger_revisions]" value="1">
+{!-- Edit Date Readable Format --}
+<input type="hidden" name="edit_date_readable" value="{current_time format='%Y-%m-%d'}" />					
+ </div>           
+            
+            
+            
+            <div class="form-main">
+            	<div class="form-row">
+                	<label class="field-label field-row-header">PE Stamp Only:</label>
+                    <div class="form-fields">
+                    	<div class="field-item inline-field">
+                            <label><input type="radio" name="pe_stamp_only_job" value="n"{if '{pe_stamp_only_job}' == 'n' OR '{pe_stamp_only_job}' == ''} checked="checked"{/if} id="field-pestamp-no"> No</label>
+                        </div> 
+                    	<div class="field-item inline-field"> &nbsp;
+                            <label><input type="radio" name="pe_stamp_only_job" value="y"{if '{pe_stamp_only_job}' == 'y'} checked="checked"{/if} id="field-pestamp-yes"> Yes</label>
+                        </div>
+                    </div>
+                </div>
+            
+            
+            	<div class="form-row">
+                	<div class="inline-field">
+                	<label for="field-status" class="field-label field-row-header">Status:</label>
+                    <div class="form-fields">
+                            <select name="status" id="field-status" class="field-dropdown">
+                            	<option value="Quote"{if status == 'Quote'} selected="selected"{/if}>Quote</option>
+                            	<option value="Quote Submitted"{if status == 'Quote Submitted'} selected="selected"{/if}>Quote Submitted</option>
+                            	<option value="Active"{if status == 'Active'} selected="selected"{/if}>Active</option>
+                                <option value="Pending"{if status == 'Pending'} selected="selected"{/if}>Pending</option>
+                                <option value="Submitted"{if status == 'Submitted'} selected="selected"{/if}>Submitted</option>
+                 {if in_group_7}    
+                                <option value="On Hold"{if status == 'On Hold'} selected="selected"{/if}>On Hold</option>
+                                <option value="Completed"{if status == 'Completed'} selected="selected"{/if}>Completed (paid)</option>
+                                <option value="Archived"{if status == 'Archived'} selected="selected"{/if}>Archived</option>
+                                <option value="Cancelled"{if status == 'Cancelled'} selected="selected"{/if}>Cancelled</option>
+                 {/if}
+                 {if in_group_1}                               
+                            	<option value="Flagged"{if status == 'Flagged'} selected="selected"{/if}>Flagged (issues with project)</option>
+                            {/if}
+                            </select> {if status == 'Quote'}&nbsp;(<em>This project has not been awarded yet</em>){/if} 
+                            {if status == 'Quote Submitted'}&nbsp;(<em>This project has been bidded on but not yet awarded</em>){/if}
+                            {if status == 'Flagged'}&nbsp;(<em>There are issues with this project and/or invoices are incomplete</em>){/if}
+                    </div>
+                    </div>
+                	<div class="inline-field">
+                	<label for="field-title" class="field-label field-row-header">Status Memo:</label> <a href="#" class="icon-helptip" data-remodal="help-statusmemo">What&rsquo;s This?</a>
+                    <div class="form-fields">
+                    	<input type="text" class="field-text" name="field_id_99[row_new_0][col_id_30]" id="field-status-memo" placeholder="Tell me where this project is at" value="" />
+                    	<input type="hidden" name="field_id_99[row_new_0][col_id_31]" value="{current_time format='%m/%d/%Y %h:%i %A'}" id="status-date" />
+                        <input type="hidden" name="field_id_99[row_new_0][col_id_33][]" value="{embed='admin/member-entryid'}" id="status-member" />
+                        <input type="hidden" name="field_id_99[trigger_revisions]" value="1">
+                    </div>
+                    </div>
+                </div>
+                {form-project-year}
+            	<div class="form-row">
+                	<label class="field-label field-row-header">Job Ordered:</label>
+                    {!--<span class="label-desc">When was the job received?</span>--}
+                    <div class="form-fields">
+                    <span class="date-field">
+                    	<input type="text" class="field-date" data-language="en" name="date_order_received" id="field-jobordered" value="{date_order_received format='%m/%d/%Y'}" />
+                        
+                    </span>
+                    {!--
+                        <input type="hidden" value="" name="date_order_received" id="field-jobordered" />--}
+                    </div>
+                </div>
+            	<div class="form-row">
+                	<label for="field-jobdue" class="field-label field-row-header">Due Date:</label>
+                    <div class="form-fields">
+                    <span class="date-field">
+                    	<input type="text" class="field-date" name="due_date" id="field-jobdue" value="{due_date format='%m/%d/%Y'}" />
+                    </span>
+                    </div>
+                </div>
+                
+            	<div class="form-row">
+                	<label for="field-title" class="field-label field-row-header">Project Title:</label>
+                    <div class="form-fields">
+                    	<input type="text" class="field-text" name="title" id="field-title" placeholder="What are you calling this project?" value="{title}" />
+                    </div>
+                </div>
+            	<div class="form-row">
+                	<label for="field-title" class="field-label field-row-header">Scope Title/Description:</label> <a href="#" id="tip-scopetitle" class="icon-helptip" data-remodal="help-scopetitle">What&rsquo;s This?</a>
+                    <div class="form-fields">
+                    	<input type="text" class="field-text" name="scope_title" id="field-scope-title" placeholder="What is the name of the work being performed as per scope" value="{scope_title}" />
+                    </div>
+                </div>
+            
+                    {form-customer}
+                	<div class="inline-field">
+                        <label for="field-jobnum" class="field-label field-row-header">Job #:</label>
+                        <div class="form-fields">
+                            <input type="text" class="field-text" name="job_number" id="field-jobnum" placeholder="i.e. {current_time format='%y'}01" value="{job_number}" />
+                        </div>
+                    </div>
+                	<div class="inline-field">
+                        <label for="field-pestate" class="field-label field-row-header">PE Stamp State:</label>
+                        <div class="form-fields">
+                           {exp:reegion_select:states hide='AE|AA|AP|MP|FM|PR|MH' selected='{pe_seal_state}{region_alpha2}{/pe_seal_state}' name='field_id_62' class='field-dropdown' type='alpha2'} 
+                        </div>
+                    </div>
+                	<div class="inline-field">
+                        <label for="field-pe-engineer" class="field-label field-row-header">PE Engineer:</label>
+                        <div class="form-fields">
+                          <select name="field_id_75[data][]" id="field-pe-engineer" class="field-dropdown" placeholder="Select an engineer">
+                                {embed="admin/field-engineers" engineerid="{stamp_pe_engineer:entry_id}"}
+                          </select>
+
+                        </div>
+                    </div>
+                    {!--
+                	<div class="inline-field">
+                        <label for="field-pestate" class="field-label field-row-header">Require Add'l PE?:</label>
+                        <div class="form-fields">
+                            <div class="field-item">
+                                <label><input type="radio" name="stamp_requires_pe" value="n"{if '{stamp_requires_pe}' == 'n'} checked="checked"{/if} id="field-perequired-no"> No</label> <label><input type="radio" name="stamp_requires_pe" value="y"{if '{stamp_requires_pe}' == 'y'} checked="checked"{/if} id="field-perequired-yes"> Yes</label>
+                            </div>
+                        </div>
+                    </div>
+                    --}
+                    
+                    
+                </div>
+            	<div class="form-row">
+                	<label for="field-customercontact" class="field-label field-row-header">FEC Customer Contact:</label>
+                    <div class="form-fields">
+                    	<textarea class="field-textbox" name="customer_contact" id="field-customercontact" rows="7" cols="40">{exp:replace_plus find='<br />' replace='' multiple='yes'}{customer_contact}{/exp:replace_plus}</textarea>
+                    </div>
+                </div>
+            	<div class="form-row">
+                	<label for="field-contractor" class="field-label field-row-header">Contractor:</label>
+                    <div class="form-fields">
+                    	<textarea class="field-textbox" name="contractor" id="field-contractor" rows="7" cols="40">{exp:replace_plus find='<br />' replace='' multiple='yes'}{contractor}{/exp:replace_plus}</textarea>
+                    </div>
+                </div>
+            	<div class="form-row">
+                	<label for="field-projectnotes" class="field-label field-row-header">General Project Notes:</label>
+                    <div class="form-fields">
+                    	<textarea class="field-textbox" name="project_notes" id="field-projectnotes" rows="7" cols="40">{exp:replace_plus find='<br />' replace='' multiple='yes'}{project_notes}{/exp:replace_plus}</textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                {if egnyte_folder_url}
+                <a href="file:///C:\{egnyte_folder_url}" class="egnyte-button">Open Egnyte Folder</a>
+                {if:else}
+               <a href="file:///C:\Egnyte\Shared\Projects" class="egnyte-button">Open Egnyte Folder</a>
+               {/if}
+               {!--&nbsp; <a href="#">Edit Egnyte Folder Path</a>
+               <div class="field-hidden">
+               <input type="text" class="field-text" name="egnyte_folder_url" id="field-egnyte-url" value="{egnyte_folder_url}" />
+               </div>--}
+                </div>
+            	<div class="form-row">
+                <input type="submit" name="submit" value="Update Project" class="field-submit" />
+                </div>
+                
+            </div>
+            <div class="form-side">
+                <div class="form-row">
+                	<h4>Status Timeline:</h4>
+                    <ul class="status-timeline">
+                    {project_status sort='desc' orderby='status_date' limit='1'}
+                    <li{if row_count == 1} style="font-weight:bold;"{/if}>{status_date format='%m/%d/%Y'} @ {status_date format='%h:%i %A'} by {status_member}{embed='admin/status-member' entry_id='{entry_id}'}{/status_member}<br />
+                    &ldquo;{status_memo}&rdquo;</li>
+                    {/project_status}
+                    </ul>
+                    <a href="#" class="history-link">View Status History</a>
+                </div>
+                {form-fec-pm}
+            	<div class="form-row">
+                	<label for="field-assigned" class="field-label field-row-header">Who's working on this?:</label>
+                    <div class="form-fields">
+                        {embed="admin/team-members" selected="{assigned_to}{assigned_to:entry_id}|{/assigned_to}"}
+                    </div>
+                </div>
+                {if in_group_1_7}
+            	<div class="form-row">
+                	<label class="field-label field-row-header">Job Pricing:</label>
+                    <div class="form-fields">
+                    	<div class="field-item">
+                            <label><input type="radio" name="job_pricing" value="LS"{if '{job_pricing}' == 'LS'} checked="checked"{/if} id="field-pricingls"> LS (Lump Sum)</label>
+                        </div>
+                    	<div class="field-item">
+                            <label><input type="radio" name="job_pricing" value="UP"{if '{job_pricing}' == 'UP'} checked="checked"{/if} id="field-pricingup"> UP (Unit Price)</label> {customer}{if customer:client_billing_rate}(${customer:client_billing_rate}/hr){/if}{/customer}
+                        </div>
+                    </div>
+                </div>
+            	<div class="form-row">
+                	<label for="field-price" class="field-label field-row-header">Purchase Order:</label>
+                    <div class="form-fields">
+                    	<div class="field-upload">
+                        <input type="file" name="purchase_order" />
+<input type="hidden" name="purchase_order_directory" value="2" />
+<input type="hidden" name="purchase_order_hidden_file" value="{purchase_order}{file_name}{/purchase_order}" />
+                        </div>
+                        {if purchase_order}<br />
+                        <a href="{purchase_order}" target="_blank">View Purchase Order</a>
+                        {if:else}
+                        {/if}
+                    </div>
+                </div>
+            	<div class="form-row">
+                	<label for="field-price" class="field-label field-row-header">Project Price:</label>
+                    <div class="form-fields">
+                    	<div class="field-price"><span class="currency-symbol">$</span> <input type="text" class="field-text field-price-input" name="project_price" id="field-price" placeholder="How much was this scope quoted for?" value="{project_price}" /></div>
+                    </div>
+                </div>
+                
+                {if '{customer:requires_po}' == 'y'}
+            	<div class="form-row">
+                	<p><strong>{lang_requires_po}</strong></p>
+                </div>
+                {/if}
+            	<div class="form-row">
+                	<label for="field-jobcompleted" class="field-label field-row-header">Completion Date:</label>
+                    <div class="form-fields">
+                    <span class="date-field">
+                    	<input type="text" class="field-date" name="job_completion_date" id="field-jobcompleted" value="{job_completion_date format='%m/%d/%Y'}" />
+                    </span>
+                    </div>
+                </div>
+                {!--
+            	<div class="form-row">
+                	<label class="field-label field-row-header">Ready for Invoice:</label>
+                    <div class="form-fields">
+                    	<div class="field-item inline-field">
+                            <label><input type="radio" name="ready_for_invoicing" value="n"{if '{ready_for_invoicing}' == 'n' OR '{ready_for_invoicing}' == ''} checked="checked"{/if} id="field-invoice-no"> No</label>
+                        </div> 
+                    	<div class="field-item inline-field"> &nbsp;
+                            <label><input type="radio" name="ready_for_invoicing" value="y"{if '{ready_for_invoicing}' == 'y'} checked="checked"{/if} id="field-invoice-yes"> Yes</label>
+                        </div>
+                    </div>
+                </div>
+                --}
+            	<div class="form-row">
+                	<label for="field-invoiced" class="field-label field-row-header">Invoice Dates:</label>
+                    <div class="form-fields">
+                    <div class="invoices-header">
+                    	<strong class="header-invdate">Date:</strong>
+                    	<strong class="header-invprice">Price:</strong>
+                    	<strong class="header-invid">ID#:</strong>
+                         {if '{related_invoices:count}' != ''}
+                    	<strong class="header-invpaid">Status:</strong>
+                        {if:else}
+                    	<strong class="header-invpaid">Paid:</strong>
+                        {/if}
+                    </div>
+                    {exp:ce_cache:escape}
+                    <ul class="invoice-list">
+                    {if '{related_invoices:count}' != ''}
+                    {related_invoices status="paid|open|draft" orderby="harvest_issued_at|harvest_number" sort="asc|asc"}
+                    <li class="invoice-item" id="invoice-row-{related_invoices:entry_id}">
+                    	<div class="invoice-inputs"><span class="date-invoice2">{exp:rye_date date="{related_invoices:harvest_issued_at}" format="%m/%d/%Y"}</span> <span class="price-invoice">${exp:price_format price="{related_invoices:harvest_amount}"}</span> <span class="price-id">#{related_invoices:harvest_number}</span> </div> &nbsp;{if '{related_invoices:status}' == 'paid'}Paid{/if}{if '{related_invoices:status}' == 'Paid'}Paid{/if}{if '{related_invoices:status}' == 'open'}Sent{/if}{if '{related_invoices:status}' == 'draft'}Draft (Not Sent){/if} </li>
+                    </li>
+                    {/related_invoices}
+                    {if:else}
+                    {invoice_dates sort="asc" orderby="invoice_date"}
+                    {if row_count == 1}{exp:stash:set name='invoice-totals'}y{/exp:stash:set}{/if}
+                    <li class="invoice-item" id="invoice-row-{row_id}">
+                    <input type="hidden" name="field_id_39[row_id_{row_id}][col_id_29]" value="n" />
+                    <div class="invoice-inputs"><input type="text" class="date-invoice" data-row="{row_id}" name="field_id_39[row_id_{row_id}][col_id_1]" value="{invoice_date format='%m/%d/%Y'}" placeholder="mm/dd/yy" /><input type="text" class="price-invoice" data-row="{row_id}" name="field_id_39[row_id_{row_id}][col_id_7]" value="{invoice_price}" placeholder="Price" /> <input type="text" class="price-id" data-row="{row_id}" name="field_id_39[row_id_{row_id}][col_id_38]" value="{invoice_id}" placeholder="Invoice ID" /> </div> &nbsp;<input type="checkbox" name="field_id_39[row_id_{row_id}][col_id_29]" value="y"{if invoice_paid == 'y'} checked="checked"{/if} /> <a href="#delete" data-delete-id="{row_id}" title="Delete Invoice Item" class="btn btn-delete">X</a></li>
+                    {/invoice_dates}
+                    {/if}
+                    </ul>
+                    {/exp:ce_cache:escape}
+                    {if '{related_invoices:count}' == ''}
+                    <a href="#new-invoice" id="link-newinvoice" class="btn">[+] Add Invoice Date</a><br />
+                    	
+                        <input type="hidden" name="field_id_39[trigger_revisions]" value="1">
+                        <div id="hidden-field-ids"></div>
+                    {/if}
+                    </div>
+                </div>
+                <input type="hidden" name="invoice_cost_total" id="field-invoice-cost-total" />
+                <input type="hidden" name="invoice_paid_total" id="field-invoice-cost-total" />
+                {if project_price}
+                {if '{related_invoices:count}' == ''}
+                    {embed='admin-includes/invoice-total' hasinvoices="{exp:stash:invoice-totals}" price='{project_price}' invoiced='{exp:trimmer right='2'}{invoice_dates}{invoice_price}, {/invoice_dates}{/exp:trimmer}' paid='{exp:trimmer right='2'}{invoice_dates search:invoice_paid="y"}{invoice_price}, {/invoice_dates}{/exp:trimmer}'}
+                {if:else}
+                    {embed='admin-includes/invoice-total' hasinvoices="y" price='{project_price}' invoiced='{exp:trimmer right='1'}{related_invoices status='paid|open'}{related_invoices:harvest_amount},{/related_invoices}{/exp:trimmer}' paid='{exp:trimmer right='1'}{related_invoices status='paid'}{related_invoices:harvest_amount},{/related_invoices}{/exp:trimmer}'}
+               	{/if}
+               {/if}
+                           <br /><br />
+	<div class="form-row">
+                <a href="#" class="btn" id="invoice-btn" data-remodal="invoice-request">Create Invoice Request</a>
+                {exp:ce_cache:escape}
+                {embed="admin-includes/requested" parentid="{segment_3}"}
+                {/exp:ce_cache:escape}
+                </div>
+
+                {!--
+            	<div class="form-row">
+                	<label for="field-invoiced" class="field-label field-row-header">Vendor Costs:</label>
+                    <div class="form-fields">
+                    <ul class="invoice-list">
+                    {project_vendors_costs}
+                    <li class="invoice-item" id="invoice-row-{row_id}"><div class="invoice-inputs"><input type="text" class="price-invoice" data-row="{row_id}" name="field_id_96[row_id_{row_id}][col_id_28]" value="{vendor_cost}" placeholder="Price" /></div> <a href="#delete" data-delete-id="{row_id}" class="btn btn-delete">X</a></li>
+                    {/project_vendors_costs}
+                    </ul>
+                    <a href="#new-vendor" id="link-vendorcost" class="btn">[+] Add Vendor Cost</a><br />
+                    	
+                        <input type="hidden" name="field_id_96[trigger_revisions]" value="1">
+                        <div id="hidden-field-ids"></div>
+                        
+                    </div>
+                </div>
+                --}
+                {/if}
+            </div>
+          {/exp:channel:form}
+          {/exp:ce_cache:it}        
+
+        {/exp:channel:entries}
+        
+        </div>
+    </div>
+
+</div>
+</div>
+{admin-footer}
+{form-client-modal}
+{modal-status-history}
+{modal-delete-project}
+{modal-help-scopetitle}
+{modal-help-statusmemo}
+{modal-invoice-request}
+
+{embed="admin/pages-bottom" script="editor|edit-project|create-customer"}
+</html>

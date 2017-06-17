@@ -1,0 +1,136 @@
+{exp:switchee variable="{segment_2}" parse="inward"}
+{case value="anchors"}
+<table class="tablesorter" width="100%" border="0" cellspacing="0" cellpadding="0">
+<thead>
+<tr>
+    	<th scope="col" colspan="4" align="center">Pipe Support</th>
+        <th scope="col" colspan="4" align="center">ANCHOR LOADS (LBS) (Max. Design)</th>
+        <th scope="col" colspan="3" align="center">ANCHOR MOMENTS (LBS) (Max. Design)</th>
+        <th rowspan="2" scope="col" valign="middle" align="center">Special Notes</th>
+</tr>
+<tr>
+  <th align="center" scope="col">Node #</th>
+  <th align="center" scope="col">Pipe Size</th>
+  <th align="center" scope="col">Support No.</th>
+  <th align="center" scope="col">Type</th>
+  <th align="center" scope="col">Vertical (FY)</th>
+  <th align="center" scope="col">Lateral</th>
+  <th align="center" scope="col">Lateral 2 (Risers)</th>
+  <th align="center" scope="col">Axial</th>
+  <th align="center" scope="col">GlobalMX</th>
+  <th align="center" scope="col">GlobalMY</th>
+  <th align="center" scope="col">GlobalMZ</th>
+</tr>
+  </thead>
+  <tbody>
+  {/case}
+ {/exp:switchee}
+{exp:loopee parse="inward" foreach="{embed:array}"}
+  <tr>
+     {!-- Node # --}
+     <td>{loopee_value}</td>
+     {!-- Pipe Size --}
+    <td>{exp:activerecord
+    select="field_id_8"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_8"
+    limit="1"
+}{field_id_8}{/exp:activerecord}
+    </td>
+    {!-- Support No. --}
+    <td>&nbsp;</td>
+    {!-- Type --}
+<td class="type"> Anchor
+</td>     
+    {!-- Vertical Load --}
+    <td class="vertical">
+    <?php
+    		$this->EE->db->select('field_id_10');
+		$this->EE->db->from('channel_data');
+		$this->EE->db->where('field_id_4', '{loopee_value}');
+		$query = $this->EE->db->get();
+		echo $query->row('field_id_10');
+
+    ?>
+    {!--
+    {exp:stash:set name='globalfy-{loopee_value}'}{embed='load-sheet/max-value' strip='y' items='{exp:activerecord
+    select="field_id_10"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_10"
+    limit="1000"
+}{field_id_10}|{/exp:activerecord}'}{/exp:stash:set}[{exp:stash:globalfy-{loopee_value}}]--}
+</td>
+{!-- Lateral Load --}
+    <td class="lateral">
+    {exp:stash:set name='localfz-{loopee_value}'}{embed='load-sheet/max-value' strip='y' items='{exp:activerecord
+    select="field_id_140"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_140"
+    limit="1000"
+}{field_id_140}|{/exp:activerecord}'}{/exp:stash:set}[{exp:stash:localfz-{loopee_value}}]
+
+</td>
+    {!-- Lateral Gap --}
+    {!-- Axial/Lateral Load --}
+    <td class="axial">
+    Riser
+    </td>
+    <td class="axial">
+    {exp:stash:set name='localfx-{loopee_value}'}{embed='load-sheet/max-value' strip='y' items='{exp:activerecord
+    select="field_id_139"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_139"
+    limit="1000"
+}{field_id_139}|{/exp:activerecord}'}{/exp:stash:set}[{exp:stash:localfx-{loopee_value}}]
+
+</td>
+    {!-- Axial/Lateral Gap --}
+    {!-- Movements X --}
+    <td>{embed='load-sheet/max-value' strip='y' items='{exp:activerecord
+    select="field_id_136"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_136"
+    limit="1000"
+}{field_id_136}|{/exp:activerecord}'}</td>
+    {!-- Movements Y --}
+    <td>{embed='load-sheet/max-value' strip='y' items='{exp:activerecord
+    select="field_id_137"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_137"
+    limit="1000"
+}{field_id_137}|{/exp:activerecord}'}</td>
+{!-- Movements Z --}
+    <td>{embed='load-sheet/max-value' strip='y' items='{exp:activerecord
+    select="field_id_135"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_135"
+    limit="1000"
+}{field_id_135}|{/exp:activerecord}'}</td>
+{!-- Special Notes --}
+        <td>
+        {embed='load-sheet/notes' values='{exp:activerecord
+    select="field_id_5"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_5"
+    limit="1000"
+}{field_id_5}|{/exp:activerecord}'}
+        </td>
+
+
+  </tr>
+
+{/exp:loopee}
+{exp:switchee variable="{segment_2}" parse="inward"}
+{case value="anchors"}
+</tbody>
+</table>
+{/case}
+{/exp:switchee}

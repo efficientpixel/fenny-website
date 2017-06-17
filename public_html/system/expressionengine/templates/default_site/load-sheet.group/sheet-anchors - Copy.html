@@ -1,0 +1,117 @@
+{exp:switchee variable="{segment_2}" parse="inward"}
+{case value="anchors"}
+<table class="tablesorter" width="100%" border="0" cellspacing="0" cellpadding="0">
+<thead>
+<tr>
+    	<th scope="col" colspan="4" align="center">Pipe Support</th>
+        <th scope="col" colspan="3" align="center">ANCHOR LOADS (LBS) (Max. Design)</th>
+        <th scope="col" colspan="3" align="center">ANCHOR MOMENTS (LBS) (Max. Design)</th>
+        <th rowspan="2" scope="col" valign="middle" align="center">Special Notes</th>
+</tr>
+<tr>
+  <th align="center" scope="col">Node #</th>
+  <th align="center" scope="col">Pipe Size</th>
+  <th align="center" scope="col">Support No.</th>
+  <th align="center" scope="col">Type</th>
+  <th align="center" scope="col">GlobalFY</th>
+  <th align="center" scope="col">GlobalFX</th>
+  <th align="center" scope="col">GlobalFZ</th>
+  <th align="center" scope="col">GlobalMX</th>
+  <th align="center" scope="col">GlobalMY</th>
+  <th align="center" scope="col">GlobalMZ</th>
+</tr>
+  </thead>
+  <tbody>
+  {/case}
+ {/exp:switchee}
+{exp:loopee parse="inward" foreach="{embed:array}"}
+  <tr>
+     {!-- Node # --}
+     <td>{loopee_value}</td>
+     {!-- Pipe Size --}
+    <td>{exp:activerecord
+    select="field_id_8"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_8"
+    limit="1"
+}{field_id_8}{/exp:activerecord}
+    </td>
+    {!-- Support No. --}
+    <td>&nbsp;</td>
+    {!-- Type --}
+<td class="type"> Anchor
+</td>     
+    {!-- Vertical Load --}
+    <td class="vertical">
+    {embed='load-sheet/max-value' strip='y' items='{exp:activerecord
+    select="field_id_10"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_10"
+    limit="1000"
+}{field_id_10}|{/exp:activerecord}'}
+</td>
+{!-- Lateral Load --}
+    <td class="lateral">{embed='load-sheet/max-value' strip='y' items='{exp:activerecord
+    select="field_id_9"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_9"
+    limit="1000"
+}{field_id_9}|{/exp:activerecord}'}</td>
+    {!-- Lateral Gap --}
+    {!-- Axial/Lateral Load --}
+    <td class="axial">{embed='load-sheet/max-value' strip='y' items='{exp:activerecord
+    select="field_id_11"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_11"
+    limit="1000"
+}{field_id_11}|{/exp:activerecord}'}</td>
+    {!-- Axial/Lateral Gap --}
+    {!-- Movements X --}
+    <td>{embed='load-sheet/max-value' strip='y' items='{exp:activerecord
+    select="field_id_136"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_136"
+    limit="1000"
+}{field_id_136}|{/exp:activerecord}'}</td>
+    {!-- Movements Y --}
+    <td>{embed='load-sheet/max-value' strip='y' items='{exp:activerecord
+    select="field_id_137"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_137"
+    limit="1000"
+}{field_id_137}|{/exp:activerecord}'}</td>
+{!-- Movements Z --}
+    <td>{embed='load-sheet/max-value' strip='y' items='{exp:activerecord
+    select="field_id_135"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_135"
+    limit="1000"
+}{field_id_135}|{/exp:activerecord}'}</td>
+{!-- Special Notes --}
+        <td>
+        {embed='load-sheet/notes' values='{exp:activerecord
+    select="field_id_5"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_5"
+    limit="1000"
+}{field_id_5}|{/exp:activerecord}'}
+        </td>
+
+
+  </tr>
+
+{/exp:loopee}
+{exp:switchee variable="{segment_2}" parse="inward"}
+{case value="anchors"}
+</tbody>
+</table>
+{/case}
+{/exp:switchee}

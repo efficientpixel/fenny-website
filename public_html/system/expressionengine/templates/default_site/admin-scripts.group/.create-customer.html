@@ -1,0 +1,61 @@
+// create customer .create-customer
+var clearModalFields = function() {
+	$('.remodal input[type="text"]').val('');
+	$('.remodal textarea').text('');
+    $('.submitter').hide();
+}
+
+var btnNewCustomer = $('#btn-new-customer');
+var customersField = $('#field-customer');
+var fieldClientNew = $('#field-client-title');
+var fieldCodeNew = $('#field-clientcode');
+
+var newclientOptions = {
+ hashTracking: false,
+ closeOnConfirm: false
+}
+var rmdl;
+
+
+btnNewCustomer.click(function() {
+	var thisModal = $(this).attr('data-modal');
+	rmdl = $('[data-remodal-id='+thisModal+']').remodal(thisModal+'Options');
+	rmdl.open();
+	return false;
+});
+
+
+var clientForm = $('#form-new-client'); 
+
+clientForm.on('submit', function(e) {
+    $('.submitter').show();
+    var newClient = fieldClientNew.val();
+    var newClientCode = fieldCodeNew.val();
+    $(this).ajaxSubmit({
+        dataType: 'json',
+        success: function(data) {
+        console.log(data);
+                if (data.success) {
+                	var newClientID = data.entry_id;
+                    alert('New Customer Created!');
+                    rmdl.close();
+                    $('.submitter').hide();
+                    customersField.children('optgroup').append('<option value="'+newClientID+'" data-code="'+newClientCode+'">'+newClientCode+' - '+newClient+'</option>');
+                	customersField.val(newClientID);
+                } else {
+                	alert('Please fill in all fields');
+                    $('.submitter').hide();
+                    console.log(data);
+                }
+            }        
+    });
+        e.preventDefault(); // prevent native submit
+
+});
+$(document).on('closed', '.remodal', function (e) {
+	clearModalFields();
+});
+$.fn.select2.defaults.set("theme", "default");
+$('#field-customer').select2({
+  placeholder: 'Select a customer'
+});

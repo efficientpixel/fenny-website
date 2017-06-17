@@ -1,0 +1,20 @@
+<aside class="sidebar">
+	<h3>Team Members (total active jobs)</h3>
+    <ul class="team-list">
+    {exp:channel:entries channel='team_members' dynamic='off' disable='categories|member_data|pagination'}
+    	<li class="member-item"><a href="/admin/member/{entry_id}/">{first_name} {last_name}</a> ({parents field='assigned_to' status='Active'}{if parents:count == 1}{parents:total_results}{/if}{if parents:no_results}0{/if}{/parents})</li>
+    {/exp:channel:entries}
+    </ul>
+    <br /><br />
+	<h3>Clients (total current jobs)</h3>
+    <ul class="team-list">
+    {exp:channel:entries channel='clients' sort="asc" orderby='title' dynamic='off' disable='categories|member_data|pagination'}
+    	<li class="member-item"><a href="/admin/client/{entry_id}/">{title}</a> ({parents field='customer' status='Active|Submitted'}{if parents:count == 1}{parents:total_results}{/if}{if parents:no_results}0{/if}{/parents})</li>
+    {/exp:channel:entries}
+    </ul>
+</aside>
+
+{!--
+<!-- Display only jobs for current year -->
+    	<li class="member-item"><a href="/admin/client/{entry_id}/">{title}</a> ({embed="admin/projects-total" entryids="{parents field='customer' status='Active|Submitted|Completed'}{parents:entry_id}|{/parents}"})</li>
+--}

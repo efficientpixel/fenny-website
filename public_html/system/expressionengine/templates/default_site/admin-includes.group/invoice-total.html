@@ -1,0 +1,8 @@
+{exp:stash:set name='invoiced'}{exp:number_formatter:format decimals='2' dec_point='.' thousands_sep=','}{exp:mx_calc expression="sum({embed:invoiced})"}{/exp:number_formatter:format}{/exp:stash:set}
+{exp:stash:set name='paid'}{exp:number_formatter:format decimals='2' dec_point='.' thousands_sep=','}{exp:mx_calc expression="sum({embed:paid})"}{/exp:number_formatter:format}{/exp:stash:set}
+
+
+Total Invoiced: ${exp:stash:invoiced}
+<br />Paid Invoices: ${exp:stash:paid}
+
+<br />Outstanding Invoices: {embed='admin-includes/outstanding' price='{embed:price}' invoiced='{exp:stash:invoiced}' paid='{exp:stash:paid}'} 

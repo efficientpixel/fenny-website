@@ -1,0 +1,206 @@
+{exp:switchee variable="{segment_2}" parse="inward"}
+{case value="new|supports"}
+<table class="tablesorter" width="100%" border="0" cellspacing="0" cellpadding="0">
+<thead>
+<tr>
+    	<th scope="col" colspan="4" align="center">Pipe Support</th>
+        <th scope="col" colspan="5" align="center">PIPE SUPPORT LOADS (LBS) (Max. Design)</th>
+        <th scope="col" colspan="3" align="center">Pipe Movements - inches</th>
+        <th rowspan="3" scope="col" valign="middle" align="center">Special Notes</th>
+</tr>
+<tr>
+    <th rowspan="2" align="center" scope="col">Node #</th>
+    <th rowspan="2" align="center" scope="col">Pipe Size</th>
+    <th rowspan="2" align="center" scope="col">Support No.</th>
+    <th rowspan="2" align="center" scope="col">Type</th>
+    <th rowspan="2" align="center" scope="col">Vertical Load</th>
+    <th colspan="2" align="center" scope="col">Lateral</th>
+    <th colspan="2" align="center" scope="col">Axial/Lateral</th>
+    <th scope="col" align="center">+X=North</th>
+    <th scope="col" align="center">Vertical</th>
+    <th scope="col" align="center">+Z=East</th>
+</tr>
+  <tr>
+    <th scope="col" align="center">Load</th>
+    <th scope="col" align="center">Gap</th>
+    <th scope="col" align="center">Load</th>
+    <th scope="col" align="center">Gap</th>
+    <th scope="col" align="center">X</th>
+    <th scope="col" align="center">Y</th>
+    <th scope="col" align="center">Z</th>
+    </tr>
+  </thead>
+  <tbody>
+  {/case}
+ {/exp:switchee}
+{exp:loopee parse="inward" foreach="{embed:array}"}
+  <tr>
+     {!-- Node # --}
+     <td>{loopee_value}</td>
+     {!-- Pipe Size --}
+    <td>{exp:activerecord
+    select="field_id_8"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_8"
+    limit="1"
+}{field_id_8}{/exp:activerecord}
+    </td>
+    {!-- Support No. --}
+    <td>&nbsp;</td>
+    {!-- Type --}
+<td class="type">
+{exp:stash:set name="type-{loopee_value}"}{embed="load-sheet/types" array="{exp:trimmer right='1'}{exp:activerecord
+    select="field_id_6"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_6"
+    limit="1000"
+    parse="inward"
+}{field_id_6}|{/exp:activerecord}{/exp:trimmer}"}{/exp:stash:set}{exp:stash:get name="type-{loopee_value}"}
+</td>     
+    {!-- Vertical Load --}
+    <td class="vertical">
+    {embed='load-sheet/max-value' strip='y' items='{exp:activerecord
+    select="field_id_10"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_10"
+    limit="1000"
+}{field_id_10}|{/exp:activerecord}'}
+</td>
+{!-- Lateral Load --}
+    <td class="lateral">
+    {embed='load-sheet/max-value' strip='y' items='{exp:activerecord
+    select="field_id_6,field_id_9,field_id_10,field_id_11,field_id_18,field_id_22,field_id_23"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_9"
+    limit="1000"
+}<?php 
+            	$type = '{field_id_6}';
+                $globaly = '{field_id_10}';
+                $force1 = '{field_id_18}';
+                if ($type == 'Guide') {
+                    if(abs($globaly) == abs($force1)) {
+                        echo '{field_id_22}|';
+                    } else {
+                        echo '{field_id_22}|';
+                    }
+                } elseif ($type == 'Shoe') {
+                        echo '0|';
+                } elseif ($type == 'Inclined') {
+                	echo '{field_id_18}|';
+                } else {
+                	echo '{field_id_22}|';
+                }
+            ?>{/exp:activerecord}'}
+    </td>
+    {!-- Lateral Gap --}
+<td class="lateral-gap">
+{exp:activerecord
+    select="field_id_27, field_id_6"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_27"
+    limit="1"
+}{exp:switchee variable="{field_id_6}"}
+        {case value='Rod Hgr|Shoe'}0{/case}
+        {case default="Yes"}{field_id_27}{/case}
+        {/exp:switchee}
+{/exp:activerecord}
+    </td>    
+    {!-- Axial/Lateral Load --}
+    <td class="axial">
+      {embed='load-sheet/max-value' strip='y' items='{exp:activerecord
+      select="field_id_6,field_id_9,field_id_10,field_id_11,field_id_18,field_id_22,field_id_23"
+      from="channel_data"
+      where:field_id_4="{loopee_value}"
+      order_by="field_id_11"
+      limit="1000"
+      }<?php 
+            	$type = '{field_id_6}';
+                $globaly = '{field_id_10}';
+                $force1 = '{field_id_18}';
+                if ($type == 'Guide') {
+                    if(abs($globaly) == abs($force1)) {
+                        echo '{field_id_23}|';
+                    } else {
+                        echo '{field_id_18}|';
+                    }
+                } elseif ($type == 'Shoe') {
+                        echo '0|';
+                } elseif ($type == 'Line Stp') {
+                        echo '{field_id_18}|';
+                } elseif ($type == 'Inclined') {
+                        echo '0|';
+                        //echo '{field_id_18}|';
+                } else {
+                	echo '';
+                }
+            ?>{/exp:activerecord}'}
+    </td>
+    {!-- Axial/Lateral Gap --}
+    <td>
+    {exp:activerecord
+    select="field_id_20,field_id_6"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_20"
+    limit="1"
+}{exp:switchee variable="{field_id_6}"}
+        {case value='Rod Hgr|Shoe'}0{/case}
+        {case default="Yes"}{field_id_20}{/case}
+        {/exp:switchee}{/exp:activerecord}
+    </td>
+    {!-- Movements X --}
+    <td>
+      {!-- Need to pull value with the greatest distance from 0 --}
+      {embed='load-sheet/max-value' items='{exp:activerecord
+      select="field_id_24"
+      from="channel_data"
+      where:field_id_4="{loopee_value}"
+      order_by="field_id_24"
+      limit="1000"
+    }{field_id_24}|{/exp:activerecord}'}</td>
+    {!-- Movements Y --}
+    <td>
+ {!-- Need to pull value with the greatest distance from 0 --}
+    {embed='load-sheet/max-value' items='{exp:activerecord
+    select="field_id_25"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_25"
+    limit="1000"
+}{field_id_25}|{/exp:activerecord}'}</td>
+{!-- Movements Z --}
+    <td>
+   {!-- Need to pull value with the greatest distance from 0 --}
+    {embed='load-sheet/max-value' items='{exp:activerecord
+    select="field_id_26"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_26"
+    limit="1000"
+}{field_id_26}|{/exp:activerecord}'}</td>
+{!-- Special Notes --}
+        <td>
+        {embed='load-sheet/notes' values='{exp:activerecord
+    select="field_id_5"
+    from="channel_data"
+    where:field_id_4="{loopee_value}"
+    order_by="field_id_5"
+    limit="1000"
+}{field_id_5}|{/exp:activerecord}'}
+        </td>
+
+
+  </tr>
+
+{/exp:loopee}
+{exp:switchee variable="{segment_2}" parse="inward"}
+{case value="new"}
+</tbody>
+</table>
+{/case}
+{/exp:switchee}

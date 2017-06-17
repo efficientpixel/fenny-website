@@ -1,0 +1,19 @@
+            	<div class="form-row">
+                	<label for="field-fecpm" class="field-label field-row-header">FEC Project Manager:</label>
+                    <div class="form-fields">
+                        {embed="admin/project-managers" selected="{fec_project_manager}{fec_project_manager:entry_id}{/fec_project_manager}"}
+                        {!--
+                            <select name="fec_project_manager" id="field-fecpm" class="field-dropdown" placeholder="Select a Team Member">
+                                <option value="">Select a Team Member</option>
+                                    {options:fec_project_manager}
+                                        <option value="{option_value}"{selected}>{option_name}</option>
+                                    {/options:fec_project_manager}
+                            </select>
+                         --}
+                    </div>
+                    <div class="field-email-link">
+                    {fec_project_manager}
+                    <a href="mailto:{fec_project_manager:email_address}?subject={job_number}-{customer:client_code}  {title}">Email FEC PM</a>
+                    {/fec_project_manager}
+                    </div>
+                </div>

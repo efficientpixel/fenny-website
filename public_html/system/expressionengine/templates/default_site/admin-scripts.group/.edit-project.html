@@ -1,0 +1,102 @@
+// edit project
+
+// <input type="hidden" name="field_id_39[deleted_rows][]" value="row_id_5">
+// <input type="text" style="display:none;" name="field_id_39[row_new_0][col_id_1]" value="" />
+// <li class="invoice-item" id="invoice-row-{row_id}"><input type="text" class="date-invoice" data-row="{row_id}" name="field_id_39[row_id_{row_id}][col_id_1]" value="{invoice_date format='%m/%d/%Y'}" placeholder="mm/dd/yy" /> <input type="text" class="date-invoice" data-row="{row_id}" name="field_id_39[row_id_{row_id}][col_id_7]" value="{invoice_price}" placeholder="Price" /> <a href="#delete" data-delete-id="{row_id}" class="btn btn-delete">X</a></li>
+
+
+$('.field-date').datepicker({
+language: 'en',
+dateFormat: 'mm/dd/yyyy'
+});
+
+var convInvDate = function() {
+    $('.date-invoice').datepicker({
+    language: 'en',
+    dateFormat: 'mm/dd/yyyy'
+    });
+}
+convInvDate();
+
+
+var invoiceList = $('.invoice-list');
+var invoiceAdd = $('#link-newinvoice');
+var invoiceDel = $('.invoice-list .btn-delete');
+var deleteHolder = $('#hidden-field-ids');
+var newInvCount = 0;
+
+invoiceAdd.click(function() {
+	console.log(newInvCount);
+	invoiceList.append('<li class="invoice-item"><div class="invoice-inputs"><input type="text" class="date-invoice" name="field_id_39[row_new_'+newInvCount+'][col_id_1]" value="" placeholder="mm/dd/yy" /><input type="text" class="price-invoice" data-row="{row_id}" name="field_id_39[row_new_'+newInvCount+'][col_id_7]" value="" placeholder="Price" /> <input type="text" class="price-id" data-row="{row_id}" name="field_id_39[row_new_'+newInvCount+'][col_id_38]" value="" placeholder="Invoice ID" /></div> &nbsp;<input type="checkbox" name="field_id_39[row_new_'+newInvCount+'][col_id_29]" value="y" /> <a href="#delete" data-delete-id="'+newInvCount+'" class="btn btn-delete">X</a></li>');
+    convInvDate();
+    newInvCount++;
+    runInputs();
+	return false;
+});
+$('.invoice-list').on('click', '.btn-delete', function() {
+	var thisDelete = $(this).attr('data-delete-id');
+    deleteHolder.append('<input type="hidden" name="field_id_39[deleted_rows][]" value="row_id_'+thisDelete+'">');
+    $(this).parent('li').remove();
+	return false;
+});
+
+var memoField = $('#field-status-memo');
+var memoDate = $('#status-date');
+var memoMember = $('#status-member');
+var updateStatus = $('#update-status');
+var fieldStatus = $('#field-status');
+
+$('#form-edit-project').submit(function() {
+	var statusMemo = memoField.val();
+    if(statusMemo == '') {
+    	memoField.removeAttr('name');
+    	memoDate.removeAttr('name');
+        memoMember.removeAttr('name');
+    } 
+    updateStatus.val(fieldStatus.val());
+    
+});
+$('#field-fecpm').change(function() {
+	var pmVal = $(this).val();
+    $('#member-item-'+pmVal).trigger('click');
+/*
+    if($('#member-item-'+pmVal).is(':checked')) {
+    // do nothing
+    } else {
+    $('#member-item-'+pmVal).trigger('click');
+    }*/
+});
+var historyLink = $('.history-link');
+historyLink.click(function() {
+	var historyModal = 'history';
+	rmdl = $('[data-remodal-id='+historyModal+']').remodal(historyModal+'Options');
+	rmdl.open();
+	return false;
+});
+
+var deleteLink = $('#delete-link');
+deleteLink.click(function() {
+	var deleteModal = 'delete-project';
+	rmdl = $('[data-remodal-id='+deleteModal+']').remodal(deleteModal+'Options');
+	rmdl.open();
+	return false;
+});
+var helpLink = $('.icon-helptip');
+helpLink.click(function() {
+	var thisModal = $(this).attr('data-remodal');
+	rmdl = $('[data-remodal-id='+thisModal+']').remodal(thisModal+'Options');
+	rmdl.open();
+    return false;
+});
+$('#invoice-btn').click(function() {
+	var thisModal = $(this).attr('data-remodal');
+	rmdl = $('[data-remodal-id='+thisModal+']').remodal(thisModal+'Options');
+	rmdl.open();
+    return false;
+});
+
+    $('input[type="radio"]').change(function(){
+    var value = $( this ).val();
+    alert(value);
+});
+

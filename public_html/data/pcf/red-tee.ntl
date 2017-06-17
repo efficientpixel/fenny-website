@@ -1,0 +1,45 @@
+JOB                                                         1.1       
+HED  MP-01-2
+    *
+CTL  B31.3     Y                           English            AUTOPIPE   B313-12
+***  
+SEG  1                 117.015    15.100    60.326          
+RVER 1.7
+PIPE PIPE1               2.000SSTD           0.000
+    *A106-A         
+    *                    0.000     0.000     0.000
+    *
+    *
+    *        BuildingData
+RVER 1.1
+OPER 1             1     0.000          0.000
+RUN  2                   0.000    -0.001    10.387
+FLA  2    NS        NS   BW        0.000
+RUN  3                -117.015   -15.099   -70.713
+***  
+SEG  4                 117.015    14.462    70.789          
+RVER 1.7
+PIPE PIPE2               1.000SSTD           0.000
+    *A106-A         
+    *                    0.000     0.000     0.000
+    *
+    *
+    *        BuildingData
+RVER 1.1
+RUN  5                   0.000     0.529     0.000
+FLA  5    NS        NS   BW        0.000
+RUN  3                -117.015   -14.991   -70.789
+RUN  6                 117.015    15.099    70.865
+FLA  6    NS        NS   BW        0.000
+***  
+SEG  7                 117.015    15.100    70.865          
+PIPE  PIPE1          
+RUN  8                   0.000    -0.001     6.528
+*** ANCHORS AT OPEN ENDS
+ANC  1    
+ANC  4    
+ANC  6    
+ANC  7    
+ANC  8    
+***  
+*** END OF FILE

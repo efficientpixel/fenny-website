@@ -1,0 +1,74 @@
+{embed="admin/head"}
+<body>
+{embed="admin/header"}
+<div class="container">
+	<div class="container-content">
+    {if segment_3 == 'updated'}
+    <div class="msg msg-updated">
+        <strong>Your project(s) have been updated</strong>
+    </div>
+    {/if}
+    <div class="page-header">
+       {!-- <div class="crumbs">
+            <span>&nbsp;</span>
+        </div>
+        --}
+        <h1 class="page-title page-header-title">Team Member</h1>
+        <div class="header-right">
+            <a href="/admin/projects/new/" class="page-header-button btn button-new btn-submit">New Project [+]</a>
+            <a href="/admin/clients/new/" class="page-header-button btn button-new btn-submit">New Customer [+]</a>
+        </div>
+    </div>
+    <div class="projects-list-container content-main">
+
+  {exp:channel:entries entry_id="{segment_3}" channel="team_members" dynamic="off" disable="pagination|categories|member_data"}
+      <div class="member-name-header">
+      	<span class="initial-header">{exp:util:first data="{first_name}"}{exp:util:first data="{last_name}"}</span>
+        <h2 class="member-heading-name">{first_name} {last_name} </h2>
+      </div>
+      <div class="projects-list-container">
+      	<h3 class="project-list-header">Projects {first_name} is Managing</h3>
+        <ul class="projects-list">
+        {parents field='fec_project_manager' status='Active|Submitted|Pending' orderby='status' sort='asc'}
+            <li{if parents:status != 'Active'} style="text-decoration: line-through;"{/if}>{parents:absolute_count}. ({parents:status}) &nbsp; {parents:job_number}-{parents:customer}{parents:customer:client_code}{/parents:customer} {parents:title}{!-- <span class="item-status status-{parents:status}">{parents:status}</span>--} | <a href="/admin/project/{parents:entry_id}/">Edit Project</a> &nbsp;&nbsp;({parents:assigned_to}{exp:util:first data="{parents:assigned_to:first_name}"}{exp:util:first data="{parents:assigned_to:last_name}"}, {/parents:assigned_to})</li>
+        {if parents:no_results}
+                  <li>You have no active projects at this time...</li>
+                {/if}
+        {/parents}
+        </ul>
+    </div>
+    <h3>Projects {first_name} is Assigned To:</h3><br>
+
+      <div class="projects-list-container">
+      	<h4 class="project-list-header">Active Projects:</h4>
+        {embed="admin-includes/member-projects-list" name="{first_name}" type="active" assigned_ids="{parents field='assigned_to' status='Active' orderby='date_order_received' sort='asc'}{parents:entry_id}|{/parents}" managing_ids="{parents field='fec_project_manager' status='Active' orderby='status' sort='asc'}{parents:entry_id}|{/parents}"}
+    </div>
+    {!--
+      <div class="projects-list-container">
+      	<h4 class="project-list-header">Pending Projects:</h4>
+        <ul class="projects-list">
+        {parents field='assigned_to' status='Pending' orderby='status' sort='asc'}
+            <li>{parents:absolute_count}. {parents:job_number}-{parents:customer}{parents:customer:client_code}{/parents:customer} {parents:title} | <a href="/admin/project/{parents:entry_id}/">Edit Project</a> </li>
+        {if parents:no_results}
+                  <li>You have no submitted projects at this time...</li>
+                {/if}
+        {/parents}
+        </ul>
+    </div>
+    --}
+    
+      <div class="projects-list-container">
+      	<h4 class="project-list-header">Submitted Projects:</h4>
+        {embed="admin-includes/member-projects-list" name="{first_name}" type="submitted" assigned_ids="{parents field='assigned_to' status='Submitted' orderby='date_order_received' sort='asc'}{parents:entry_id}|{/parents}" managing_ids="{parents field='fec_project_manager' status='Submitted' orderby='status' sort='asc'}{parents:entry_id}|{/parents}"}
+        
+    </div>
+    
+   {/exp:channel:entries}
+    </div>
+{embed="admin/projects-sidebar"}
+</div>
+
+</div>
+{admin-footer}
+{embed="admin/pages-bottom"}
+</html>

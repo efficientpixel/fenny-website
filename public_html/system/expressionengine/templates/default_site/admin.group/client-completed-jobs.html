@@ -1,0 +1,10 @@
+{if '{embed:entryids}' != ''}
+{exp:channel:entries dynamic="off" channel="projects" entry_id="{embed:entryids}" status="Completed" limit="1000" orderby="date_order_received" sort="asc" disable="categories|category_fields|member_data|pagination" search:project_year="{current_year}"}
+<li>{absolute_count}. {title} | <a href="/admin/project/{entry_id}/">Edit Project</a></li>
+{if no_results}
+<li>You have no {current_year} completed projects at this time...</li>
+{/if}
+{/exp:channel:entries}
+{if:else}
+<li>There are no {current_year} completed projects at this time...</li>
+{/if}
